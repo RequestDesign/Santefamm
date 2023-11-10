@@ -1,8 +1,8 @@
 {
-  "name": "santefam",
+  "name": "santefamm",
   "version": "1.0.0",
-  "description": "Deploy: https://dimonio04.github.io/santefam/dist/",
-  "main": "index.js",
+  "description": "Deploy: https://requestdesign.github.io/Santefamm/dist/",
+  "main": ".eslintrc.js",
   "scripts": {
     "start": "set NODE_ENV=development&&webpack serve",
     "build-dev": "set NODE_ENV=development&&webpack",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DiMoNiO04/santefam.git"
+    "url": "git+https://github.com/DiMoNiO04/Santefamm.git"
   },
-  "author": "Dmitriy Razumov <dima.razumov.940@mail.ru>",
+  "author": "Dmitriy Razumov <dima.razumov940@mail.ru>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DiMoNiO04/santefam/issues"
+    "url": "https://github.com/DiMoNiO04/Santefamm/issues"
   },
-  "homepage": "https://github.com/DiMoNiO04/santefam#readme",
+  "homepage": "https://github.com/DiMoNiO04/Santefamm#readme",
   "browserslist": [
     ">0.2%",
     "not dead",

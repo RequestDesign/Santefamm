@@ -1,0 +1,124 @@
+%philoCaps70 {
+  font-family: Philosopher, sans-serif;
+  font-size: 7rem;
+  line-height: 120%;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 48em) {
+    font-size: 7.2rem;
+  }
+}
+
+%philoCaps32 {
+  font-family: Philosopher, sans-serif;
+  font-size: 3.2rem;
+  line-height: 120%;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 48em) {
+    font-size: 4.8rem;
+  }
+}
+
+%philoCaps28 {
+  font-family: Philosopher, sans-serif;
+  font-size: 2.8rem;
+  line-height: 120%;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 48em) {
+    font-size: 4rem;
+  }
+}
+
+%semibold20 {
+  font-family: Gilroy, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 120%;
+
+  @media screen and (max-width: 48em) {
+    font-size: 3.2rem;
+  }
+}
+
+%regular20 {
+  font-family: Gilroy, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 120%;
+
+  @media screen and (max-width: 48em) {
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+}
+
+%regularCaps18 {
+  font-family: Gilroy, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 48em) {
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+}
+
+%regular18 {
+  font-family: Gilroy, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 140%;
+
+  @media screen and (max-width: 48em) {
+    font-size: 2.8rem;
+  }
+}
+
+%medium18Caps {
+  font-family: Gilroy, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 48em) {
+    font-size: 2.8rem;
+  }
+}
+
+%semibold18 {
+  font-family: Gilroy, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 120%;
+
+  @media screen and (max-width: 48em) {
+    font-size: 2.8rem;
+  }
+}
+
+%regular16Caps {
+  font-family: Gilroy, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 48em) {
+    font-size: 2.4rem;
+  }
+}
+
+%regular16 {
+  font-family: Gilroy, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+}
