@@ -1,0 +1,14 @@
+.btn-primary {
+  @extend %flexCenter;
+  border-radius: 1.8rem;
+  background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
+  width: fit-content;
+  padding: 1.9rem 4rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+  span {
+    @extend %regularCaps18;
+    color: $white;
+  }
+}

@@ -1,0 +1,85 @@
+.header {
+  background-color: #ffffff4d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__container {
+    @extend %flexCenterBetween;
+    padding: 2rem 0;
+  }
+
+  &__phone {
+    @extend %flexCenterBetween;
+    column-gap: 1.6rem;
+  }
+
+  &__phone-icon {
+    @include sizes(3.6rem, 3.6rem);
+  }
+
+  &__phone-number {
+    @extend %semibold20;
+    color: $black;
+    margin-bottom: 0.4rem;
+  }
+
+  &__phone-adres {
+    @extend %regular18;
+    color: $grey;
+    display: block;
+  }
+
+  &__menu {
+    @extend %flexCenter;
+    column-gap: 2.8rem;
+  }
+
+  &__item {
+    a {
+      @extend %regularCaps18;
+      transition: $transitionColor;
+
+      &:hover {
+        color: $lightPurple;
+      }
+    }
+  }
+
+  &__logo {
+    @include sizes(7rem, 9.3rem);
+    margin: 0 2.8rem;
+  }
+
+  &__btns {
+    @extend %flexCenter;
+    column-gap: 2.8rem;
+  }
+
+  &__gender {
+    padding: 0.5rem;
+    background-color: $white;
+    border-radius: 1.2rem;
+    display: flex;
+    column-gap: 0.2rem;
+
+    button {
+      @include sizes(5rem, 5rem);
+      @extend %flexCenter;
+      border-radius: 0.8rem;
+
+      svg {
+        @include sizes(2.4rem, 2.4rem);
+      }
+
+      &.active {
+        background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
+
+        svg path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}
