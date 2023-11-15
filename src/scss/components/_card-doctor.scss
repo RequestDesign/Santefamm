@@ -1,0 +1,58 @@
+.doctor-card {
+  border-radius: 4rem;
+  background: $lightWhite;
+  @include sizes(84rem, 39.5rem);
+  @extend %flexStartBetween;
+  column-gap: 3.2rem;
+  padding: 1.6rem 5rem 1.6rem 1.6rem;
+  position: relative;
+
+  &:hover {
+  }
+
+  &__img {
+    @include sizes(36.8rem, 36.3rem);
+    flex-shrink: 0;
+
+    img {
+      border-radius: 4rem;
+    }
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    row-gap: 3.2rem;
+    margin-top: 1.6rem;
+  }
+
+  &__title {
+    @extend %philoCaps32;
+    color: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+  }
+
+  &__item {
+    @extend %flexColumn;
+    row-gap: 1rem;
+  }
+
+  &__tit {
+    @extend %semibold18;
+    line-height: 2.16rem;
+  }
+
+  &__txt {
+    @extend %regular18;
+    line-height: 2.16rem;
+  }
+
+  &__department {
+    padding: 0.8rem 2rem;
+    border-radius: 20rem;
+    background: #f3f0ff;
+    backdrop-filter: blur(0.35rem);
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    @extend %regularCaps16;
+  }
+}

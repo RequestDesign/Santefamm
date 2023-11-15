@@ -23,8 +23,14 @@
     line-height: 2.5rem;
   }
 
+  &__img {
+  }
+
   &__img img {
     @include sizes(48.3rem, 28.7rem);
+    @include sizes(48.3rem, 28.7rem);
+    -webkit-mask-box-image: url('./assets/images/top.svg') 0 repeat;
+    mask-border: url('./assets/images/top.svg') 0 repeat;
   }
 
   &__link {

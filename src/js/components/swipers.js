@@ -30,6 +30,30 @@ function initReviewsSliders() {
   }
 }
 
+function initDoctorsSliders() {
+  if (document.querySelector('.doctors__swiper')) {
+    const slider = document.querySelector('.doctors__swiper');
+    const fraction = document.querySelector('.doctors-panel__fractions');
+    const btnPrev = document.querySelector('.doctors-panel__btn-prev');
+    const btnNext = document.querySelector('.doctors-panel__btn-next');
+
+    new Swiper(slider, {
+      modules: [Pagination, Navigation],
+      slidesPerView: 2,
+      allowTouchMove: true,
+      spaceBetween: 40,
+      pagination: {
+        el: fraction,
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: btnNext,
+        prevEl: btnPrev,
+      },
+    });
+  }
+}
+
 function initNewsSliders() {
   if (document.querySelector('.news__swiper')) {
     const slider = document.querySelector('.news__swiper');
@@ -57,6 +81,7 @@ function initNewsSliders() {
 function initSliders() {
   initReviewsSliders();
   initNewsSliders();
+  initDoctorsSliders();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);
