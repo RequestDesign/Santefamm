@@ -1,0 +1,10 @@
+.logo {
+  &-santefam {
+    @include sizes(7rem, 9.3rem);
+    margin: 0 2.8rem;
+  }
+
+  &-request {
+    @include sizes(14.4rem, 3.2rem);
+  }
+}

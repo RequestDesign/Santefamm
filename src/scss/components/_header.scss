@@ -47,11 +47,6 @@
     }
   }
 
-  &__logo {
-    @include sizes(7rem, 9.3rem);
-    margin: 0 2.8rem;
-  }
-
   &__btns {
     @extend %flexCenter;
     column-gap: 2.8rem;

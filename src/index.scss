@@ -12,6 +12,12 @@
 // Components
 @import './scss/components/btns';
 @import './scss/components/header';
+@import './scss/components/footer';
+@import './scss/components/logo';
 
 // Fonts
 @import './scss/fonts';
+
+main {
+  height: 800px;
+}
