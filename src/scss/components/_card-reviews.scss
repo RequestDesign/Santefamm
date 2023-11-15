@@ -1,0 +1,65 @@
+.card-review {
+  position: relative;
+  width: 54.7rem;
+  margin-top: 1.4rem;
+
+  &__desc {
+    background: url('./assets/images/bg/review-bg.svg');
+    background-size: contain;
+    padding: 4rem 3.2rem 3.2rem;
+    @include sizes(54.7rem, 37.2rem);
+  }
+
+  &__title {
+    @extend %semibold18;
+    max-width: 30.2rem;
+    margin-bottom: 2rem;
+    line-height: 2.16rem;
+  }
+
+  &__txt {
+    @extend %regular18;
+    color: $grey;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+  }
+
+  &__info {
+    @extend %flexCenterBetween;
+  }
+
+  &__name {
+    @extend %semibold18;
+    margin-bottom: 0.4rem;
+  }
+
+  &__date {
+    @extend %regular18;
+    color: $grey;
+  }
+
+  &__site {
+    @extend %flexCenter;
+    @include sizes(9.4rem, 9.4rem);
+    background: #f3f2f7;
+    backdrop-filter: blur(0.35rem);
+    border-radius: 50%;
+
+    img {
+      @include sizes(8.1rem, 6.9rem);
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: -1.4rem;
+    right: 0;
+    width: 17.6rem;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+  }
+}

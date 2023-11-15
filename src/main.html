@@ -10,6 +10,37 @@
     <include src="./components/header.html"></include>
 
     <main>
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__container">
+            <div class="reviews__titles">
+              <div class="reviews__title title">отзывы</div>
+              <div class="reviews__panel swiper-panel">
+                <button type="button" class="swiper-panel__btn reviews-panel__btn-prev">
+                  <img src="./assets/images/swiper-prev.svg" alt="btn-prev" />
+                </button>
+                <div class="reviews-panel__fractions"></div>
+                <button type="button" class="swiper-panel__btn reviews-panel__btn-next">
+                  <img src="./assets/images/swiper-next.svg" alt="btn-next" />
+                </button>
+              </div>
+            </div>
+
+            <div class="swiper reviews__swiper">
+              <div class="swiper-wrapper">
+                <include src="./components/review-card.html"></include>
+                <include src="./components/review-card.html"></include>
+                <include src="./components/review-card.html"></include>
+                <include src="./components/review-card.html"></include>
+                <include src="./components/review-card.html"></include>
+                <include src="./components/review-card.html"></include>
+                <include src="./components/review-card.html"></include>
+                <include src="./components/review-card.html"></include>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <include src="./components/contacts.html"></include>
     </main>
 

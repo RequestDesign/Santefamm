@@ -1,6 +1,7 @@
 // Libs
 @import './scss/libs/normalize';
 @import './scss/libs/set';
+@import './scss/libs/swiper';
 
 // Utils
 @import './scss/utils/colors';
@@ -15,6 +16,9 @@
 @import './scss/components/footer';
 @import './scss/components/logo';
 @import './scss/components/contacts';
+@import './scss/components/reviews';
+@import './scss/components/card-reviews';
+@import './scss/components/swiper-panel';
 
 @import './scss/style';
 
