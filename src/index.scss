@@ -19,12 +19,10 @@
 @import './scss/components/reviews';
 @import './scss/components/card-reviews';
 @import './scss/components/swiper-panel';
+@import './scss/components/news';
+@import './scss/components/news-card';
 
 @import './scss/style';
 
 // Fonts
 @import './scss/fonts';
-
-main {
-  height: 800px;
-}

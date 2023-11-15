@@ -1,0 +1,36 @@
+.news-card {
+  @include sizes(54.7rem, 53.4rem);
+  background: url('./assets/images/bg/news-card.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 4rem 3.2rem;
+  position: relative;
+
+  &__title {
+    @extend %philoCaps28;
+    margin-bottom: 2rem;
+    line-height: 95%;
+  }
+
+  &__desc {
+    @extend %regular18;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: $grey;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+  }
+
+  &__img img {
+    @include sizes(48.3rem, 28.7rem);
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 4rem;
+    right: 3.2rem;
+    width: 17.6rem;
+  }
+}

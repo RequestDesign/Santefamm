@@ -30,8 +30,33 @@ function initReviewsSliders() {
   }
 }
 
+function initNewsSliders() {
+  if (document.querySelector('.news__swiper')) {
+    const slider = document.querySelector('.news__swiper');
+    const fraction = document.querySelector('.news-panel__fractions');
+    const btnPrev = document.querySelector('.news-panel__btn-prev');
+    const btnNext = document.querySelector('.news-panel__btn-next');
+
+    new Swiper(slider, {
+      modules: [Pagination, Navigation],
+      slidesPerView: 3,
+      allowTouchMove: true,
+      spaceBetween: 40,
+      pagination: {
+        el: fraction,
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: btnNext,
+        prevEl: btnPrev,
+      },
+    });
+  }
+}
+
 function initSliders() {
   initReviewsSliders();
+  initNewsSliders();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);

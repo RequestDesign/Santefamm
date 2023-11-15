@@ -6,6 +6,7 @@
   &__desc {
     background: url('./assets/images/bg/review-bg.svg');
     background-size: contain;
+    background-repeat: no-repeat;
     padding: 4rem 3.2rem 3.2rem;
     @include sizes(54.7rem, 37.2rem);
   }
