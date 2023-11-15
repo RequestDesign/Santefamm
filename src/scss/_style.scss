@@ -1,1 +1,4 @@
-@import './fonts';
+.title {
+  @extend %philoCaps70;
+  margin-bottom: 4.8rem;
+}
