@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import remToPx from '../utils/rem';
 
 // import Swiper and modules styles
 import 'swiper/css';
@@ -17,7 +18,7 @@ function initReviewsSliders() {
       modules: [Pagination, Navigation],
       slidesPerView: 3,
       allowTouchMove: true,
-      spaceBetween: 40,
+      spaceBetween: remToPx(4),
       pagination: {
         el: fraction,
         type: 'fraction',
@@ -41,7 +42,7 @@ function initDoctorsSliders() {
       modules: [Pagination, Navigation],
       slidesPerView: 2,
       allowTouchMove: true,
-      spaceBetween: 40,
+      spaceBetween: remToPx(4),
       pagination: {
         el: fraction,
         type: 'fraction',
@@ -65,7 +66,7 @@ function initNewsSliders() {
       modules: [Pagination, Navigation],
       slidesPerView: 3,
       allowTouchMove: true,
-      spaceBetween: 40,
+      spaceBetween: remToPx(4),
       pagination: {
         el: fraction,
         type: 'fraction',
