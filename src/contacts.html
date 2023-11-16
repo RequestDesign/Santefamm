@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+  </head>
+
+  <body>
+    <include src="./components/header.html"></include>
+
+    <main>
+      <section class="contacts-page">
+        <div class="container">
+          <div class="contacts-page__title title">Контакты</div>
+          <div class="contacts-page__container">
+            <div class="contacts-page__map">
+              <div class="contacts-page__map-map" id="map">
+                <div class="contacts-page__map-adres">
+                  <div class="contacts-page__map-block">
+                    <div class="contacts-page__block-title">Адрес:</div>
+                    <div class="contacts-page__block-desc">Москва, Бутырская улица, 77, этаж 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts-page__info">
+              <div class="contacts-page__time">
+                <div class="contacts-page__time-title">время работы</div>
+                <div class="contacts-page__time-items">
+                  <div class="contacts-page__time-item">
+                    <div class="contacts-page__time-tit">Понедельник-суббота</div>
+                    <div class="contacts-page__time-txt">09:00 - 21:00</div>
+                  </div>
+                  <div class="contacts-page__time-item">
+                    <div class="contacts-page__time-tit">Воскресенье</div>
+                    <div class="contacts-page__time-txt">Выходной</div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts-page__connect">
+                <div class="contacts-page__connect-title">Связаться с нами</div>
+                <div class="contacts-page__connect-items">
+                  <div class="contacts-page__connect-item">
+                    <div class="contacts-page__connect-circle">
+                      <img src="./assets/images/phone.svg" alt="" />
+                    </div>
+                    <div class="contacts-page__connect-desc">
+                      <div class="contacts-page__connect-tit">Телефон</div>
+                      <a href="tel:+79388792157" class="contacts-page__connect-txt">+7 (938) 879-21-57</a>
+                    </div>
+                  </div>
+                  <div class="contacts-page__connect-item">
+                    <div class="contacts-page__connect-circle">
+                      <img src="./assets/images/email.svg" alt="" />
+                    </div>
+                    <div class="contacts-page__connect-desc">
+                      <div class="contacts-page__connect-tit">E-mail</div>
+                      <a href="mailto:e-mail@yandex.ru" class="contacts-page__connect-txt">e-mail@yandex.ru</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="./components/footer.html"></include>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU"></script>
+  </body>
+</html>

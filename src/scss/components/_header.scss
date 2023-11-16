@@ -1,10 +1,5 @@
 .header {
-  background-color: #ffffff4d;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
+  background: #e9e5fd;
 
   &__container {
     @extend %flexCenterBetween;
@@ -40,10 +35,10 @@
   &__item {
     a {
       @extend %regularCaps18;
-      transition: $transitionColor;
+      transition: $transitionColor, $transitionBg;
 
       &:hover {
-        color: $lightPurple;
+        @extend %gradientColorTxt;
       }
     }
   }

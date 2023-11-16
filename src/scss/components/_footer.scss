@@ -23,10 +23,10 @@
   &__top-item {
     a {
       @extend %regular18;
-      transition: $transitionColor;
+      transition: $transitionColor, $transitionBg;
 
       &:hover {
-        color: $lightPurple;
+        @extend %gradientColorTxt;
       }
     }
   }

@@ -1,3 +1,6 @@
+// Fonts
+@import './scss/fonts';
+
 // Libs
 @import './scss/libs/normalize';
 @import './scss/libs/set';
@@ -23,8 +26,9 @@
 @import './scss/components/news-card';
 @import './scss/components/doctors';
 @import './scss/components/card-doctor';
+@import './scss/components/map';
 
 @import './scss/style';
 
-// Fonts
-@import './scss/fonts';
+// Pages
+@import './scss/pages/contacts';
