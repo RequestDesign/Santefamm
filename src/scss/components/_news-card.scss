@@ -28,10 +28,6 @@
 
   &__img img {
     @include sizes(48.3rem, 28.7rem);
-    @include sizes(48.3rem, 28.7rem);
-    -webkit-mask-box-image: url('./assets/images/top.svg') 0;
-    mask-border: url('./assets/images/top.svg') 0;
-    mask: url('./assets/images/top.svg') 0;
   }
 
   &__link {

@@ -76,45 +76,43 @@
 
 /*! ./a11y.mjs */
 
-/*! ./assets/fonts/Gilroy-Medium.eot */
+/*! ./assets/fonts/Gilroy/Gilroy-Medium.eot */
 
-/*! ./assets/fonts/Gilroy-Medium.ttf */
+/*! ./assets/fonts/Gilroy/Gilroy-Medium.ttf */
 
-/*! ./assets/fonts/Gilroy-Medium.woff */
+/*! ./assets/fonts/Gilroy/Gilroy-Medium.woff */
 
-/*! ./assets/fonts/Gilroy-Medium.woff2 */
+/*! ./assets/fonts/Gilroy/Gilroy-Medium.woff2 */
 
-/*! ./assets/fonts/Gilroy-Regular.eot */
+/*! ./assets/fonts/Gilroy/Gilroy-Regular.eot */
 
-/*! ./assets/fonts/Gilroy-Regular.ttf */
+/*! ./assets/fonts/Gilroy/Gilroy-Regular.ttf */
 
-/*! ./assets/fonts/Gilroy-Regular.woff */
+/*! ./assets/fonts/Gilroy/Gilroy-Regular.woff */
 
-/*! ./assets/fonts/Gilroy-Regular.woff2 */
+/*! ./assets/fonts/Gilroy/Gilroy-Regular.woff2 */
 
-/*! ./assets/fonts/Gilroy-Semibold.eot */
+/*! ./assets/fonts/Gilroy/Gilroy-Semibold.eot */
 
-/*! ./assets/fonts/Gilroy-Semibold.ttf */
+/*! ./assets/fonts/Gilroy/Gilroy-Semibold.ttf */
 
-/*! ./assets/fonts/Gilroy-Semibold.woff */
+/*! ./assets/fonts/Gilroy/Gilroy-Semibold.woff */
 
-/*! ./assets/fonts/Gilroy-Semibold.woff2 */
+/*! ./assets/fonts/Gilroy/Gilroy-Semibold.woff2 */
 
-/*! ./assets/fonts/Philosopher-Regular.eot */
+/*! ./assets/fonts/Philosopher/Philosopher-Regular.eot */
 
-/*! ./assets/fonts/Philosopher-Regular.ttf */
+/*! ./assets/fonts/Philosopher/Philosopher-Regular.ttf */
 
-/*! ./assets/fonts/Philosopher-Regular.woff */
+/*! ./assets/fonts/Philosopher/Philosopher-Regular.woff */
 
-/*! ./assets/fonts/Philosopher-Regular.woff2 */
+/*! ./assets/fonts/Philosopher/Philosopher-Regular.woff2 */
 
 /*! ./assets/images/bg/news-card.svg */
 
 /*! ./assets/images/bg/review-bg.svg */
 
-/*! ./assets/images/substract-map.svg */
-
-/*! ./assets/images/top.svg */
+/*! ./assets/images/bg/substract-map.svg */
 
 /*! ./autoplay.mjs */
 
@@ -196,10 +194,6 @@
   !*** ./src/js/pages/contacts.js ***!
   \**********************************/
 
-/*!***********************************!*\
-  !*** ./src/assets/images/top.svg ***!
-  \***********************************/
-
 /*!**************************************!*\
   !*** ./src/js/components/swipers.js ***!
   \**************************************/
@@ -213,36 +207,12 @@
   \****************************************/
 
 /*!********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Medium.eot ***!
-  \********************************************/
-
-/*!********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Medium.ttf ***!
-  \********************************************/
-
-/*!********************************************!*\
   !*** ./src/assets/images/bg/news-card.svg ***!
   \********************************************/
 
 /*!********************************************!*\
   !*** ./src/assets/images/bg/review-bg.svg ***!
   \********************************************/
-
-/*!*********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Medium.woff ***!
-  \*********************************************/
-
-/*!*********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Regular.eot ***!
-  \*********************************************/
-
-/*!*********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Regular.ttf ***!
-  \*********************************************/
-
-/*!*********************************************!*\
-  !*** ./src/assets/images/substract-map.svg ***!
-  \*********************************************/
 
 /*!**********************************************!*\
   !*** ./node_modules/swiper/modules/a11y.mjs ***!
@@ -260,32 +230,8 @@
   !*** ./node_modules/swiper/shared/utils.mjs ***!
   \**********************************************/
 
-/*!**********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Medium.woff2 ***!
-  \**********************************************/
-
-/*!**********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Regular.woff ***!
-  \**********************************************/
-
-/*!**********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Semibold.eot ***!
-  \**********************************************/
-
-/*!**********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Semibold.ttf ***!
-  \**********************************************/
-
 /*!***********************************************!*\
   !*** ./node_modules/swiper/modules/index.mjs ***!
-  \***********************************************/
-
-/*!***********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Regular.woff2 ***!
-  \***********************************************/
-
-/*!***********************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Semibold.woff ***!
   \***********************************************/
 
 /*!************************************************!*\
@@ -293,7 +239,7 @@
   \************************************************/
 
 /*!************************************************!*\
-  !*** ./src/assets/fonts/Gilroy-Semibold.woff2 ***!
+  !*** ./src/assets/images/bg/substract-map.svg ***!
   \************************************************/
 
 /*!*************************************************!*\
@@ -316,14 +262,6 @@
   !*** ./node_modules/swiper/modules/parallax.mjs ***!
   \**************************************************/
 
-/*!**************************************************!*\
-  !*** ./src/assets/fonts/Philosopher-Regular.eot ***!
-  \**************************************************/
-
-/*!**************************************************!*\
-  !*** ./src/assets/fonts/Philosopher-Regular.ttf ***!
-  \**************************************************/
-
 /*!***************************************************!*\
   !*** ./node_modules/swiper/modules/free-mode.mjs ***!
   \***************************************************/
@@ -333,7 +271,11 @@
   \***************************************************/
 
 /*!***************************************************!*\
-  !*** ./src/assets/fonts/Philosopher-Regular.woff ***!
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Medium.eot ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Medium.ttf ***!
   \***************************************************/
 
 /*!****************************************************!*\
@@ -369,7 +311,15 @@
   \****************************************************/
 
 /*!****************************************************!*\
-  !*** ./src/assets/fonts/Philosopher-Regular.woff2 ***!
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Medium.woff ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Regular.eot ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Regular.ttf ***!
   \****************************************************/
 
 /*!*****************************************************!*\
@@ -388,6 +338,22 @@
   !*** ./node_modules/swiper/modules/effect-flip.mjs ***!
   \*****************************************************/
 
+/*!*****************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Medium.woff2 ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Regular.woff ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Semibold.eot ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Semibold.ttf ***!
+  \*****************************************************/
+
 /*!******************************************************!*\
   !*** ./node_modules/swiper/modules/effect-cards.mjs ***!
   \******************************************************/
@@ -404,8 +370,20 @@
   !*** ./node_modules/swiper/shared/effect-target.mjs ***!
   \******************************************************/
 
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Regular.woff2 ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Semibold.woff ***!
+  \******************************************************/
+
 /*!*******************************************************!*\
   !*** ./node_modules/swiper/shared/ssr-window.esm.mjs ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/assets/fonts/Gilroy/Gilroy-Semibold.woff2 ***!
   \*******************************************************/
 
 /*!********************************************************!*\
@@ -432,9 +410,25 @@
   !*** ./node_modules/swiper/shared/classes-to-selector.mjs ***!
   \************************************************************/
 
+/*!**************************************************************!*\
+  !*** ./src/assets/fonts/Philosopher/Philosopher-Regular.eot ***!
+  \**************************************************************/
+
+/*!**************************************************************!*\
+  !*** ./src/assets/fonts/Philosopher/Philosopher-Regular.ttf ***!
+  \**************************************************************/
+
 /*!***************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
   \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/assets/fonts/Philosopher/Philosopher-Regular.woff ***!
+  \***************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./src/assets/fonts/Philosopher/Philosopher-Regular.woff2 ***!
+  \****************************************************************/
 
 /*!********************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
