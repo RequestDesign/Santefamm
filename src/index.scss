@@ -4,7 +4,6 @@
 // Libs
 @import './scss/libs/normalize';
 @import './scss/libs/set';
-@import './scss/libs/swiper';
 
 // Utils
 @import './scss/utils/colors';
@@ -19,17 +18,17 @@
 @import './scss/components/footer';
 @import './scss/components/logo';
 @import './scss/components/contacts';
-@import './scss/components/reviews';
-@import './scss/components/card-reviews';
-@import './scss/components/swiper-panel';
-@import './scss/components/news';
-@import './scss/components/news-card';
-@import './scss/components/doctors';
-@import './scss/components/card-doctor';
 @import './scss/components/map';
+@import './scss/components/swiper-panel';
+@import './scss/components/doctors/doctors-card';
+@import './scss/components/doctors/doctors';
+@import './scss/components/news/news-card';
+@import './scss/components/news/news';
+@import './scss/components/reviews/reviews-card';
+@import './scss/components/reviews/reviews';
 
 @import './scss/style';
 
 // Pages
-@import './scss/pages/main';
-@import './scss/pages/contacts';
+@import './scss/pages/main/index';
+@import './scss/pages/contacts/index';

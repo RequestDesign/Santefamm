@@ -1,0 +1,8 @@
+.main {
+  &__bg-neit {
+    background: url('./assets/images/bg/bg.png') no-repeat center;
+    background-size: cover;
+  }
+}
+
+@import './akcii';
