@@ -24,16 +24,27 @@
   }
 
   &__img {
-  }
+    border-radius: 2rem;
 
-  &__img img {
-    @include sizes(48.3rem, 28.7rem);
+    img {
+      @include sizes(48.3rem, 28.7rem);
+      border-radius: 2rem;
+    }
   }
 
   &__link {
+    background: url('./assets/images/bg/substract-news.svg') no-repeat center;
+    @include sizes(21.5rem, 10rem);
+    background-size: contain;
     position: absolute;
-    bottom: 4rem;
-    right: 3.2rem;
-    width: 17.6rem;
+    bottom: 3.8rem;
+    right: 3rem;
+
+    .btn-primary {
+      width: 17.6rem;
+      top: 3.8rem;
+      position: absolute;
+      right: 0.2rem;
+    }
   }
 }

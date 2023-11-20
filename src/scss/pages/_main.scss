@@ -1,0 +1,53 @@
+.main {
+  &__bg-neit {
+    background: url('./assets/images/bg.png') no-repeat center;
+    background-size: cover;
+  }
+}
+
+.akcii {
+  margin-bottom: 20rem;
+
+  &__content {
+    position: relative;
+  }
+
+  &__man,
+  &__women {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__items {
+    @extend %flexColumn;
+    row-gap: 0.5rem;
+  }
+
+  &__item {
+    @extend %flexColumn;
+    @include sizes(100%, 17.1rem);
+    border-radius: 4rem;
+    background: $white;
+    padding: 4.5rem 0;
+    user-select: none;
+  }
+
+  &__item-content {
+    position: relative;
+    z-index: 2;
+    @extend %flexColumn;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.6rem;
+    user-select: text;
+  }
+
+  &__item-tit {
+    @extend %philoCaps32;
+  }
+
+  &__item-txt {
+    @extend %regular20;
+    @extend %gradientColorTxt;
+  }
+}

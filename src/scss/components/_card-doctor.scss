@@ -8,11 +8,15 @@
   position: relative;
 
   &:hover {
+    .doctor-card__img {
+      transform: scale(1.09);
+    }
   }
 
   &__img {
     @include sizes(36.8rem, 36.3rem);
     flex-shrink: 0;
+    transition: $transitionTransform;
 
     img {
       border-radius: 4rem;
@@ -27,7 +31,7 @@
 
   &__title {
     @extend %philoCaps32;
-    color: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+    @extend %gradientColorTxt;
   }
 
   &__item {
@@ -37,12 +41,12 @@
 
   &__tit {
     @extend %semibold18;
-    line-height: 2.16rem;
+    // line-height: 2.16rem;
   }
 
   &__txt {
     @extend %regular18;
-    line-height: 2.16rem;
+    // line-height: 2.16rem;
   }
 
   &__department {
@@ -53,6 +57,10 @@
     position: absolute;
     bottom: 4rem;
     left: 4rem;
-    @extend %regularCaps16;
+
+    span {
+      @extend %regularCaps16;
+      @extend %gradientColorTxt;
+    }
   }
 }

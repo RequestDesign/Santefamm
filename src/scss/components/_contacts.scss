@@ -55,7 +55,7 @@
     @extend %flexCenter;
     border-radius: 1.8rem;
     background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
-    padding: 1rem 3.8rem;
+    padding: 1.8rem 3.8rem;
     width: fit-content;
     position: absolute;
     top: -0.2rem;
@@ -84,16 +84,18 @@
     justify-content: center;
 
     &:not(:last-child) {
-      margin-bottom: 3.2rem;
+      margin-bottom: 2.8rem;
     }
   }
 
   &__time-day {
     @extend %semibold18;
+    line-height: 2.16rem;
   }
 
   &__time-desc {
     @extend %regular18;
     color: $grey;
+    line-height: 2.16rem;
   }
 }
