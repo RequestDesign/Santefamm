@@ -1,0 +1,12 @@
+.news {
+  margin-bottom: 20rem;
+
+  &__titles {
+    @extend %flexCenterBetween;
+    margin-bottom: 4.8rem;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+}

@@ -58,6 +58,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@babel/core": "^7.23.3"
+    "@babel/core": "^7.23.3",
+    "swiper": "^11.0.4",
+    "ymaps": "^0.2.1"
   }
 }

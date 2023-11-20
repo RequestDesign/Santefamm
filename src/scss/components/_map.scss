@@ -1,0 +1,26 @@
+#map {
+  .ymaps-2-1-79-map,
+  .ymaps-2-1-79-inner-panes {
+    border-radius: 3rem;
+  }
+
+  .ymaps-2-1-79-controls__control {
+    inset: 27rem auto auto 1rem !important;
+  }
+}
+
+[class*='gototech'],
+[class*='copyrights-pane'],
+[class*='controls__control'],
+[class*='controls__toolbar'],
+[class*='controls__bottom'] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 48em) {
+  #map:hover [class*='copyrights-pane'],
+  #map:hover [class*='controls__control'] {
+    opacity: 1;
+  }
+}
