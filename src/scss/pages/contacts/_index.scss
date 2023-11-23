@@ -121,3 +121,129 @@
     @extend %regular18;
   }
 }
+
+@media screen and (max-width: 48em) {
+  .contacts-page {
+    margin: 20.6rem 0 18rem;
+
+    &__container {
+      flex-direction: column;
+      row-gap: 8rem;
+    }
+
+    &__info {
+      width: 54.7rem;
+      margin-top: 4rem;
+    }
+
+    &__time {
+      margin-bottom: 4rem;
+    }
+
+    &__time-title {
+      @extend %philoCaps28;
+      margin-bottom: 3.2rem;
+    }
+
+    &__time-items {
+      display: flex;
+      column-gap: 4.8rem;
+    }
+
+    &__time-tit {
+      @extend %semibold18;
+      margin-bottom: 1.2rem;
+    }
+
+    &__time-txt {
+      @extend %regular18;
+      color: $grey;
+    }
+
+    &__connect {
+      border-radius: 1.8rem;
+      border: 0.2rem solid $white;
+      background: $white;
+      padding: 4rem;
+      backdrop-filter: blur(1.5rem);
+    }
+
+    &__connect-title {
+      @extend %philoCaps28;
+      margin-bottom: 3.2rem;
+    }
+
+    &__connect-item {
+      border-radius: 1.8rem;
+      background: $lightPurple;
+      padding: 2rem;
+      @extend %flexCenterStart;
+      column-gap: 1.6rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__connect-circle {
+      @extend %flexCenter;
+      padding: 2.3rem;
+      border-radius: 50%;
+      background: $white;
+
+      img {
+        @include sizes(5.4rem, 5.4rem);
+      }
+    }
+
+    &__connect-tit {
+      @extend %semibold20;
+      @extend %gradientColorTxt;
+      margin-bottom: 0.8rem;
+    }
+
+    &__connect-txt {
+      @extend %regular20;
+      color: $grey;
+    }
+
+    &__map {
+      position: relative;
+      @include sizes(113.3rem, 65.3rem);
+    }
+
+    &__map-map {
+      @extend %fullSize;
+    }
+
+    &__map-adres {
+      background: url('./assets/images/bg/substract-map.svg') no-repeat center;
+      position: absolute;
+      background-size: contain;
+      z-index: 2;
+      @include sizes(43.3rem, 18.9rem);
+      top: -0.5rem;
+      left: -0.1rem;
+    }
+
+    &__map-block {
+      @include sizes(38.4rem, 13.2rem);
+      border-radius: 1.8rem;
+      border: 0.2rem solid $white;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(1.5rem);
+      padding: 3.8rem;
+      margin: 0.5rem 0 0 0.1rem;
+    }
+
+    &__block-title {
+      @extend %semibold18;
+      @extend %gradientColorTxt;
+      margin-bottom: 0.8rem;
+    }
+
+    &__block-desc {
+      @extend %regular18;
+    }
+  }
+}
