@@ -24,3 +24,10 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 48em) {
+  #map {
+    height: 108rem;
+    width: 100%;
+  }
+}

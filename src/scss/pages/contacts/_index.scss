@@ -1,6 +1,12 @@
 .contacts-page {
   margin: 5.4rem 0 20rem;
 
+  &-bg {
+    background: url('./assets/images/bg/contact-mob-bg.png') no-repeat center;
+    background-size: cover;
+    display: none;
+  }
+
   &__container {
     @extend %flexStartBetween;
     column-gap: 4rem;
@@ -124,7 +130,11 @@
 
 @media screen and (max-width: 48em) {
   .contacts-page {
-    margin: 20.6rem 0 18rem;
+    margin: 7rem 0 18rem;
+
+    &-bg {
+      display: block;
+    }
 
     &__container {
       flex-direction: column;
@@ -132,67 +142,48 @@
     }
 
     &__info {
-      width: 54.7rem;
-      margin-top: 4rem;
+      width: 100%;
+      margin-top: 0;
     }
 
     &__time {
-      margin-bottom: 4rem;
+      margin-bottom: 8rem;
     }
 
     &__time-title {
-      @extend %philoCaps28;
-      margin-bottom: 3.2rem;
+      margin-bottom: 4rem;
     }
 
     &__time-items {
-      display: flex;
-      column-gap: 4.8rem;
+      column-gap: 8rem;
     }
 
     &__time-tit {
-      @extend %semibold18;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.6rem;
     }
 
     &__time-txt {
-      @extend %regular18;
-      color: $grey;
+      font-size: 3.6rem;
     }
 
     &__connect {
-      border-radius: 1.8rem;
-      border: 0.2rem solid $white;
-      background: $white;
+      width: 100%;
+      border-radius: 3.6rem;
       padding: 4rem;
       backdrop-filter: blur(1.5rem);
     }
 
     &__connect-title {
-      @extend %philoCaps28;
-      margin-bottom: 3.2rem;
+      margin-bottom: 2.2rem;
     }
 
     &__connect-item {
-      border-radius: 1.8rem;
-      background: $lightPurple;
-      padding: 2rem;
-      @extend %flexCenterStart;
-      column-gap: 1.6rem;
+      border-radius: 3.6rem;
+      padding: 4rem;
+      column-gap: 3.2rem;
 
       &:not(:last-child) {
-        margin-bottom: 2rem;
-      }
-    }
-
-    &__connect-circle {
-      @extend %flexCenter;
-      padding: 2.3rem;
-      border-radius: 50%;
-      background: $white;
-
-      img {
-        @include sizes(5.4rem, 5.4rem);
+        margin-bottom: 1.6rem;
       }
     }
 
@@ -208,8 +199,7 @@
     }
 
     &__map {
-      position: relative;
-      @include sizes(113.3rem, 65.3rem);
+      @include sizes(100%, 100%);
     }
 
     &__map-map {
@@ -217,33 +207,21 @@
     }
 
     &__map-adres {
-      background: url('./assets/images/bg/substract-map.svg') no-repeat center;
-      position: absolute;
-      background-size: contain;
-      z-index: 2;
-      @include sizes(43.3rem, 18.9rem);
-      top: -0.5rem;
-      left: -0.1rem;
+      background: none;
+      position: relative;
+      @include sizes(100%, 16.4rem);
+      top: 0;
+      left: 0;
+      margin-bottom: 4.8rem;
     }
 
     &__map-block {
-      @include sizes(38.4rem, 13.2rem);
-      border-radius: 1.8rem;
-      border: 0.2rem solid $white;
-      background: rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(1.5rem);
-      padding: 3.8rem;
-      margin: 0.5rem 0 0 0.1rem;
-    }
-
-    &__block-title {
-      @extend %semibold18;
-      @extend %gradientColorTxt;
-      margin-bottom: 0.8rem;
-    }
-
-    &__block-desc {
-      @extend %regular18;
+      @include sizes(100%, 100%);
+      border-radius: 3.6rem;
+      backdrop-filter: blur(3rem);
+      padding: 4rem;
+      border-width: 0.4rem;
+      margin: 0;
     }
   }
 }

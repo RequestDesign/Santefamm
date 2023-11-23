@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты</title>
-  <script defer src="main59eff2d99b56a61eb57b.js"></script></head>
+  <script defer src="main55fe9cc50e0385c2e93c.js"></script></head>
 
   <body>
     <header class="header">
   <div class="container">
     <div class="header__container">
+      <button type="button" class="header__burger --mob">
+        <img src="assets/images/burger-icon.svg" alt="burger-menu" />
+      </button>
       <div class="header__phone">
         <div class="header__phone-icon">
           <img src="assets/images/phone.svg" alt="" />
@@ -83,25 +86,28 @@
           </button>
         </div>
       </div>
+      <a href="tel:+79388792157" class="header__tel --mob">
+        <img src="assets/images/phone.svg" alt="phone" />
+      </a>
     </div>
   </div>
 </header>
 
 
     <main>
+      <div class="bg contacts-page-bg"></div>
       <section class="contacts-page">
         <div class="container">
           <div class="contacts-page__title title">Контакты</div>
           <div class="contacts-page__container">
             <div class="contacts-page__map">
-              <div class="contacts-page__map-map" id="map">
-                <div class="contacts-page__map-adres">
-                  <div class="contacts-page__map-block">
-                    <div class="contacts-page__block-title">Адрес:</div>
-                    <div class="contacts-page__block-desc">Москва, Бутырская улица, 77, этаж 3</div>
-                  </div>
+              <div class="contacts-page__map-adres">
+                <div class="contacts-page__map-block">
+                  <div class="contacts-page__block-title">Адрес:</div>
+                  <div class="contacts-page__block-desc">Москва, Бутырская улица, 77, этаж 3</div>
                 </div>
               </div>
+              <div class="contacts-page__map-map" id="map"></div>
             </div>
             <div class="contacts-page__info">
               <div class="contacts-page__time">
@@ -192,9 +198,13 @@
             <a href="#"> Политика конфиденциальности </a>
             <a href="#"> Договор оферты </a>
           </div>
-          <div class="footer__bottom-logo logo-request">
-            <img src="assets/images/request-logo.svg" alt="Request Design" />
-          </div>
+          <a href="#" class="footer__bottom-logo logo-request">
+            <picture>
+              <source media="(max-width: 769px)" srcset="assets/images/request-logo-mob.svg" />
+              <source media="(min-width: 768px)" srcset="assets/images/request-logo.svg" />
+              <img src="assets/images/request-logo.svg" alt="" />
+            </picture>
+          </a>
         </div>
       </div>
     </div>
