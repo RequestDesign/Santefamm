@@ -19,3 +19,14 @@ if (document.querySelectorAll('[data-content-open]')) {
     });
   });
 }
+
+if (document.querySelector('.js-toggles')) {
+  const btns = document.querySelector('.js-toggles').querySelectorAll('button');
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', function () {
+      btns.forEach((bt) => bt.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+}
