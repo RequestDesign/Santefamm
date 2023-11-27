@@ -18,6 +18,7 @@ const entryPoints = {
   servicesFive: path.resolve(__dirname, 'src', 'index.js'),
   servicesSix: path.resolve(__dirname, 'src', 'index.js'),
   servicesSeven: path.resolve(__dirname, 'src', 'index.js'),
+  servicesEight: path.resolve(__dirname, 'src', 'index.js'),
   // Добавьте другие страницы здесь
 };
 
