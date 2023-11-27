@@ -1,6 +1,12 @@
 .contacts-page {
   margin: 5.4rem 0 20rem;
 
+  &-bg {
+    background: url('./assets/images/bg/contact-mob-bg.png') no-repeat center;
+    background-size: cover;
+    display: none;
+  }
+
   &__container {
     @extend %flexStartBetween;
     column-gap: 4rem;
@@ -119,5 +125,103 @@
 
   &__block-desc {
     @extend %regular18;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .contacts-page {
+    margin: 7rem 0 18rem;
+
+    &-bg {
+      display: block;
+    }
+
+    &__container {
+      flex-direction: column;
+      row-gap: 8rem;
+    }
+
+    &__info {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    &__time {
+      margin-bottom: 8rem;
+    }
+
+    &__time-title {
+      margin-bottom: 4rem;
+    }
+
+    &__time-items {
+      column-gap: 8rem;
+    }
+
+    &__time-tit {
+      margin-bottom: 1.6rem;
+    }
+
+    &__time-txt {
+      font-size: 3.6rem;
+    }
+
+    &__connect {
+      width: 100%;
+      border-radius: 3.6rem;
+      padding: 4rem;
+      backdrop-filter: blur(1.5rem);
+    }
+
+    &__connect-title {
+      margin-bottom: 2.2rem;
+    }
+
+    &__connect-item {
+      border-radius: 3.6rem;
+      padding: 4rem;
+      column-gap: 3.2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &__connect-tit {
+      @extend %semibold20;
+      @extend %gradientColorTxt;
+      margin-bottom: 0.8rem;
+    }
+
+    &__connect-txt {
+      @extend %regular20;
+      color: $grey;
+    }
+
+    &__map {
+      @include sizes(100%, 100%);
+    }
+
+    &__map-map {
+      @extend %fullSize;
+    }
+
+    &__map-adres {
+      background: none;
+      position: relative;
+      @include sizes(100%, 16.4rem);
+      top: 0;
+      left: 0;
+      margin-bottom: 4.8rem;
+    }
+
+    &__map-block {
+      @include sizes(100%, 100%);
+      border-radius: 3.6rem;
+      backdrop-filter: blur(3rem);
+      padding: 4rem;
+      border-width: 0.4rem;
+      margin: 0;
+    }
   }
 }

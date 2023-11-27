@@ -20,3 +20,25 @@ main {
   height: 100%;
   top: 0;
 }
+
+.--desc {
+  display: block;
+}
+
+.--mob {
+  display: none;
+}
+
+@media screen and (max-width: 48em) {
+  .title {
+    margin-bottom: 6.4rem;
+  }
+
+  .--desc {
+    display: none;
+  }
+
+  .--mob {
+    display: block;
+  }
+}
