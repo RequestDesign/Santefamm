@@ -1,0 +1,80 @@
+.services-plushs {
+  margin-top: 20rem;
+
+  &__btns {
+    @extend %flexCenterStart;
+    column-gap: 4rem;
+    margin-bottom: 4.8rem;
+  }
+
+  &__btn {
+    @extend %flexCenterStart;
+
+    &.active {
+      .services-plushs__btn-txt {
+        background: $white;
+        span {
+          @extend %semibold20;
+        }
+      }
+    }
+  }
+
+  &__btn-img {
+    @include sizes(13.7rem, 6rem);
+    border-radius: 20rem;
+  }
+
+  &__btn-txt {
+    @extend %flexCenter;
+    height: 6rem;
+    border-radius: 4rem;
+    border: 0.2rem solid $white;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1.5rem);
+    padding: 0 2rem;
+
+    span {
+      @extend %gradientColorTxt;
+      @extend %regular18;
+    }
+  }
+
+  &__items {
+    @extend %flexColumn;
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__item {
+    @extend %flexCenter;
+    column-gap: 4rem;
+    padding: 2.4rem 0;
+    border-bottom: 0.2rem solid $white;
+  }
+
+  &__item-number {
+    flex: 0 0 10.6rem;
+    @extend %regular20;
+    @extend %gradientColorTxt;
+  }
+
+  &__item-tit {
+    flex: 0 0 54.6rem;
+    @extend %semibold20;
+    color: $black;
+  }
+
+  &__item-txt {
+    flex: 0 0 78.1rem;
+    @extend %regular18;
+    color: $grey;
+  }
+
+  &__item-btn {
+    flex: 0 0 16.5rem;
+  }
+}

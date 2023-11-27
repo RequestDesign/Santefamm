@@ -12,3 +12,19 @@
     color: $white;
   }
 }
+
+.btn-secondary {
+  @extend %flexCenter;
+  width: fit-content;
+  cursor: pointer;
+  column-gap: 1.6rem;
+
+  span {
+    @extend %medium18Caps;
+    @extend %gradientColorTxt;
+  }
+
+  img {
+    @include sizes(4.4rem, 100%);
+  }
+}
