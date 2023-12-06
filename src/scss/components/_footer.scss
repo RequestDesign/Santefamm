@@ -1,141 +1,138 @@
 .footer {
-  &__container {
-    @extend %flexColumn;
-  }
-
-  &__top {
-    border-bottom: 0.1rem solid $grey;
-  }
-
-  &__top-container {
-    @extend %flexCenterBetween;
-    padding-bottom: 3.8rem;
-  }
-
-  &__top-menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 11.2rem;
-    row-gap: 2.8rem;
-  }
-
-  &__top-item {
-    a {
-      @extend %regular18;
-      transition: $transitionColor, $transitionBg;
-
-      &:hover {
-        @extend %gradientColorTxt;
-      }
-    }
-  }
-
-  &__top-desc {
-    &:first-child {
-      margin-bottom: 2.4rem;
+    &__container {
+        @extend %flexColumn;
     }
 
-    @extend %flexCenterStart;
-    column-gap: 1.2rem;
-  }
-
-  &__top-icon {
-    @include sizes(2.4rem, 2.4rem);
-  }
-
-  &__top-txt {
-    @extend %regular18;
-  }
-
-  &__bottom-container {
-    @extend %flexCenterBetween;
-    padding: 5.2rem 0 2.6rem;
-  }
-
-  &__bottom-links {
-    a:first-child {
-      margin-right: 4.4rem;
-    }
-    a {
-      @extend %regular18;
-      color: $grey;
-      display: inline-block;
-      transition: $transitionColor;
-
-      &:hover {
-        color: $lightPurple;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 48em) {
-  .footer {
     &__top {
-      border: 0;
+        border-bottom: 0.1rem solid $grey;
     }
 
     &__top-container {
-      padding-bottom: 5.6rem;
-      flex-direction: column;
-      row-gap: 5.6rem;
-      align-items: flex-start;
-      border-bottom: 0.2rem solid $grey;
+        @extend %flexCenterBetween;
+        padding-bottom: 3.8rem;
     }
 
     &__top-menu {
-      column-gap: 12rem;
-      row-gap: 3.2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 11.2rem;
+        row-gap: 2.8rem;
     }
 
     &__top-item {
-      a {
-        line-height: 120%;
-      }
-    }
-
-    &__top-descs {
-      display: flex;
-      flex-direction: column-reverse;
-      row-gap: 3.2rem;
+        a {
+            @extend %regular18;
+            @extend %gradientColorTxt;
+        }
     }
 
     &__top-desc {
-      &:first-child {
-        margin-bottom: 0;
-      }
+        &:first-child {
+            margin-bottom: 2.4rem;
+        }
 
-      column-gap: 2.4rem;
+        @extend %flexCenterStart;
+        column-gap: 1.2rem;
+
+        a {
+            @extend %gradientColorTxt;
+            display: block;
+        }
     }
 
     &__top-icon {
-      @include sizes(4.8rem, 4.8rem);
+        @include sizes(2.4rem, 2.4rem);
     }
 
     &__top-txt {
-      @extend %regular18;
+        @extend %regular18;
     }
 
     &__bottom-container {
-      flex-direction: column;
-      padding: 5.6rem 0 4rem;
-      row-gap: 5.6rem;
+        @extend %flexCenterBetween;
+        padding: 5.2rem 0 2.6rem;
     }
 
     &__bottom-links {
-      display: flex;
-      flex-direction: column;
-      row-gap: 5.6rem;
-      width: 100%;
-
-      a:first-child {
-        margin-right: 0;
-      }
-
-      a {
-        line-height: 120%;
-      }
+        a:first-child {
+            margin-right: 4.4rem;
+        }
+        a {
+            @extend %regular18;
+            color: $grey;
+            display: inline-block;
+            @extend %gradientColorTxt;
+        }
     }
-  }
+}
+
+@media screen and (max-width: 48em) {
+    .footer {
+        &__top {
+            border: 0;
+        }
+
+        &__top-container {
+            padding-bottom: 5.6rem;
+            flex-direction: column;
+            row-gap: 5.6rem;
+            align-items: flex-start;
+            border-bottom: 0.2rem solid $grey;
+        }
+
+        &__top-menu {
+            column-gap: 12rem;
+            row-gap: 3.2rem;
+        }
+
+        &__top-item {
+            a {
+                line-height: 120%;
+            }
+        }
+
+        &__top-descs {
+            display: flex;
+            flex-direction: column-reverse;
+            row-gap: 3.2rem;
+        }
+
+        &__top-desc {
+            &:first-child {
+                margin-bottom: 0;
+            }
+
+            column-gap: 2.4rem;
+        }
+
+        &__top-icon {
+            @include sizes(4.8rem, 4.8rem);
+        }
+
+        &__top-txt {
+            @extend %regular18;
+        }
+
+        &__bottom-container {
+            flex-direction: column;
+            padding: 5.6rem 0 4rem;
+            row-gap: 5.6rem;
+        }
+
+        &__bottom-links {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5.6rem;
+            width: 100%;
+
+            a:first-child {
+                margin-right: 0;
+            }
+
+            a {
+                line-height: 120%;
+            }
+        }
+    }
 }

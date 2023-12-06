@@ -1,101 +1,105 @@
 .contacts {
-  margin-top: 20rem;
-  margin-bottom: 20rem;
+    margin-top: 20rem;
+    margin-bottom: 20rem;
 
-  &__container {
-    @extend %flexCenterBetween;
-    column-gap: 11.5rem;
-  }
-
-  &__items {
-    @extend %flexCenter;
-  }
-
-  &__item {
-    display: flex;
-    column-gap: 1.6rem;
-
-    &:not(:last-child) {
-      margin-right: 6.8rem;
+    &__container {
+        @extend %flexCenterBetween;
+        column-gap: 11.5rem;
     }
-  }
 
-  &__circle {
-    background-color: $white;
-    border-radius: 50%;
-    padding: 2.3rem;
-
-    img {
-      @include sizes(5.4rem, 5.4rem);
+    &__items {
+        @extend %flexCenter;
     }
-  }
 
-  &__desc {
-    margin-top: 2.2rem;
-    max-width: 24.7rem;
-  }
+    &__item {
+        display: flex;
+        column-gap: 1.6rem;
 
-  &__desc-title {
-    @extend %semibold20;
-    margin-bottom: 0.8rem;
-  }
+        a {
+            @extend %gradientColorTxt;
+        }
 
-  &__desc-txt {
-    @extend %regular20;
-  }
-
-  &__time {
-    @extend %flexColumn;
-    align-items: center;
-    position: relative;
-    padding-top: 2.4rem;
-  }
-
-  &__time-title {
-    @extend %flexCenter;
-    border-radius: 1.8rem;
-    background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
-    padding: 1.8rem 3.8rem;
-    width: fit-content;
-    position: absolute;
-    top: -0.2rem;
-    z-index: 2;
-
-    span {
-      @extend %philoCaps28;
-      color: $white;
+        &:not(:last-child) {
+            margin-right: 6.8rem;
+        }
     }
-  }
 
-  &__time-block {
-    @include sizes(54.7rem, 23.7rem);
-    border-radius: 1.8rem;
-    background-color: $white;
-    backdrop-filter: blur(0.35rem);
-    display: flex;
-    justify-content: center;
-    padding-top: 6rem;
-  }
+    &__circle {
+        background-color: $white;
+        border-radius: 50%;
+        padding: 2.3rem;
 
-  &__time-item {
-    @extend %flexColumn;
-    row-gap: 1.2rem;
-    align-items: center;
-    justify-content: center;
-
-    &:not(:last-child) {
-      margin-bottom: 2.8rem;
+        img {
+            @include sizes(5.4rem, 5.4rem);
+        }
     }
-  }
 
-  &__time-day {
-    @extend %semibold18;
-    line-height: 2.16rem;
-  }
+    &__desc {
+        margin-top: 2.2rem;
+        max-width: 24.7rem;
+    }
 
-  &__time-desc {
-    @extend %regular18;
-    color: $grey;
-    line-height: 2.16rem;
-  }
+    &__desc-title {
+        @extend %semibold20;
+        margin-bottom: 0.8rem;
+    }
+
+    &__desc-txt {
+        @extend %regular20;
+    }
+
+    &__time {
+        @extend %flexColumn;
+        align-items: center;
+        position: relative;
+        padding-top: 2.4rem;
+    }
+
+    &__time-title {
+        @extend %flexCenter;
+        border-radius: 1.8rem;
+        background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+        padding: 1.8rem 3.8rem;
+        width: fit-content;
+        position: absolute;
+        top: -0.2rem;
+        z-index: 2;
+
+        span {
+            @extend %philoCaps28;
+            color: $white;
+        }
+    }
+
+    &__time-block {
+        @include sizes(54.7rem, 23.7rem);
+        border-radius: 1.8rem;
+        background-color: $white;
+        backdrop-filter: blur(0.35rem);
+        display: flex;
+        justify-content: center;
+        padding-top: 6rem;
+    }
+
+    &__time-item {
+        @extend %flexColumn;
+        row-gap: 1.2rem;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+            margin-bottom: 2.8rem;
+        }
+    }
+
+    &__time-day {
+        @extend %semibold18;
+        line-height: 2.16rem;
+    }
+
+    &__time-desc {
+        @extend %regular18;
+        color: $grey;
+        line-height: 2.16rem;
+    }
 }

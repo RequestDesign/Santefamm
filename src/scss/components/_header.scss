@@ -74,87 +74,82 @@
     }
 }
 
-//@media screen and (max-width: 48em) {
-//    .header {
-//        background: none;
-//
-//        &__container {
-//            padding: 0.8rem 0;
-//        }
-//
-//        &__phone {
-//            display: none;
-//        }
-//
-//        &__phone-icon {
-//            @include sizes(3.6rem, 3.6rem);
-//        }
-//
-//        &__phone-number {
-//            @extend %semibold20;
-//            color: $black;
-//            margin-bottom: 0.4rem;
-//        }
-//
-//        &__phone-adres {
-//            @extend %regular18;
-//            color: $grey;
-//            display: block;
-//        }
-//
-//        &__menu {
-//            .header__item {
-//                display: none;
-//            }
-//            .logo-santefam {
-//                display: block;
-//            }
-//        }
-//
-//        &__item {
-//            a {
-//                @extend %regularCaps18;
-//                transition: $transitionColor, $transitionBg;
-//
-//                &:hover {
-//                    @extend %gradientColorTxt;
-//                }
-//            }
-//        }
-//
-//        &__btns {
-//            display: none;
-//        }
-//
-//        &__gender {
-//            padding: 0.5rem;
-//            background-color: $white;
-//            border-radius: 1.2rem;
-//            display: flex;
-//            column-gap: 0.2rem;
-//
-//            button {
-//                @include sizes(5rem, 5rem);
-//                @extend %flexCenter;
-//                border-radius: 0.8rem;
-//
-//                svg {
-//                    @include sizes(2.4rem, 2.4rem);
-//                }
-//
-//                &.active {
-//                    background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
-//
-//                    svg path {
-//                        stroke: $white;
-//                    }
-//                }
-//            }
-//        }
-//
-//        &__tel,
-//        &__burger {
-//            @include sizes(4.8rem, 4.8rem);
-//        }
-//    }
-//}
+@media screen and (max-width: 48em) {
+    .header {
+        background: none;
+
+        &__container {
+            padding: 0.8rem 0;
+        }
+
+        &__phone {
+            display: none;
+        }
+
+        &__phone-icon {
+            @include sizes(3.6rem, 3.6rem);
+        }
+
+        &__phone-number {
+            @extend %semibold20;
+            color: $black;
+            margin-bottom: 0.4rem;
+        }
+
+        &__phone-adres {
+            @extend %regular18;
+            color: $grey;
+            display: block;
+        }
+
+        &__menu {
+            .header__item {
+                display: none;
+            }
+            .logo-santefam {
+                display: block;
+            }
+        }
+
+        &__item {
+            a {
+                @extend %regularCaps18;
+            }
+        }
+
+        &__btns {
+            display: none;
+        }
+
+        &__gender {
+            padding: 0.5rem;
+            background-color: $white;
+            border-radius: 1.2rem;
+            display: flex;
+            column-gap: 0.2rem;
+
+            button {
+                @include sizes(5rem, 5rem);
+                @extend %flexCenter;
+                border-radius: 0.8rem;
+
+                svg {
+                    @include sizes(2.4rem, 2.4rem);
+                }
+
+                &.active {
+                    background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
+
+                    svg path {
+                        stroke: $white;
+                    }
+                }
+            }
+        }
+
+        &__tel,
+        &__burger {
+            @include sizes(4.8rem, 4.8rem);
+        }
+    }
+}

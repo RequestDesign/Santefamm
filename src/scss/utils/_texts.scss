@@ -13,7 +13,7 @@
 %philoCaps32 {
     font-family: Philosopher, sans-serif;
     font-size: 3.2rem;
-    line-height: 92.5%;
+    line-height: 3.84rem;
     font-weight: 400;
     text-transform: uppercase;
 
@@ -134,4 +134,11 @@
     &:hover {
         background-position: top left 100%;
     }
+}
+
+%gradientColor {
+    background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
