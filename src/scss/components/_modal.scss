@@ -104,6 +104,8 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 2.16rem;
+                    display: block;
+                    @extend %gradientColorTxt;
                 }
             }
         }
@@ -152,7 +154,7 @@
                         @include sizes(1.8rem, 1.8rem);
                     }
 
-                    p {
+                    label {
                         color: $grey;
                         font-family: Gilroy;
                         font-size: 1.6rem;
