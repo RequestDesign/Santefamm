@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.23.3",
+    "jquery": "^3.7.1",
     "swiper": "^11.0.4",
     "ymaps": "^0.2.1"
   }

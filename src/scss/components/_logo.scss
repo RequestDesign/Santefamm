@@ -1,23 +1,23 @@
 .logo {
-  &-santefam {
-    @include sizes(7rem, 9.3rem);
-    margin: 0 2.8rem;
-  }
-
-  &-request {
-    @include sizes(14.4rem, 3.2rem);
-  }
-}
-
-@media screen and (max-width: 48em) {
-  .logo {
     &-santefam {
-      @include sizes(9.4rem, 12rem);
-      margin: 0;
+        @include sizes(7rem, 9.3rem);
+        margin: 0 2.8rem;
     }
 
     &-request {
-      @include sizes(23rem, 5.8rem);
+        @include sizes(14.4rem, 3.2rem);
     }
-  }
+}
+
+@media screen and (max-width: 48em) {
+    .logo {
+        &-santefam {
+            @include sizes(9.4rem, 12rem);
+            margin: 0;
+        }
+
+        &-request {
+            @include sizes(23rem, 5.8rem);
+        }
+    }
 }

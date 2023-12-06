@@ -31,7 +31,71 @@
                 </li>
             </ol>
             <h2>Модальные окна:</h2>
-            <ol></ol>
+            <ol>
+                <li>
+                    <button class="btn-primary request-button">
+                       <span> Запись на прием</span>
+                    </button>
+                </li>
+            </ol>
+        </div>
+
+        <div class="modal__wrapper" id="request-modal">
+            <div class="modal">
+                <div class="modal__close">
+                    <img src="./assets/images/close.svg" alt="" />
+                </div>
+                <div class="modal__body">
+                    <div class="modal__logo">
+                        <img src="./assets/images/icons/logo.svg" alt="" />
+                    </div>
+
+                    <div class="modal__content">
+                        <div class="modal__content-info">
+                            <h2 class="modal__content-info-title">запись на прием</h2>
+
+                            <p class="modal__content-info-description">
+                                Оставьте ваше имя и номер телефона  и мы вам перезвоним в ближайшее время.
+                            </p>
+
+                            <a href="tel:79388792157" class="modal__content-info-phone">
+                                <img src="./assets/images/icons/phone.svg" alt="" />
+
+                                <span>+7 (938) 879-21-57</span>
+                            </a>
+                        </div>
+
+                        <form action="#" class="modal__content-form">
+                            <div class="modal__content-form-field">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" />
+                            </div>
+
+                            <div class="modal__content-form-field">
+                                <label for="phone">Телефон</label>
+                                <input type="text" id="phone" />
+                            </div>
+
+                            <div class="modal__content-form-submit">
+                                <button class="btn-primary" type="submit">
+                                    <span>
+                                        Записаться
+                                    </span>
+                                </button>
+
+                                <div class="modal__content-form-submit-agreement">
+                                    <input type="checkbox" id="agreement" />
+
+                                    <p>
+                                        Согласен(-а) с обработкой моих персональных данных в соответствии  с
+                                        политикой конфиденциальности
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 

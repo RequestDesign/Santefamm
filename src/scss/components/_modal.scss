@@ -1,0 +1,167 @@
+.modal__wrapper {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+            31.12% 17.8% at 30.31% 46.13%,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(193deg, rgba(238, 234, 255, 0.3) 23.28%, rgba(238, 234, 255, 0) 41.01%),
+        linear-gradient(115deg, #efe6ff 33.58%, rgba(239, 230, 255, 0) 53.79%),
+        linear-gradient(124deg, rgba(231, 221, 255, 0.8) 41.5%, rgba(231, 221, 255, 0) 61.87%),
+        linear-gradient(248deg, #e0dafd 13.09%, rgba(224, 218, 253, 0) 34.9%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%), #cfc3ec;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    will-change: opacity;
+    display: flex;
+    transition: 0.3s opacity ease-in;
+
+    &.--active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal {
+        position: relative;
+        padding: 6rem;
+        border-radius: 3rem;
+        background: $white;
+        max-width: 115.1rem;
+        width: 100%;
+        min-height: 63.4rem;
+
+        transform: scale(1.15);
+        will-change: transform;
+        transition: 0.2s transform ease-in;
+
+        &.--active {
+            transform: scale(1);
+        }
+
+        &__close {
+            cursor: pointer;
+            position: absolute;
+            right: 2.4rem;
+            top: 2.4rem;
+        }
+    }
+}
+
+#request-modal {
+    .modal__logo {
+        @include sizes(7.3rem, 9.3rem);
+        margin-bottom: 2.5rem;
+    }
+
+    .modal__content {
+        display: flex;
+        gap: 10rem;
+
+        &-info {
+            max-width: 37.3rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 6rem;
+
+            &-title {
+                font-size: 2.7rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.84rem;
+                text-transform: uppercase;
+                margin-bottom: 3.2rem;
+                color: $black;
+            }
+
+            &-description {
+                font-family: Gilroy;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: $black;
+            }
+
+            &-phone {
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+
+                img {
+                    @include sizes(2.4rem, 2.4rem);
+                }
+
+                span {
+                    color: $grey;
+                    font-family: Gilroy;
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.16rem;
+                }
+            }
+        }
+
+        &-form {
+            &-field {
+                display: flex;
+                flex-direction: column;
+                height: 8.6rem;
+
+                &:not(:first-child) {
+                    margin-top: 1.6rem;
+                }
+
+                label {
+                    @extend %regular18;
+                    color: $grey;
+                }
+
+                input {
+                    border-bottom: 0.1rem solid $grey;
+                }
+            }
+
+            &-submit {
+                margin-top: 3rem;
+                display: flex;
+                gap: 3.4rem;
+
+                > button {
+                    padding: 1.9rem 4rem;
+                    width: fit-content;
+                    height: 6rem;
+
+                    span {
+                        @extend %regular18;
+                        color: $white;
+                    }
+                }
+
+                &-agreement {
+                    display: flex;
+                    gap: 2.1rem;
+
+                    input {
+                        @include sizes(1.8rem, 1.8rem);
+                    }
+
+                    p {
+                        color: $grey;
+                        font-family: Gilroy;
+                        font-size: 1.6rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.92rem;
+                    }
+                }
+            }
+        }
+    }
+}
