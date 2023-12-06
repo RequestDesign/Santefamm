@@ -19,6 +19,7 @@
 
     &__phone-number {
         @extend %semibold20;
+        @extend %gradientColorTxt;
         color: $black;
         margin-bottom: 0.4rem;
     }

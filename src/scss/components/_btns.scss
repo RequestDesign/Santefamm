@@ -1,30 +1,57 @@
 .btn-primary {
-  @extend %flexCenter;
-  border-radius: 1.8rem;
-  background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
-  width: fit-content;
-  padding: 1.9rem 4rem;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
+    @extend %flexCenter;
+    border-radius: 1.8rem;
+    background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
+    width: fit-content;
+    padding: 1.9rem 4rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    position: relative;
 
-  span {
-    @extend %regularCaps18;
-    color: $white;
-  }
+    span {
+      position: relative;
+      z-index: 4;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 0.4;
+        }
+    }
+
+    &::after {
+        @include pseudo {
+            border-radius: 1.8rem;
+            opacity: 0;
+            background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+            filter: blur(0.5rem);
+            z-index: 2;
+            inset: -0.4rem;
+            transition: 0.3s opacity ease-out;
+        }
+    }
+
+    &:hover {
+    }
+
+    span {
+        @extend %regularCaps18;
+        color: $white;
+    }
 }
 
 .btn-secondary {
-  @extend %flexCenter;
-  width: fit-content;
-  cursor: pointer;
-  column-gap: 1.6rem;
+    @extend %flexCenter;
+    width: fit-content;
+    cursor: pointer;
+    column-gap: 1.6rem;
 
-  span {
-    @extend %medium18Caps;
-    @extend %gradientColorTxt;
-  }
+    span {
+        @extend %medium18Caps;
+        @extend %gradientColorTxt;
+    }
 
-  img {
-    @include sizes(4.4rem, 100%);
-  }
+    img {
+        @include sizes(4.4rem, 100%);
+    }
 }
