@@ -1,0 +1,139 @@
+.prices {
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 4.8rem;
+
+        &-title {
+            @extend %philoCaps70;
+            color: $black;
+        }
+
+        &-services {
+            @extend %philoCaps28;
+            margin-top: auto;
+            display: block;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 4rem;
+        justify-content: space-between;
+    }
+
+    &__categories {
+        width: 40rem;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        &-item {
+            padding: 1rem 3.6rem 1rem 1rem;
+            border-radius: 2rem;
+            border: 0.1rem solid $white;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(1.5rem);
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+
+            &-icon {
+                @include sizes(8rem, 8rem) {
+                    max-width: 8rem;
+                    width: 100%;
+                }
+                border-radius: 1.4rem;
+
+                img {
+                    border-radius: inherit;
+                }
+            }
+
+            &-title {
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                text-transform: uppercase;
+                color: $black;
+            }
+
+            &-arrow {
+                margin-left: auto;
+                @include sizes(2rem, 2.8rem);
+            }
+        }
+
+        &-info {
+            width: 100%;
+            max-width: 128rem;
+
+            &-subcategories {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-bottom: 4.8rem;
+            }
+
+            &-subcategory {
+                padding: 1.75rem 2rem;
+                border-radius: 4rem;
+                border: 0.2rem solid $white;
+                background: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(1.5rem);
+                @extend %regular18;
+
+                span {
+                    @extend %gradientColor;
+                    transition: 0.3s font-weight ease-out;
+                }
+
+                &.--active {
+                    background: $white;
+                    font-weight: 600;
+                }
+            }
+
+            &-articles {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &-article {
+                width: 100%;
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 6rem;
+                padding: 4rem;
+                background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+
+                &-title {
+                    @extend %regular20;
+                    color: $black;
+                }
+
+                &-price {
+                    margin-left: auto;
+                    @extend %regular20;
+                    color: $grey;
+                }
+            }
+        }
+    }
+}

@@ -1,20 +1,20 @@
 .swiper-panel {
-  @extend %flexCenterBetween;
-  column-gap: 4.8rem;
-  color: $grey;
-  @extend %philoCaps28;
-
-  &__btn {
-    @include sizes(6rem, 1.8rem);
-    flex-shrink: 0;
-  }
-
-  .swiper-pagination-current {
-    color: $black;
-  }
-
-  .swiper-pagination-total {
+    @extend %flexCenterBetween;
+    column-gap: 4.8rem;
     color: $grey;
     @extend %philoCaps28;
-  }
+
+    &__btn {
+        @include sizes(6rem, 1.8rem);
+        flex-shrink: 0;
+    }
+
+    .swiper-pagination-current {
+        color: $black;
+    }
+
+    .swiper-pagination-total {
+        color: $grey;
+        @extend %philoCaps28;
+    }
 }

@@ -9,8 +9,8 @@
     position: relative;
 
     span {
-      position: relative;
-      z-index: 4;
+        position: relative;
+        z-index: 4;
     }
 
     &:hover {
@@ -48,10 +48,11 @@
 
     span {
         @extend %medium18Caps;
-        @extend %gradientColorTxt;
+        @extend %gradientColor;
     }
 
-    img {
+    img,
+    svg {
         @include sizes(4.4rem, 100%);
     }
 }

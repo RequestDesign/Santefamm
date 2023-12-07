@@ -1,6 +1,8 @@
 @mixin sizes($width: 100%, $height: auto) {
     width: $width;
     height: $height;
+
+    @content;
 }
 
 @mixin noScrollLine() {
