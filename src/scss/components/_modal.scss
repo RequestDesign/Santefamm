@@ -20,6 +20,17 @@
     display: flex;
     transition: 0.3s opacity ease-in;
 
+    &::after {
+        @include pseudo {
+            background: linear-gradient(261deg, #f8f8f8 8.92%, #ff3641 43.11%, rgba(252, 216, 208, 0) 43.11%),
+                #ead3d4;
+            opacity: 0.2;
+            filter: blur(10rem);
+            inset: 0;
+            z-index: -1;
+        }
+    }
+
     &.--active {
         opacity: 1;
         pointer-events: auto;

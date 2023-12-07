@@ -1,6 +1,8 @@
 import $ from 'jquery';
 
 function bindModal(trigger, modal, close, callback = () => null) {
+    if (!document.querySelector('.modal')) return;
+
     (modal = document.querySelector(modal)), (close = document.querySelector(close));
 
     const body = document.body;

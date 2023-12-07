@@ -1,6 +1,5 @@
 @mixin sizes($width: 100%, $height: auto) {
-    max-width: $width;
-    width: 100%;
+    width: $width;
     height: $height;
 }
 
