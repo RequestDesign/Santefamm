@@ -63,7 +63,7 @@
                 @include sizes(2.4rem, 2.4rem);
             }
 
-            &.active {
+            &.--active {
                 background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
 
                 svg path {
@@ -137,7 +137,7 @@
                     @include sizes(2.4rem, 2.4rem);
                 }
 
-                &.active {
+                &.--active {
                     background: linear-gradient(267deg, #d65986 -0.51%, #a261f9 100%);
 
                     svg path {

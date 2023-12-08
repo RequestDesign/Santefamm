@@ -10,7 +10,7 @@
     &__btn {
         @extend %flexCenterStart;
 
-        &.active {
+        &.--active {
             .services-plushs__btn-txt {
                 background: $white;
                 span {
@@ -51,7 +51,7 @@
         @extend %flexColumn;
         display: none;
 
-        &.active {
+        &.--active {
             display: flex;
             animation: fade-bounce 0.8s both;
         }

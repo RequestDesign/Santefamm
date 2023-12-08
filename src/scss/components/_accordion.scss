@@ -5,6 +5,8 @@
     border-radius: 3rem;
     background: $white;
     padding: 2rem 2rem 2rem 4rem;
+    transition: 0.5s border-radius ease-in;
+    cursor: pointer;
 
     &-title {
         color: $black;

@@ -4,16 +4,16 @@ if (document.querySelectorAll('[data-content-open]')) {
 
     btnsOpen.forEach((btnOpen) => {
         btnOpen.addEventListener('click', function () {
-            btnsOpen.forEach((btn) => btn.classList.remove('active'));
-            this.classList.add('active');
+            btnsOpen.forEach((btn) => btn.classList.remove('--active'));
+            this.classList.add('--active');
 
             const attr = this.getAttribute('data-content-open');
 
-            contents.forEach((content) => content.classList.remove('active'));
+            contents.forEach((content) => content.classList.remove('--active'));
 
             contents.forEach((cont) => {
                 if (cont.getAttribute('data-content-block') === attr) {
-                    cont.classList.add('active');
+                    cont.classList.add('--active');
                 }
             });
         });

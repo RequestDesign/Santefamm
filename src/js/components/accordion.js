@@ -1,5 +1,5 @@
 function accordion(trigger, selector) {
-    const items = document.querySelectorAll(trigger);
+    const items = document.querySelectorAll('.accordion__heading');
 
     items.forEach((item) => {
         item.addEventListener('click', () => {
@@ -10,13 +10,15 @@ function accordion(trigger, selector) {
             if (parent.classList.contains('--active')) {
                 parent.classList.remove('--active');
             } else {
-                document.querySelectorAll(selector).forEach((child) => child.classList.remove('--active'));
+                // document
+                //     .querySelectorAll('.accordion__item')
+                //     .forEach((children) => children.classList.remove('--active'));
                 parent.classList.add('--active');
             }
         });
     });
 }
 
-if (document.querySelector('.faq')) {
-    accordion('.faq__questions-item-heading', '.faq__questions-item');
+if (document.querySelector('.prices')) {
+    accordion();
 }
