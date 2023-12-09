@@ -1,9 +1,21 @@
+@import './prices-categories';
+
 .prices {
+    margin-bottom: 20rem;
+
+    @include small-tablet{
+        margin-bottom: 18rem;
+    }
+
     &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 4.8rem;
+
+        @include small-tablet{
+            margin-bottom: 6.4rem;
+        }
 
         &-title {
             @extend %philoCaps70;

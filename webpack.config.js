@@ -20,7 +20,8 @@ const entryPoints = {
     servicesSeven: path.resolve(__dirname, 'src', 'index.js'),
     servicesEight: path.resolve(__dirname, 'src', 'index.js'),
     servicesNine: path.resolve(__dirname, 'src', 'index.js'),
-    prices: path.resolve(__dirname, 'src', 'index.js')
+    prices: path.resolve(__dirname, 'src', 'index.js'),
+    'prices-categories': path.resolve(__dirname, 'src', 'index.js')
     // Добавьте другие страницы здесь
 };
 
