@@ -79,10 +79,24 @@ function initNewsSliders() {
     }
 }
 
+function initCategorySlider() {
+    if (document.querySelector('.prices__categories-swiper')) {
+        const slider = document.querySelector('.prices__categories-swiper');
+
+        new Swiper(slider, {
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(0.8),
+            speed: 1200,
+            slideToClickedSlide: true
+        });
+    }
+}
+
 function initSliders() {
     initReviewsSliders();
     initNewsSliders();
     initDoctorsSliders();
+    initCategorySlider();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);

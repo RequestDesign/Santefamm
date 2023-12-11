@@ -8,6 +8,12 @@
     transition: 0.5s border-radius ease-in;
     cursor: pointer;
 
+    @include small-tablet {
+        padding: 1.6rem 1.6rem 1.6rem 4rem;
+        border-radius: 4rem;
+        gap: 1.8rem;
+    }
+
     &-title {
         color: $black;
         font-size: 2.8rem;
@@ -19,6 +25,11 @@
         align-items: center;
         gap: 1.8rem;
         font-family: 'Philosopher';
+
+        @include small-tablet {
+            font-size: 4rem;
+            line-height: 120%;
+        }
 
         span {
             color: $grey;
@@ -33,5 +44,10 @@
 
     &-icon {
         @include sizes(6rem, 6rem);
+        transition: 0.3s transform ease-in-out;
+
+        @include small-tablet {
+            @include sizes(8.4rem, 8.4rem);
+        }
     }
 }

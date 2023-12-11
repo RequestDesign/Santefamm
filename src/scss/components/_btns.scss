@@ -45,14 +45,31 @@
     width: fit-content;
     cursor: pointer;
     column-gap: 1.6rem;
+    display: flex;
+    align-items: center;
+
+    @include small-tablet{
+        gap: 3.2rem;
+    }
 
     span {
         @extend %medium18Caps;
         @extend %gradientColor;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            font-weight: 500;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
     }
 
     img,
     svg {
         @include sizes(4.4rem, 100%);
+
+        @include small-tablet {
+            @include sizes(8.8rem, 100%);
+        }
     }
 }
