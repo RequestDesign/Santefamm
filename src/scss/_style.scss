@@ -42,3 +42,27 @@ main {
         display: block;
     }
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 50%;
+    background: $white;
+    max-width: 4rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &::after {
+        display: none;
+        visibility: hidden;
+    }
+
+    svg {
+        max-width: 2.4rem;
+        width: 100%;
+        height: 2.4rem;
+    }
+}

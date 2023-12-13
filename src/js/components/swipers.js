@@ -92,11 +92,60 @@ function initCategorySlider() {
     }
 }
 
+function initPalomarSlider() {
+    if (document.querySelector('.palomar__swiper')) {
+        const slider = document.querySelector('.palomar__swiper');
+
+        const next = slider.querySelector('.palomar-button-next');
+        const prev = slider.querySelector('.palomar-button-prev');
+
+        new Swiper(slider, {
+            modules: [Navigation],
+            slidesPerView: '3',
+            spaceBetween: remToPx(5.05),
+            speed: 1200,
+            slideToClickedSlide: true,
+            loop: true,
+            navigation: {
+                nextEl: next,
+                prevEl: prev
+            }
+        });
+
+        const resultSliders = document.querySelectorAll('.palomar__swiper-result');
+
+        resultSliders.forEach((slider) => {
+            const parent = slider.closest('.palomar__block');
+
+            const fraction = parent.querySelector('.palomar__panel-fractions');
+            const prevButton = parent.querySelector('.palomar__result-prev');
+            const nextButton = parent.querySelector('.palomar__result-next');
+
+            new Swiper(slider, {
+                modules: [Pagination, Navigation],
+                allowTouchMove: true,
+                slidesPerView: '4',
+                spaceBetween: remToPx(1.2),
+                speed: 1200,
+                pagination: {
+                    el: fraction,
+                    type: 'fraction'
+                },
+                navigation: {
+                    nextEl: nextButton,
+                    prevEl: prevButton
+                }
+            });
+        });
+    }
+}
+
 function initSliders() {
     initReviewsSliders();
     initNewsSliders();
     initDoctorsSliders();
     initCategorySlider();
+    initPalomarSlider();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);
