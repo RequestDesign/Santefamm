@@ -7,6 +7,10 @@
     &__btn {
         @include sizes(6rem, 1.8rem);
         flex-shrink: 0;
+
+        img {
+            height: auto;
+        }
     }
 
     .swiper-pagination-current {

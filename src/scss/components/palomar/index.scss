@@ -1,0 +1,184 @@
+.palomar {
+    margin-bottom: 20rem;
+
+    &-button {
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 50%;
+        }
+
+        &-prev {
+            left: 2rem;
+        }
+
+        &-next {
+            right: 2rem;
+        }
+    }
+
+    &__swiper {
+        margin-bottom: 4.8rem;
+    }
+
+    &__slide {
+
+        &.--active {
+            .palomar__slide-title {
+                background: $white;
+                border-color: transparent;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 1.8rem 0;
+            cursor: pointer;
+
+            &:hover {
+                .palomar__slide-title {
+                    background: $white;
+                }
+            }
+        }
+
+        &-image {
+            max-width: 15rem;
+            width: 100%;
+            height: 6rem;
+            border-radius: 20rem;
+
+            img {
+                border-radius: inherit;
+            }
+        }
+
+        &-title {
+            @extend %regular18;
+            max-width: 39rem;
+            width: 100%;
+            padding: 1.8rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4rem;
+            border: 0.2rem solid $white;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(1.5rem);
+            transition:
+                0.3s background ease-in,
+                0.3s border ease-in,
+                0.3s font-weight ease-in;
+
+            span {
+                display: block;
+                @extend %gradientColor;
+                @extend %regular18;
+                transition: 0.3s background ease-in;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-start;
+        gap: 4rem;
+        margin-bottom: 6rem;
+
+        &-image {
+            max-width: 54.7rem;
+            width: 100%;
+            height: 40.2rem;
+            border-radius: 2rem;
+
+            img {
+                border-radius: inherit;
+            }
+        }
+
+        &-text-block {
+            max-width: 113.3rem;
+            width: 100%;
+        }
+
+        &-description {
+            color: $black;
+            @extend %regular18;
+            margin-bottom: 2rem;
+        }
+
+        &-subtitle {
+            display: block;
+            margin-bottom: 1.6rem;
+            color: $black;
+            @extend %semibold18;
+        }
+
+        &-benefits {
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+            }
+
+            &-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 1.6rem;
+
+                &-marker {
+                    max-width: 2.4rem;
+                    width: 100%;
+                    height: 2.4rem;
+                }
+
+                p {
+                    color: $black;
+                    @extend %regular18;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        .palomar__panel {
+            width: fit-content;
+            margin-left: auto;
+            display: flex;
+            gap: 4.8rem;
+            margin-bottom: 4.9rem;
+        }
+    }
+
+    &__block {
+        display: none;
+
+        &.--active {
+            display: block;
+            animation: fade-bounce 0.8s both;
+        }
+    }
+
+    &__result {
+        &-image {
+            width: 100%;
+            height: 37.1rem;
+            margin-bottom: 0.9rem;
+        }
+
+        &-title {
+            @extend %regular18;
+            color: grey;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+        }
+    }
+}
