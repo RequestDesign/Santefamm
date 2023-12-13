@@ -24,6 +24,7 @@ const entryPoints = {
     'prices-categories': path.resolve(__dirname, 'src', 'index.js'),
     'prices-category': path.resolve(__dirname, 'src', 'index.js'),
     specialist: path.resolve(__dirname, 'src', 'index.js'),
+    "404": path.resolve(__dirname, 'src', 'index.js'),
     // Добавьте другие страницы здесь
 };
 
