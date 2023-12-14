@@ -1,0 +1,82 @@
+.specialists {
+    &__swiper {
+        margin-bottom: 4.8rem;
+    }
+
+    &__slide {
+        width: fit-content;
+
+        &:hover {
+            .specialists__slide-category {
+                background: $white;
+            }
+        }
+
+        &.--active {
+            .specialists__slide-category {
+                background: $white;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &-category {
+            padding: 1.75rem 2rem;
+            backdrop-filter: blur(1.5rem);
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4rem;
+            border: 0.2rem solid $white;
+            transition: 0.3s background ease-in;
+
+            span {
+                display: block;
+                @extend %regular18;
+                @extend %gradientColor;
+                transition: 0.3s font-weight ease-in;
+            }
+        }
+    }
+
+    &__list {
+        display: none;
+        grid-template-columns: repeat(2, minmax(84rem, 1fr));
+        gap: 4rem;
+        margin-bottom: 4.8rem;
+
+        &.--active {
+            display: grid;
+            animation: fade-bounce 0.8s both;
+        }
+    }
+
+    &__show-more {
+        @extend %gradientColorTxt;
+        @extend %regularCaps18;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__swiper {
+        &-block {
+            position: relative;
+        }
+    }
+
+    &-button {
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 50%;
+        }
+
+        &-prev {
+            left: -2rem;
+        }
+
+        &-next {
+            right: -2rem;
+        }
+    }
+}

@@ -1,6 +1,12 @@
 .palomar {
     margin-bottom: 20rem;
 
+    &__slider {
+        &-block {
+            position: relative;
+        }
+    }
+
     &-button {
         &-prev,
         &-next {
@@ -9,11 +15,11 @@
         }
 
         &-prev {
-            left: 2rem;
+            left: -3rem;
         }
 
         &-next {
-            right: 2rem;
+            right: -2rem;
         }
     }
 
@@ -22,7 +28,6 @@
     }
 
     &__slide {
-
         &.--active {
             .palomar__slide-title {
                 background: $white;
@@ -153,6 +158,14 @@
             gap: 4.8rem;
             margin-bottom: 4.9rem;
         }
+
+        &-slide {
+            &:hover {
+                .palomar__result-title {
+                    background-position: top left 100%;
+                }
+            }
+        }
     }
 
     &__block {
@@ -179,6 +192,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 4;
+            @extend %gradientColorTxt;
         }
     }
 }

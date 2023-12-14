@@ -25,11 +25,10 @@ if (document.querySelectorAll('[data-content-open]')) {
         });
     }
 
-    if (document.querySelector('.palomar')) {
+    if (document.querySelector('.palomar') && document.querySelector('.equipment')) {
         initContent('.palomar');
-    }
-
-    if (document.querySelector('.equipment')) {
         initContent('.equipment');
+    } else {
+        initContent();
     }
 }
