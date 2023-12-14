@@ -1,0 +1,77 @@
+.devices {
+    margin-bottom: 20rem;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__swiper {
+        margin-bottom: 4.8rem;
+    }
+
+    &__slide {
+        width: auto !important;
+        height: unset;
+
+        &.--bigger {
+            .devices__slide-wrapper {
+                width: 84rem;
+            }
+
+            .devices__slide-title {
+                text-align: left;
+            }
+
+            .devices__slide-description {
+                text-align: left;
+                max-width: 29.9rem;
+                margin: 0;
+            }
+
+        }
+
+        &-wrapper {
+            width: 40rem;
+            min-height: 51rem;
+            height: 100%;
+            padding: 3.2rem 4rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-image {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+
+        &-title {
+            display: block;
+            margin-top: auto;
+            text-align: center;
+            color: $black;
+            font-family: Philosopher;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
+
+        &-description {
+            color: $black;
+            @extend %regular18;
+            text-align: center;
+            max-width: 21.9rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__link {
+        margin-left: auto;
+    }
+}

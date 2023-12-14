@@ -154,6 +154,30 @@ function initSpecialistsSlider() {
     }
 }
 
+function initDevicesSlider() {
+    if (document.querySelector('.devices__swiper')) {
+        const slider = document.querySelector('.devices__swiper');
+        const fraction = document.querySelector('.devices__panel-fractions');
+        const btnPrev = document.querySelector('.devices__panel-prev');
+        const btnNext = document.querySelector('.devices__panel-next');
+
+        new Swiper(slider, {
+            modules: [Pagination, Navigation],
+            slidesPerView: '3',
+            spaceBetween: remToPx(4),
+            speed: 1200,
+            pagination: {
+                el: fraction,
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: btnNext,
+                prevEl: btnPrev
+            }
+        });
+    }
+}
+
 function initSliders() {
     initReviewsSliders();
     initNewsSliders();
@@ -161,6 +185,7 @@ function initSliders() {
     initCategorySlider();
     initPalomarSlider();
     initSpecialistsSlider();
+    initDevicesSlider();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);
