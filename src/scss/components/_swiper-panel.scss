@@ -7,6 +7,7 @@
     &__btn {
         @include sizes(6rem, 1.8rem);
         flex-shrink: 0;
+        transition: .3s opacity ease-in;
 
         img {
             height: auto;
