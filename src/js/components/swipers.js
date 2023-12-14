@@ -1,11 +1,12 @@
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper';
+import { EffectFade, EffectCards, Navigation, Pagination } from 'swiper/modules';
 import remToPx from '../utils/rem';
 
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 function initReviewsSliders() {
     if (document.querySelector('.reviews__swiper')) {
@@ -177,6 +178,78 @@ function initDevicesSlider() {
         });
     }
 }
+function initPagesInfoSlider() {
+    if (document.querySelector('.pages-info__swiper')) {
+        const slider = document.querySelector('.pages-info__swiper');
+        const btnPrev = document.querySelector('.pages-info__link-rotate-prev');
+        const btnNext = document.querySelector('.pages-info__link-rotate-next');
+        const slides = slider.querySelectorAll('.swiper-slide .pages-info__title');
+
+        new Swiper(slider, {
+            modules: [Navigation, EffectFade],
+            slidesPerView: 1,
+            loop: true,
+            spaceBetween: remToPx(10),
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            speed: 1200,
+            navigation: {
+                nextEl: btnNext,
+                prevEl: btnPrev
+            },
+            on: {
+                slideChange() {
+                    let titlePrevIndex = this.realIndex - 1;
+                    let titleNextIndex = this.realIndex + 1;
+                    let fadeSpeed = 6;
+
+                    if (titlePrevIndex == -1) {
+                        titlePrevIndex = slides.length - 1;
+                    }
+                    if (titleNextIndex == slides.length) {
+                        titleNextIndex = 0;
+                    }
+                    function fadeIn(fade) {
+                        var opacity = 0;
+                        var intervalID = setInterval(function () {
+                            console.log(opacity);
+                            if (opacity < 1) {
+                                opacity = opacity + 0.01;
+                                fade.style.opacity = opacity;
+                            } else {
+                                clearInterval(intervalID);
+                            }
+                        }, fadeSpeed);
+                    }
+                    function fadeOut(fade) {
+                        var opacity = 1;
+                        var intervalID = setInterval(function () {
+                            if (opacity > 0) {
+                                opacity = opacity - 0.01;
+                                fade.style.opacity = opacity;
+                            } else {
+                                clearInterval(intervalID);
+                            }
+                        }, fadeSpeed);
+                    }
+                    function changeTitle() {
+                        btnNext.querySelector('p').textContent = slides[titleNextIndex].textContent;
+                        btnPrev.querySelector('p').textContent = slides[titlePrevIndex].textContent;
+                    }
+
+                    fadeOut(btnNext.querySelector('p'));
+                    fadeOut(btnPrev.querySelector('p'));
+
+                    setTimeout(function () {
+                        changeTitle();
+                        fadeIn(btnNext.querySelector('p'));
+                        fadeIn(btnPrev.querySelector('p'));
+                    }, fadeSpeed * 100);
+                }
+            }
+        });
+    }
+}
 
 function initSliders() {
     initReviewsSliders();
@@ -186,6 +259,7 @@ function initSliders() {
     initPalomarSlider();
     initSpecialistsSlider();
     initDevicesSlider();
+    initPagesInfoSlider();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);
