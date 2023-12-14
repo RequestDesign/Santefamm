@@ -96,8 +96,8 @@ function initPalomarSlider() {
     if (document.querySelector('.palomar__swiper')) {
         const slider = document.querySelector('.palomar__swiper');
 
-        const next = slider.querySelector('.palomar-button-next');
-        const prev = slider.querySelector('.palomar-button-prev');
+        const next = document.querySelector('.palomar-button-next');
+        const prev = document.querySelector('.palomar-button-prev');
 
         new Swiper(slider, {
             modules: [Navigation],
@@ -112,30 +112,44 @@ function initPalomarSlider() {
             }
         });
 
-        const resultSliders = document.querySelectorAll('.palomar__swiper-result');
+        const resultSlider = document.querySelector('.palomar__swiper-result');
 
-        resultSliders.forEach((slider) => {
-            const parent = slider.closest('.palomar__block');
+        const fraction = document.querySelector('.palomar__panel-fractions');
+        const prevButton = document.querySelector('.palomar__result-prev');
+        const nextButton = document.querySelector('.palomar__result-next');
 
-            const fraction = parent.querySelector('.palomar__panel-fractions');
-            const prevButton = parent.querySelector('.palomar__result-prev');
-            const nextButton = parent.querySelector('.palomar__result-next');
+        new Swiper(resultSlider, {
+            modules: [Pagination, Navigation],
+            allowTouchMove: true,
+            slidesPerView: '4',
+            spaceBetween: remToPx(1.2),
+            speed: 1200,
+            pagination: {
+                el: fraction,
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: nextButton,
+                prevEl: prevButton
+            }
+        });
+    }
+}
 
-            new Swiper(slider, {
-                modules: [Pagination, Navigation],
-                allowTouchMove: true,
-                slidesPerView: '4',
-                spaceBetween: remToPx(1.2),
-                speed: 1200,
-                pagination: {
-                    el: fraction,
-                    type: 'fraction'
-                },
-                navigation: {
-                    nextEl: nextButton,
-                    prevEl: prevButton
-                }
-            });
+function initSpecialistsSlider() {
+    if (document.querySelector('.specialists__swiper')) {
+        const slider = document.querySelector('.specialists__swiper');
+
+        new Swiper(slider, {
+            modules: [Navigation],
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(1.2),
+            speed: 1200,
+            slideToClickedSlide: true,
+            navigation: {
+                nextEl: document.querySelector('.specialists-button-next'),
+                prevEl: document.querySelector('.specialists-button-prev')
+            }
         });
     }
 }
@@ -146,6 +160,7 @@ function initSliders() {
     initDoctorsSliders();
     initCategorySlider();
     initPalomarSlider();
+    initSpecialistsSlider();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);
