@@ -1,137 +1,254 @@
 .footer {
-    &__container {
-        @extend %flexColumn;
-    }
+    margin-bottom: 10rem;
 
-    &__top {
-        border-bottom: 0.1rem solid $grey;
-    }
+    &__content {
+        display: flex;
+        gap: 24.7rem;
 
-    &__top-container {
-        @extend %flexCenterBetween;
-        padding-bottom: 3.8rem;
-    }
-
-    &__top-menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        column-gap: 11.2rem;
-        row-gap: 2.8rem;
-    }
-
-    &__top-item {
-        a {
-            @extend %regular18;
-            @extend %gradientColorTxt;
-        }
-    }
-
-    &__top-desc {
-        &:first-child {
-            margin-bottom: 2.4rem;
-        }
-
-        @extend %flexCenterStart;
-        column-gap: 1.2rem;
-
-        a {
-            @extend %gradientColorTxt;
-            display: block;
-        }
-    }
-
-    &__top-icon {
-        @include sizes(2.4rem, 2.4rem);
-    }
-
-    &__top-txt {
-        @extend %regular18;
-    }
-
-    &__bottom-container {
-        @extend %flexCenterBetween;
-        padding: 5.2rem 0 2.6rem;
-    }
-
-    &__bottom-links {
-        a:first-child {
-            margin-right: 4.4rem;
-        }
-        a {
-            @extend %regular18;
-            color: $grey;
-            display: inline-block;
-            @extend %gradientColorTxt;
-        }
-    }
-}
-
-@media screen and (max-width: 48em) {
-    .footer {
-        &__top {
-            border: 0;
-        }
-
-        &__top-container {
-            padding-bottom: 5.6rem;
+        @include small-tablet {
             flex-direction: column;
-            row-gap: 5.6rem;
-            align-items: flex-start;
-            border-bottom: 0.2rem solid $grey;
+            gap: 8rem;
+            align-items: center;
         }
+    }
 
-        &__top-menu {
-            column-gap: 12rem;
-            row-gap: 3.2rem;
+    &__logo {
+        max-width: 7rem;
+        width: 100%;
+        height: 9.3rem;
+        margin-bottom: 4rem;
+
+        @include small-tablet {
+            margin: 0 auto 5.6rem;
+            max-width: 9.4rem;
+            height: 12rem;
         }
+    }
 
-        &__top-item {
-            a {
-                line-height: 120%;
-            }
-        }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
 
-        &__top-descs {
-            display: flex;
-            flex-direction: column-reverse;
-            row-gap: 3.2rem;
-        }
-
-        &__top-desc {
-            &:first-child {
-                margin-bottom: 0;
-            }
-
-            column-gap: 2.4rem;
-        }
-
-        &__top-icon {
-            @include sizes(4.8rem, 4.8rem);
-        }
-
-        &__top-txt {
-            @extend %regular18;
-        }
-
-        &__bottom-container {
-            flex-direction: column;
-            padding: 5.6rem 0 4rem;
-            row-gap: 5.6rem;
-        }
-
-        &__bottom-links {
-            display: flex;
-            flex-direction: column;
-            row-gap: 5.6rem;
+        @include small-tablet {
             width: 100%;
+        }
 
-            a:first-child {
-                margin-right: 0;
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+            @include small-tablet {
+                flex-direction: row-reverse;
+                gap: 3.2rem;
+                align-items: flex-start;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+
+            @include small-tablet {
+                gap: 1.6rem;
+
+                &:first-child {
+                    max-width: 36.2rem;
+                    width: 100%;
+                }
+
+                &:last-child {
+                    max-width: 29.2rem;
+                    width: 100%;
+                }
+            }
+
+            &-icon {
+                max-width: 2.4rem;
+                width: 100%;
+                height: 2.4rem;
+
+                @include small-tablet {
+                    max-width: 4.8rem;
+                    height: 4.8rem;
+                }
+            }
+
+            a,
+            address {
+                color: $black;
+                @extend %regular18;
+                font-style: normal;
             }
 
             a {
+                @extend %gradientColorTxt;
+            }
+        }
+
+        &-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: auto;
+            transition: margin-top 0.3s ease 0s;
+            will-change: margin-top;
+
+            @include small-tablet {
+                margin-top: initial;
+                gap: 2.4rem;
+                align-items: center;
+                padding-top: 4rem;
+                border-top: 0.1rem solid #8a8296;
+                width: 100%;
+
+                &.--mob {
+                    display: flex;
+                }
+            }
+        }
+
+        &-link {
+            color: $grey;
+            @extend %regular18;
+            @extend %gradientColorTxt;
+
+            @include small-tablet {
+                font-size: 2.8rem;
+                font-weight: 400;
                 line-height: 120%;
+            }
+        }
+    }
+
+    &__nav {
+        @include small-tablet {
+            width: 100%;
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                'a b c'
+                '. . d';
+            gap: 4rem 18rem;
+
+            @include small-tablet {
+                display: flex;
+                justify-content: space-between;
+                gap: 0;
+                width: 100%;
+                align-items: center;
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &.--active {
+                .footer__nav-item-title {
+                    background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    svg {
+                        transform: rotate(-180deg);
+
+                       path {
+                           stroke: #d65986;
+                       }
+                    }
+                }
+            }
+
+            &-title {
+                @extend %medium18Caps;
+                margin-bottom: 1.6rem;
+                display: block;
+                transition: 0.3s background ease-in;
+
+                @media (min-width: 48em) {
+                    background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                @include small-tablet {
+                    display: flex;
+                    gap: 0.4rem;
+                    align-items: center;
+                    font-family: Gilroy;
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    white-space: nowrap;
+                    text-transform: initial;
+
+                    svg {
+                        max-width: 4.8rem;
+                        width: 100%;
+                        height: 4.8rem;
+                        transition: 0.3s transform ease-in;
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                @include small-tablet {
+                    gap: 3.2rem;
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 8.2rem;
+                }
+
+                li {
+                    a {
+                        display: block;
+                        color: $black;
+                        @extend %regular18;
+                        @extend %gradientColorTxt;
+
+                        @include small-tablet {
+                            font-family: Gilroy;
+                            font-size: 2.8rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%;
+                        }
+                    }
+
+                    &:not(:first-child) {
+                        margin-top: 3.2rem;
+                    }
+                }
+            }
+
+            &.a {
+                grid-area: a;
+            }
+            &.b {
+                grid-area: b;
+            }
+            &.c {
+                grid-area: c;
+
+                @include small-tablet {
+                    order: -1;
+                }
+            }
+            &.d {
+                grid-area: d;
             }
         }
     }

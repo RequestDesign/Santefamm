@@ -1,0 +1,91 @@
+.benefits {
+    margin-bottom: 20rem;
+
+    &__title {
+        margin-bottom: 4.8rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(40rem, 1fr));
+        gap: 4rem;
+        margin-bottom: 4.8rem;
+    }
+
+    &__item {
+        border-radius: 5rem;
+        border: 0.2rem solid $white;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(1.5rem);
+        padding: 2.5rem;
+
+        &-subtitle {
+            color: $black;
+            @extend %regularCaps18;
+        }
+
+        &-description {
+            color: $grey;
+            @extend %regular18;
+        }
+
+        &-icon {
+            max-width: 15rem;
+            width: 100%;
+            height: 12rem;
+        }
+
+        &-title {
+            color: $black;
+            @extend %regularCaps18;
+        }
+    }
+
+    &__link {
+        margin-left: auto;
+    }
+}
+
+.benefits__item {
+    position: relative;
+    > .front,
+    > .back {
+        display: block;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-duration: 0.5s;
+        transition-property: transform, opacity;
+    }
+    > .front {
+        transform: rotateY(0deg);
+        gap: 3.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    > .back {
+        position: absolute;
+        opacity: 0;
+        inset: 0;
+        border-radius: inherit;
+        transform: rotateY(-180deg);
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+        text-align: start;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(1.5rem);
+    }
+    &:hover {
+        > .front {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }
+        > .back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+}
