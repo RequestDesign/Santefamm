@@ -1,10 +1,29 @@
 .specialists {
+    margin-bottom: 20rem;
+
+    @include small-tablet {
+        overflow: hidden;
+    }
+
     &__swiper {
         margin-bottom: 4.8rem;
+
+        @include small-tablet {
+            overflow: visible;
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__title {
+        @include small-tablet {
+            text-align: center;
+            margin-bottom: 6.4rem;
+        }
     }
 
     &__slide {
         width: fit-content;
+        cursor: pointer;
 
         &:hover {
             .specialists__slide-category {
@@ -30,11 +49,25 @@
             border: 0.2rem solid $white;
             transition: 0.3s background ease-in;
 
+            @include small-tablet {
+                padding: 2.4rem 4rem;
+                border-radius: 20rem;
+            }
+
             span {
                 display: block;
                 @extend %regular18;
                 @extend %gradientColor;
                 transition: 0.3s font-weight ease-in;
+
+                @include small-tablet {
+                    font-family: Gilroy;
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
             }
         }
     }
@@ -48,14 +81,30 @@
         &.--active {
             display: grid;
             animation: fade-bounce 0.8s both;
+
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+            }
         }
     }
 
     &__show-more {
-        @extend %gradientColorTxt;
+        @extend %gradientColor;
         @extend %regularCaps18;
-        display: block;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        @include small-tablet {
+            justify-content: flex-start;
+            font-family: Gilroy;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
     }
 
     &__swiper {
@@ -69,6 +118,10 @@
         &-next {
             position: absolute;
             top: 50%;
+
+            @include small-tablet {
+                display: none;
+            }
         }
 
         &-prev {
