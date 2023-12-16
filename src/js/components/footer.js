@@ -1,8 +1,14 @@
 import $ from 'jquery';
 import remToPx from '../utils/rem';
+import { isMobile } from '../utils/is-mobile';
+console.log(isMobile());
 
 $('.footer__nav-item').each(function (_, item) {
     $(item).on('click', function (event) {
+        if (!isMobile()) {
+            return;
+        }
+
         const list = $(this).find('ul');
         const height = list.outerHeight();
 

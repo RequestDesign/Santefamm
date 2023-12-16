@@ -1,0 +1,17 @@
+.novelty {
+    margin-bottom: 20rem;
+
+    &__articles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(54.7rem, 1fr));
+        gap: 4rem;
+        margin-bottom: 4.8rem;
+    }
+
+    &__show-more {
+        display: flex;
+        justify-content: center;
+        @extend %gradientColor;
+        @extend %regularCaps18;
+    }
+}

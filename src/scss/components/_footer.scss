@@ -1,5 +1,6 @@
 .footer {
     margin-bottom: 10rem;
+    margin-top: 2rem;
 
     &__content {
         display: flex;
@@ -159,9 +160,9 @@
                     svg {
                         transform: rotate(-180deg);
 
-                       path {
-                           stroke: #d65986;
-                       }
+                        path {
+                            stroke: #d65986;
+                        }
                     }
                 }
             }
@@ -179,6 +180,10 @@
                     -webkit-text-fill-color: transparent;
                 }
 
+                svg {
+                    display: none;
+                }
+
                 @include small-tablet {
                     display: flex;
                     gap: 0.4rem;
@@ -192,6 +197,7 @@
                     text-transform: initial;
 
                     svg {
+                        display: block;
                         max-width: 4.8rem;
                         width: 100%;
                         height: 4.8rem;
@@ -228,8 +234,14 @@
                         }
                     }
 
+                    @include small-tablet {
+                        &:not(:first-child) {
+                            margin-top: 3.2rem;
+                        }
+                    }
+
                     &:not(:first-child) {
-                        margin-top: 3.2rem;
+                        margin-top: 1.6rem;
                     }
                 }
             }
@@ -249,6 +261,11 @@
             }
             &.d {
                 grid-area: d;
+                margin-top: -13rem;
+
+                @include small-tablet {
+                    margin-top: 0;
+                }
             }
         }
     }
