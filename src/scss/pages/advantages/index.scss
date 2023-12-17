@@ -8,12 +8,24 @@
         justify-content: space-between;
         margin-bottom: 4rem;
 
+        @include small-tablet {
+            flex-direction: column;
+            gap: 6.4rem;
+            margin-bottom: 14rem;
+        }
+
         &-text {
             display: flex;
             align-items: flex-end;
             max-width: 72.1rem;
             width: 100%;
             position: relative;
+
+            @include small-tablet {
+                max-width: 100%;
+                flex-direction: column;
+                gap: 3.8rem;
+            }
         }
 
         &-tour {
@@ -22,6 +34,11 @@
             width: 100%;
             height: 48rem;
             border-radius: 1.8rem;
+
+            @include small-tablet {
+                height: 42rem;
+                border-radius: 2.8rem;
+            }
 
             &-image {
                 border-radius: inherit;
@@ -47,15 +64,39 @@
                 gap: 3.2rem;
                 align-items: center;
 
+                @include small-tablet {
+                    flex-direction: row-reverse;
+                    gap: 1.6rem;
+                    padding: 3.2rem;
+                    border-radius: 40rem;
+                    bottom: -8rem;
+                    top: auto;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
                 img {
                     max-width: 7rem;
                     width: 100%;
                     height: 7rem;
+
+                    @include small-tablet {
+                        max-width: 9.2rem;
+                        height: 9.2rem;
+                    }
                 }
 
                 span {
                     color: $black;
                     @extend %medium18Caps;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                        text-transform: uppercase;
+                    }
                 }
             }
         }
@@ -69,12 +110,31 @@
         font-weight: 400;
         line-height: 120%;
         text-transform: uppercase;
+
+        @include small-tablet {
+            text-align: center;
+            color: $black;
+            font-family: Philosopher;
+            font-size: 4.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: uppercase;
+            max-width: 60rem;
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 
     &__link {
         position: absolute;
         bottom: 1.3rem;
         right: 0;
+
+        @include small-tablet {
+            position: initial;
+            margin: 0 auto;
+        }
     }
 
     &__bottom {
@@ -83,6 +143,12 @@
         gap: 18rem;
         margin-top: 20rem;
 
+        @include small-tablet {
+            flex-direction: column;
+            margin-top: 18rem;
+            gap: 5.4rem;
+        }
+
         &-info {
             display: flex;
             flex-direction: column;
@@ -90,15 +156,45 @@
             max-width: 70rem;
             width: 100%;
 
+            @include small-tablet {
+                max-width: 100%;
+                gap: 0;
+            }
+
             &-description {
                 color: $grey;
                 @extend %regular18;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    max-width: 43.2rem;
+                }
             }
 
             &-heading {
                 display: flex;
                 padding-bottom: 4rem;
                 border-bottom: 0.2rem solid $white;
+
+                @include small-tablet {
+                    gap: 4rem;
+                    margin-bottom: 4rem;
+                }
+
+                &.--desc {
+                    @include small-tablet {
+                        display: none;
+                    }
+                }
+
+                &.--mob {
+                    @media (min-width: 48em) {
+                        display: none;
+                    }
+                }
 
                 &-description {
                     color: $grey;
@@ -115,6 +211,25 @@
                     gap: 4rem;
                     max-width: 35rem;
                     width: 100%;
+
+                    &.--mob {
+                        @media (min-width: 48em) {
+                            display: none;
+                        }
+                    }
+
+                    @include small-tablet {
+                        max-width: 100%;
+                        border-radius: 2.8rem;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 2rem;
+
+                        .advantages__bottom-info-heading-description {
+                            order: 3;
+                        }
+                    }
                 }
 
                 &-counting {
@@ -128,6 +243,15 @@
                     line-height: 80%;
                     text-transform: uppercase;
 
+                    @include small-tablet {
+                        order: 1;
+                        font-size: 7.2rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                        text-transform: uppercase;
+                    }
+
                     span {
                         color: $black;
                         font-family: Philosopher;
@@ -136,6 +260,14 @@
                         font-weight: 400;
                         line-height: 120%;
                         text-transform: uppercase;
+
+                        @include small-tablet {
+                            font-size: 4.8rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%;
+                            text-transform: uppercase;
+                        }
                     }
                 }
 
@@ -143,11 +275,29 @@
                     max-width: 16rem;
                     width: 100%;
                     height: 7rem;
+
+                    @include small-tablet {
+                        order: 2;
+                        height: 8.6rem;
+                        max-width: 22rem;
+                        margin-right: 1rem;
+                    }
                 }
 
                 &-poster {
                     max-width: 35rem;
                     width: 100%;
+                    border-radius: 1.8rem;
+
+                    img {
+                        border-radius: inherit;
+                    }
+
+                    @include small-tablet {
+                        max-width: 21.4rem;
+                        height: 21.4rem;
+                        border-radius: 2.4rem;
+                    }
                 }
             }
         }
@@ -157,9 +307,20 @@
             flex-direction: column;
             gap: 2.5rem;
 
+            @include small-tablet {
+                gap: 3.8rem;
+            }
+
             p {
                 color: $black;
                 @extend %regular18;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
             }
         }
     }
