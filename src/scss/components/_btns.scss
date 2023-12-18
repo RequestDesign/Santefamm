@@ -8,6 +8,11 @@
     transition: background 0.3s ease-in-out;
     position: relative;
 
+    @include small-tablet {
+        padding: 2.7rem 4rem;
+        border-radius: 2.8rem;
+    }
+
     span {
         position: relative;
         z-index: 4;
@@ -31,12 +36,18 @@
         }
     }
 
-    &:hover {
-    }
-
     span {
         @extend %regularCaps18;
         color: $white;
+
+        @include small-tablet {
+            font-family: Gilroy;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
     }
 }
 
