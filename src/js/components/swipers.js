@@ -112,14 +112,36 @@ function initPalomarSlider() {
                 prevEl: prev
             }
         });
+        // const resultSlider = document.querySelector('.palomar__swiper-result');
+        // const fraction = document.querySelector('.palomar__panel-fractions');
+        // const prevButton = document.querySelector('.palomar__result-prev');
+        // const nextButton = document.querySelector('.palomar__result-next');
 
-        const resultSlider = document.querySelector('.palomar__swiper-result');
-
+        // new Swiper(resultSlider, {
+        //     modules: [Pagination, Navigation],
+        //     allowTouchMove: true,
+        //     slidesPerView: '4',
+        //     spaceBetween: remToPx(1.2),
+        //     speed: 1200,
+        //     pagination: {
+        //         el: fraction,
+        //         type: 'fraction'
+        //     },
+        //     navigation: {
+        //         nextEl: nextButton,
+        //         prevEl: prevButton
+        //     }
+        // });
+    }
+}
+function initBeforeAfterSlider() {
+    if (document.querySelector('.palomar__swiper-result')) {
+        const slider = document.querySelector('.palomar__swiper-result');
         const fraction = document.querySelector('.palomar__panel-fractions');
         const prevButton = document.querySelector('.palomar__result-prev');
         const nextButton = document.querySelector('.palomar__result-next');
 
-        new Swiper(resultSlider, {
+        new Swiper(slider, {
             modules: [Pagination, Navigation],
             allowTouchMove: true,
             slidesPerView: '4',
@@ -136,7 +158,6 @@ function initPalomarSlider() {
         });
     }
 }
-
 function initSpecialistsSlider() {
     if (document.querySelector('.specialists__swiper')) {
         const slider = document.querySelector('.specialists__swiper');
@@ -178,6 +199,7 @@ function initDevicesSlider() {
         });
     }
 }
+
 function initPagesInfoSlider() {
     if (document.querySelector('.pages-info__swiper')) {
         const slider = document.querySelector('.pages-info__swiper');
@@ -212,7 +234,6 @@ function initPagesInfoSlider() {
                     function fadeIn(fade) {
                         var opacity = 0;
                         var intervalID = setInterval(function () {
-                            console.log(opacity);
                             if (opacity < 1) {
                                 opacity = opacity + 0.01;
                                 fade.style.opacity = opacity;
@@ -251,6 +272,56 @@ function initPagesInfoSlider() {
     }
 }
 
+function initServiceDescriptionEqSlider() {
+    if (document.querySelector('.service-description__swiper')) {
+        const slider = document.querySelector('.service-description__swiper');
+        const fraction = document.querySelector('.service-description-panel__fractions');
+        const btnPrev = document.querySelector('.service-description-panel__btn-prev');
+        const btnNext = document.querySelector('.service-description-panel__btn-next');
+
+        new Swiper(slider, {
+            modules: [Pagination, Navigation, EffectFade],
+            slidesPerView: 1,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            spaceBetween: remToPx(4),
+            speed: 1200,
+            pagination: {
+                el: fraction,
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: btnNext,
+                prevEl: btnPrev
+            }
+        });
+    }
+}
+
+function initServiceBenefitsEqSlider() {
+    if (document.querySelector('.service-benefits__swiper')) {
+        const slider = document.querySelector('.service-benefits__swiper');
+        const fraction = document.querySelector('.service-benefits__fractions');
+        const btnPrev = document.querySelector('.service-benefits__btn-prev');
+        const btnNext = document.querySelector('.service-benefits__btn-next');
+
+        new Swiper(slider, {
+            modules: [Pagination, Navigation],
+            slidesPerView: '4',
+            spaceBetween: remToPx(4),
+            speed: 1200,
+            pagination: {
+                el: fraction,
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: btnNext,
+                prevEl: btnPrev
+            }
+        });
+    }
+}
+
 function initSliders() {
     initReviewsSliders();
     initNewsSliders();
@@ -260,6 +331,9 @@ function initSliders() {
     initSpecialistsSlider();
     initPagesInfoSlider();
     initDevicesSlider();
+    initServiceDescriptionEqSlider();
+    initBeforeAfterSlider();
+    initServiceBenefitsEqSlider();
 }
 
 document.addEventListener('DOMContentLoaded', initSliders);

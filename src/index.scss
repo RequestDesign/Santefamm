@@ -32,6 +32,12 @@
 @import './scss/components/accordion';
 @import './scss/components/back-button';
 @import './scss/components/pages-info/pages-info';
+@import './scss/components/action/action';
+@import './scss/components/action/action-card';
+@import './scss/components/service/description';
+@import './scss/components/service/article';
+@import './scss/components/service/before-after';
+@import './scss/components/service/benefits';
 
 @import './scss/style';
 
@@ -47,3 +53,6 @@
 @import './scss/pages/about/index';
 @import './scss/pages/news/index';
 @import './scss/pages/advantages/index';
+@import './scss/pages/action/index';
+@import './scss/pages/service/index';
+

@@ -22,3 +22,6 @@ function accordion(trigger, selector) {
 if (document.querySelector('.prices')) {
     accordion();
 }
+if (document.querySelector('.service-description__info-accordion')) {
+    accordion();
+}
