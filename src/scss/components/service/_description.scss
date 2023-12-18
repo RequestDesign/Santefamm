@@ -1,0 +1,246 @@
+.service-description {
+    margin-bottom: 20rem;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__tabs {
+        &-list {
+            display: flex;
+            flex-direction: column;
+        }
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4.2rem;
+            cursor: pointer;
+
+            min-width: 54.5rem;
+            max-width: 54.5rem;
+            padding: 1rem 1rem 1rem 4rem;
+
+            border-radius: 20rem;
+            border: 0.2rem solid $white;
+            background-color: transparent;
+
+            transition: 0.3s background-color ease-in;
+
+            &:not(:first-child) {
+                margin-top: -0.2rem;
+            }
+
+            &:hover {
+                background-color: $bgCards;
+
+                .service-description__tabs-title {
+                    background-position: top left 100%;
+                }
+            }
+
+            &.--active {
+                background-color: $bgCards;
+
+                .service-description__tabs-title {
+                    background-position: top left 100%;
+                }
+                .service-description__tabs-icon {
+                    background-color: $white;
+                }
+            }
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            max-width: 13.7rem;
+            width: 100%;
+            max-height: 6rem;
+            padding: 1.9rem;
+
+            background-color: transparent;
+            border-radius: 20rem;
+
+            transition: 0.3s background-color ease-in;
+
+            img {
+                @include sizes(3rem, 2.2rem);
+            }
+        }
+        &-title {
+            background-image: linear-gradient(to right, $black, $black 50%, #d65986 -15.39%, #a261f9 112.18%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 100%;
+            background-position: top left;
+            transition: background-position 0.5s ease-out;
+
+            @extend %semibold18;
+        }
+    }
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+        visibility: hidden;
+        flex-direction: column;
+        gap: 2.4rem;
+
+        &-container {
+            position: relative;
+            width: 102.7rem;
+        }
+
+        &.--active {
+            position: relative;
+            visibility: visible;
+            animation: fade-bounce 0.8s both;
+        }
+
+        &-titles {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-title {
+            @extend %philoCaps32;
+        }
+        &-text {
+            @extend %regular18;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            &-item {
+                display: flex;
+                flex-direction: row;
+                gap: 1.6rem;
+
+                &-marker {
+                    min-width: 2.4rem;
+                    @include sizes(2.4rem, 2.4rem);
+                }
+                &-text {
+                    @extend %regular18;
+                }
+            }
+        }
+        &-tags {
+            display: flex;
+            gap: 1.6rem;
+        }
+        &-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 1.2rem 2rem;
+
+            border-radius: 20rem;
+            background-color: $lightPurple;
+
+            &-text {
+                @extend %regularCaps16;
+                @extend %gradientColor;
+            }
+        }
+        &-colums {
+            display: flex;
+            gap: 4rem;
+
+            &-img {
+                width: 44rem;
+            }
+            &-bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+
+                &-description {
+                    color: $grey;
+                    @extend %regular18;
+                }
+            }
+        }
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+
+                &-number {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include sizes(4.6rem, 4.6rem);
+                    margin-bottom: 1.6rem;
+
+                    border-radius: 50%;
+                    color: $white;
+                    background-image: $gradientPurple;
+
+                    p {
+                        @extend %philoCaps28;
+                    }
+                }
+                &-title {
+                    @extend %semibold18;
+                }
+                &-description {
+                    @extend %regular18;
+                }
+            }
+        }
+        &-accordion {
+            .accordion__content {
+                display: grid;
+                will-change: grid-template-rows;
+                grid-template-rows: 0fr;
+                transition: 0.5s grid-template-rows ease-in;
+            }
+            &.--active {
+                .accordion__content {
+                    grid-template-rows: 1fr;
+                }
+                .accordion__heading-icon {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &-title {
+                @extend %semibold18;
+            }
+            &-content {
+                overflow: hidden;
+
+                border-radius: 3rem;
+                background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, #fff 100%);
+
+                p {
+                    padding: 2rem 10.7rem 2rem 4rem;
+                }
+            }
+        }
+    }
+    &__swiper {
+        width: 100%;
+        height: 100%;
+
+        &-container {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
