@@ -4,6 +4,10 @@
     &__slider {
         &-block {
             position: relative;
+
+            @include small-tablet {
+                display: none;
+            }
         }
     }
 
@@ -95,11 +99,23 @@
         gap: 4rem;
         margin-bottom: 6rem;
 
+        @include small-tablet {
+            flex-direction: column;
+            gap: 6.4rem;
+            margin-bottom: 6.4rem;
+        }
+
         &-image {
             max-width: 54.7rem;
             width: 100%;
             height: 40.2rem;
             border-radius: 2rem;
+
+            @include small-tablet {
+                max-width: 100%;
+                border-radius: 2.8rem;
+                min-height: 50.4rem;
+            }
 
             img {
                 border-radius: inherit;
@@ -109,12 +125,24 @@
         &-text-block {
             max-width: 113.3rem;
             width: 100%;
+
+            @include small-tablet {
+                max-width: 100%;
+            }
         }
 
         &-description {
             color: $black;
             @extend %regular18;
             margin-bottom: 2rem;
+
+            @include small-tablet {
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                margin-bottom: 1rem;
+            }
         }
 
         &-subtitle {
@@ -122,6 +150,15 @@
             margin-bottom: 1.6rem;
             color: $black;
             @extend %semibold18;
+
+            @include small-tablet {
+                margin-bottom: 2.4rem;
+                font-family: Gilroy;
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+            }
         }
 
         &-benefits {
@@ -129,6 +166,10 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1.6rem;
+
+                @include small-tablet {
+                    gap: 2.4rem;
+                }
             }
 
             &-item {
@@ -140,23 +181,44 @@
                     max-width: 2.4rem;
                     width: 100%;
                     height: 2.4rem;
+
+                    @include small-tablet {
+                        max-width: 4rem;
+                        height: 4rem;
+                    }
                 }
 
                 p {
                     color: $black;
                     @extend %regular18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
             }
         }
     }
 
     &__bottom {
+        @include small-tablet {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
         .palomar__panel {
             width: fit-content;
             margin-left: auto;
             display: flex;
             gap: 4.8rem;
             margin-bottom: 4.9rem;
+
+            @include small-tablet {
+                margin: 4.8rem auto 0;
+            }
         }
 
         &-slide {
@@ -182,6 +244,11 @@
             width: 100%;
             height: 37.1rem;
             margin-bottom: 0.9rem;
+
+            @include small-tablet {
+                height: 29.6rem;
+                margin-bottom: 0.8rem;
+            }
         }
 
         &-title {
@@ -193,6 +260,14 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 4;
             @extend %gradientColorTxt;
+
+            @include small-tablet {
+                -webkit-line-clamp: 1;
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
         }
     }
 }
