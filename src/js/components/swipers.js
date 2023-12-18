@@ -122,8 +122,6 @@ function initPalomarSlider() {
         new Swiper(resultSlider, {
             modules: [Pagination, Navigation],
             allowTouchMove: true,
-            slidesPerView: '4',
-            spaceBetween: remToPx(1.2),
             speed: 1200,
             pagination: {
                 el: fraction,
@@ -132,6 +130,16 @@ function initPalomarSlider() {
             navigation: {
                 nextEl: nextButton,
                 prevEl: prevButton
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: '2',
+                    spaceBetween: remToPx(1.3)
+                },
+                768: {
+                    slidesPerView: '4',
+                    spaceBetween: remToPx(1.2)
+                }
             }
         });
     }
@@ -261,5 +269,38 @@ function initSliders() {
     initPagesInfoSlider();
     initDevicesSlider();
 }
+
+const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+    let swiper;
+
+    breakpoint = window.matchMedia(breakpoint);
+
+    const enableSwiper = function (className, settings) {
+        swiper = new Swiper(className, settings);
+
+        if (callback) {
+            callback(swiper);
+        }
+    };
+
+    const checker = function () {
+        if (breakpoint.matches) {
+            return enableSwiper(swiperClass, swiperSettings);
+        } else {
+            if (swiper !== undefined) swiper.destroy(true, true);
+            return;
+        }
+    };
+
+    breakpoint.addEventListener('change', checker);
+    checker();
+};
+
+resizableSwiper('(max-width: 768px)', '.equipment__swiper', {
+    speed: 1200,
+    slidesPerView: 'auto',
+    spaceBetween: remToPx(0.4),
+    slideToClickedSlide: true
+});
 
 document.addEventListener('DOMContentLoaded', initSliders);
