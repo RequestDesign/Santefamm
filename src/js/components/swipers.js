@@ -371,6 +371,18 @@ function initServiceBenefitsEqSlider() {
     }
 }
 
+function initServiceDetailedSwiper() {
+    if (document.querySelector('.accommodation__swiper')) {
+        const slider = document.querySelector('.accommodation__swiper');
+
+        new Swiper(slider, {
+            slidesPerView: '1.05',
+            spaceBetween: remToPx(0.8),
+            speed: 1200
+        });
+    }
+}
+
 function initSliders() {
     initReviewsSliders();
     initNewsSliders();
@@ -384,6 +396,7 @@ function initSliders() {
     initBeforeAfterSlider();
     initServiceBenefitsEqSlider();
     initLicensesSlider();
+    initServiceDetailedSwiper();
 }
 
 const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {

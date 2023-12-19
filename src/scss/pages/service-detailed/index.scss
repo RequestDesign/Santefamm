@@ -1,0 +1,119 @@
+.accommodation {
+    overflow: hidden;
+    margin-bottom: 20rem;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__swiper {
+        margin-bottom: 4rem;
+        overflow: visible;
+    }
+
+    &__description {
+        margin-bottom: 2.4rem;
+
+        p {
+            color: $black;
+            font-family: Gilroy;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+
+        &-image {
+            max-width: 18.8rem;
+            width: 100%;
+            height: 8.2rem;
+        }
+
+        &-title {
+            padding: 2.4rem 4rem;
+            border-radius: 40rem;
+            background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+            backdrop-filter: blur(1.5rem);
+            display: block;
+            color: $white;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+    }
+
+    &__list {
+        flex-direction: column;
+        display: none;
+
+        &.--active {
+            display: flex;
+            animation: fade-bounce 0.8s both;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        border-bottom: 0.1rem solid $white;
+        padding: 3.2rem 0;
+
+        &:first-child {
+            border-top: 0.1rem solid $white;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: flex-start;
+            gap: 2.4rem;
+
+            &-counter {
+                font-family: Gilroy;
+                font-size: 3.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                @extend %gradientColor;
+            }
+
+            &-title {
+                color: $black;
+                font-family: Gilroy;
+                font-size: 3.2rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            padding-left: 5.6rem;
+        }
+
+        &-description {
+            overflow: hidden;
+            color: $grey;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            font-family: Gilroy;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+}
