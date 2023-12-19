@@ -1,7 +1,22 @@
 .services {
+    margin-bottom: 20rem;
+
+    .title {
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+
     &__items {
         display: grid;
         grid-template-columns: repeat(172, 1rem);
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            width: 100%;
+        }
     }
 
     &__item {
@@ -13,6 +28,17 @@
         display: flex;
         position: relative;
         cursor: pointer;
+
+        @include small-tablet {
+            padding: 4rem;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 3.6rem;
+            gap: 2rem;
+            width: 100%;
+            margin: 0 !important;
+            min-height: 20rem;
+        }
 
         &:hover {
             .services__item-tit {
@@ -26,10 +52,31 @@
         @extend %gradientColorTxt;
         text-transform: uppercase;
         word-break: break-word;
+
+        @include small-tablet {
+            font-family: Philosopher;
+            font-size: 4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
     }
 
     &__item-img {
         position: absolute;
+
+        @include small-tablet {
+            position: initial;
+            max-width: 18.6rem;
+            width: 100%;
+            height: 10.2rem;
+            border-radius: 10rem;
+
+            img {
+                border-radius: inherit;
+            }
+        }
     }
 
     &__items--five {
@@ -393,6 +440,10 @@
         .services__item {
             &__tit {
                 max-width: 26rem;
+
+                @include small-tablet {
+                    max-width: 100%;
+                }
             }
 
             &:nth-child(1) {
@@ -402,9 +453,11 @@
                 margin-bottom: 4rem;
 
                 .services__item-img {
-                    @include sizes(49.2rem, 32.8rem);
-                    bottom: -3rem;
-                    left: 10.8rem;
+                    @media (min-width: 48em) {
+                        @include sizes(49.2rem, 32.8rem);
+                        bottom: -3rem;
+                        left: 10.8rem;
+                    }
                 }
             }
 
@@ -418,6 +471,15 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
+
+                    @include small-tablet {
+                        right: 0;
+                        bottom: -2rem;
+                        position: absolute;
+                        max-width: 29.4rem;
+                        width: 100%;
+                        height: 20rem;
+                    }
                 }
             }
 
@@ -430,6 +492,17 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
+
+                    @include small-tablet {
+                        width: 18.2rem;
+                        height: 9.9rem;
+                    }
+                }
+
+                .services__item-tit {
+                    @include small-tablet {
+                        max-width: 60%;
+                    }
                 }
             }
 
@@ -442,6 +515,17 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
+
+                    @include small-tablet {
+                        position: absolute;
+                        right: 2.8rem;
+                        top: 0;
+                        bottom: 0;
+                        max-width: 21rem;
+                        width: 100%;
+                        transform: scale(-1, 1);
+                        height: 100%;
+                    }
                 }
             }
 
@@ -455,6 +539,11 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
+
+                    @include small-tablet {
+                        width: 18.2rem;
+                        height: 9.9rem;
+                    }
                 }
             }
 
@@ -465,9 +554,18 @@
                 margin-bottom: 4rem;
 
                 .services__item-img {
-                    @include sizes(15.8rem, 12.6rem);
+                    @include sizes(15.8rem, 8.6rem);
                     right: 5rem;
-                    bottom: 0;
+                    bottom: 4rem;
+
+                    @include small-tablet {
+                        position: absolute;
+                        right: 4rem;
+                        top: 1rem;
+                        max-width: 20.6rem;
+                        width: 100%;
+                        height: 19rem;
+                    }
                 }
             }
 
@@ -476,9 +574,14 @@
                 grid-row: 48/69;
 
                 .services__item-img {
-                    @include sizes(18.2rem, 10.9rem);
+                    @include sizes(18.2rem, 24.9rem);
                     right: 6rem;
-                    bottom: 13rem;
+                    bottom: 0rem;
+
+                    @include small-tablet {
+                        width: 27.2rem;
+                        height: 9.9rem;
+                    }
                 }
             }
 
@@ -487,9 +590,16 @@
                 grid-row: 70/91;
 
                 .services__item-img {
-                    @include sizes(22.2rem, 14.9rem);
+                    width: 22.2rem;
+                    height: 24.9rem;
                     right: 3rem;
-                    bottom: 10rem;
+                    top: auto;
+                    bottom: 0;
+
+                    @include small-tablet {
+                        width: 18.2rem;
+                        height: 9.9rem;
+                    }
                 }
             }
 
@@ -501,6 +611,11 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
+
+                    @include small-tablet {
+                        width: 27.2rem;
+                        height: 9.9rem;
+                    }
                 }
             }
         }
