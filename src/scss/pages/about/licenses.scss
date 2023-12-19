@@ -1,0 +1,126 @@
+.licenses {
+    margin-bottom: 20rem;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.8rem;
+    }
+
+    &__sliders {
+        display: flex;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+
+    &__title {
+        color: $black;
+        font-family: Philosopher;
+        font-size: 7rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+
+    &__slide {
+        height: unset;
+
+        &-wrapper {
+            border-radius: 1.8rem;
+            border: 0.2rem solid $white;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(1.5rem);
+            position: relative;
+            padding: 3rem 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-image {
+            width: auto;
+            height: auto;
+        }
+
+        &-button {
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 7.6rem;
+            width: 100%;
+            height: 6rem;
+            border-radius: 1.8rem;
+            background: $white;
+
+            img {
+                max-width: 2.4rem;
+                width: 100%;
+                height: 2.4rem;
+            }
+        }
+
+        &-text {
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 25.3rem;
+        }
+
+        &-title {
+            color: $black;
+            font-family: Philosopher;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
+
+        &-description {
+            color: $grey;
+            font-family: Gilroy;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+
+    &__swiper {
+        max-width: 84rem;
+        width: 100%;
+
+        &-license {
+            width: 100%;
+            height: 54rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .licenses__slide {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 4rem;
+            }
+
+            .licenses__slide-wrapper {
+                padding: 4rem;
+                max-width: 54rem;
+                width: 100%;
+            }
+
+            .licenses__slide-image {
+                max-width: 32.6rem;
+                max-height: 46rem;
+                width: auto;
+                user-select: none;
+            }
+        }
+    }
+}

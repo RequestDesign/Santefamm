@@ -73,3 +73,8 @@ main {
     pointer-events: none !important;
     user-select: none !important;
 }
+
+.swiper-pagination-fraction {
+    display: flex;
+    align-items: center;
+}
