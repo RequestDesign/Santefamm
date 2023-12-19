@@ -51,6 +51,11 @@
     }
 }
 
+.btn-details {
+    margin-top: 4.8rem;
+    margin-left: auto;
+}
+
 .btn-secondary {
     @extend %flexCenter;
     width: fit-content;
