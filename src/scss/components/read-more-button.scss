@@ -1,0 +1,22 @@
+.read-more__link {
+    &-wrap {
+        display: none;
+
+        @include small-tablet {
+            display: block;
+            margin-bottom: 6.5rem;
+        }
+    }
+
+    font-family: Gilroy;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    @extend %gradientColor;
+
+    @include small-tablet {
+        font-size: 2.8rem;
+    }
+}

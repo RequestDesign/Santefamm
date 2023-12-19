@@ -2,18 +2,49 @@
     margin-top: 20rem;
     margin-bottom: 20rem;
 
+    &__main {
+        @include small-tablet {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+
     &__container {
         @extend %flexCenterBetween;
         column-gap: 11.5rem;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 7.4rem;
+        }
     }
 
     &__items {
         @extend %flexCenter;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            align-items: flex-start;
+        }
     }
 
     &__item {
         display: flex;
         column-gap: 1.6rem;
+
+        @include small-tablet {
+            align-items: center;
+            gap: 3.2rem;
+            width: 100%;
+        }
 
         a {
             @extend %gradientColorTxt;
@@ -21,6 +52,10 @@
 
         &:not(:last-child) {
             margin-right: 6.8rem;
+
+            @include small-tablet {
+                margin-right: 0;
+            }
         }
     }
 
@@ -37,15 +72,34 @@
     &__desc {
         margin-top: 2.2rem;
         max-width: 24.7rem;
+
+        @include small-tablet {
+            max-width: 100%;
+            margin-top: 0;
+        }
     }
 
     &__desc-title {
         @extend %semibold20;
         margin-bottom: 0.8rem;
+
+        @include small-tablet {
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+        }
     }
 
     &__desc-txt {
         @extend %regular20;
+
+        @include small-tablet {
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
     }
 
     &__time {
@@ -53,6 +107,10 @@
         align-items: center;
         position: relative;
         padding-top: 2.4rem;
+
+        @include small-tablet {
+            width: 100%;
+        }
     }
 
     &__time-title {
@@ -65,9 +123,23 @@
         top: -0.2rem;
         z-index: 2;
 
+        @include small-tablet {
+            padding: 1.4rem 4rem;
+            border-radius: 3.6rem;
+            top: -0.8rem;
+        }
+
         span {
             @extend %philoCaps28;
             color: $white;
+
+            @include small-tablet {
+                font-size: 4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
         }
     }
 
@@ -79,6 +151,14 @@
         display: flex;
         justify-content: center;
         padding-top: 6rem;
+
+        @include small-tablet {
+            max-width: 100%;
+            width: 100%;
+            height: initial;
+            padding: 7.6rem 7.6rem 4rem;
+            border-radius: 2.8rem;
+        }
     }
 
     &__time-item {
@@ -87,19 +167,42 @@
         align-items: center;
         justify-content: center;
 
+        @include small-tablet {
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+
         &:not(:last-child) {
             margin-bottom: 2.8rem;
+
+            @include small-tablet {
+                margin-bottom: 4rem;
+            }
         }
     }
 
     &__time-day {
         @extend %semibold18;
         line-height: 2.16rem;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+        }
     }
 
     &__time-desc {
         @extend %regular18;
         color: $grey;
         line-height: 2.16rem;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
     }
 }
