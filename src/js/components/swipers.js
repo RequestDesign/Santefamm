@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper';
-import { EffectFade, EffectCards, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, EffectCards, Navigation, Pagination, Thumbs } from 'swiper/modules';
 import remToPx from '../utils/rem';
 
 // import Swiper and modules styles
@@ -208,6 +208,47 @@ function initDevicesSlider() {
     }
 }
 
+function initLicensesSlider() {
+    if (document.querySelector('.licenses__swiper')) {
+        const slider = document.querySelector('.licenses__swiper');
+        const fraction = document.querySelector('.licenses__panel-fractions');
+        const btnPrev = document.querySelector('.licenses__panel-prev');
+        const btnNext = document.querySelector('.licenses__panel-next');
+
+        const sliderLicense = document.querySelector('.licenses__swiper-license');
+
+        const license = new Swiper(sliderLicense, {
+            modules: [Pagination, Navigation, EffectFade],
+            effect: 'fade',
+            noSwiping: true,
+            noSwipingClass: 'swiper-slide',
+            fadeEffect: {
+                crossFade: true
+            },
+            slidesPerView: 1,
+            speed: 1200
+        });
+
+        new Swiper(slider, {
+            modules: [Pagination, Navigation, Thumbs],
+            slidesPerView: '3',
+            spaceBetween: remToPx(4),
+            speed: 1200,
+            thumbs: {
+                swiper: license
+            },
+            pagination: {
+                el: fraction,
+                type: 'fraction'
+            },
+            navigation: {
+                nextEl: btnNext,
+                prevEl: btnPrev
+            }
+        });
+    }
+}
+
 function initPagesInfoSlider() {
     if (document.querySelector('.pages-info__swiper')) {
         const slider = document.querySelector('.pages-info__swiper');
@@ -342,9 +383,12 @@ function initSliders() {
     initServiceDescriptionEqSlider();
     initBeforeAfterSlider();
     initServiceBenefitsEqSlider();
+    initLicensesSlider();
 }
 
 const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+    if (!document.querySelector(swiperClass)) return;
+
     let swiper;
 
     breakpoint = window.matchMedia(breakpoint);
