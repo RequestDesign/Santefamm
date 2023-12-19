@@ -35,3 +35,4 @@ function bindModal(trigger, modal, close, callback = () => null) {
 }
 
 bindModal('.request-button', '#request-modal', '#request-modal .modal__close');
+bindModal('.appointment-button', '#service-appointment-modal', '#service-appointment-modal .modal__close');
