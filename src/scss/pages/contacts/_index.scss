@@ -1,5 +1,5 @@
 .contacts-page {
-    margin: 5.4rem 0 20rem;
+    margin-bottom: 20rem;
 
     &-bg {
         background: url('./assets/images/bg/contact-mob-bg.png') no-repeat center;
@@ -47,6 +47,12 @@
         background: $white;
         padding: 4rem;
         backdrop-filter: blur(1.5rem);
+
+        &-desc {
+            a {
+                @extend %gradientColorTxt;
+            }
+        }
     }
 
     &__connect-title {
@@ -119,7 +125,7 @@
 
     &__block-title {
         @extend %semibold18;
-        @extend %gradientColorTxt;
+        @extend %gradientColor;
         margin-bottom: 0.8rem;
     }
 
@@ -130,7 +136,16 @@
 
 @media screen and (max-width: 48em) {
     .contacts-page {
-        margin: 7rem 0 18rem;
+        &__title {
+            text-align: center;
+        }
+
+        &__block-desc {
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
 
         &-bg {
             display: block;
