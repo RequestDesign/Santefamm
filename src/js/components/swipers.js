@@ -112,26 +112,6 @@ function initPalomarSlider() {
                 prevEl: prev
             }
         });
-        // const resultSlider = document.querySelector('.palomar__swiper-result');
-        // const fraction = document.querySelector('.palomar__panel-fractions');
-        // const prevButton = document.querySelector('.palomar__result-prev');
-        // const nextButton = document.querySelector('.palomar__result-next');
-
-        // new Swiper(resultSlider, {
-        //     modules: [Pagination, Navigation],
-        //     allowTouchMove: true,
-        //     slidesPerView: '4',
-        //     spaceBetween: remToPx(1.2),
-        //     speed: 1200,
-        //     pagination: {
-        //         el: fraction,
-        //         type: 'fraction'
-        //     },
-        //     navigation: {
-        //         nextEl: nextButton,
-        //         prevEl: prevButton
-        //     }
-        // });
     }
 }
 function initBeforeAfterSlider() {
@@ -382,6 +362,26 @@ function initServiceDetailedSwiper() {
         });
     }
 }
+function initActionSlider() {
+    if (document.querySelector('.action__swiper')) {
+        const slider = document.querySelector('.action__swiper');
+
+        const next = document.querySelector('.action-button-next');
+        const prev = document.querySelector('.action-button-prev');
+
+        new Swiper(slider, {
+            modules: [Navigation],
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(1.6),
+            speed: 1200,
+            slideToClickedSlide: true,
+            navigation: {
+                nextEl: next,
+                prevEl: prev
+            }
+        });
+    }
+}
 
 function initSliders() {
     initReviewsSliders();
@@ -397,6 +397,7 @@ function initSliders() {
     initServiceBenefitsEqSlider();
     initLicensesSlider();
     initServiceDetailedSwiper();
+    initActionSlider();
 }
 
 const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
