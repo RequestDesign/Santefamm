@@ -20,6 +20,10 @@
     display: flex;
     transition: 0.3s opacity ease-in;
 
+    @include small-tablet {
+        padding: 0 3.2rem;
+    }
+
     &::after {
         @include pseudo {
             background: linear-gradient(261deg, #f8f8f8 8.92%, #ff3641 43.11%, rgba(252, 216, 208, 0) 43.11%),
@@ -45,6 +49,13 @@
         width: 100%;
         min-height: 63.4rem;
 
+        @include small-tablet {
+            padding: 6rem 3.8rem 6.4rem;
+            border-radius: 2.8rem;
+            max-width: 100%;
+            min-height: initial;
+        }
+
         transform: scale(1.15);
         will-change: transform;
         transition: 0.2s transform ease-in;
@@ -58,6 +69,14 @@
             position: absolute;
             right: 2.4rem;
             top: 2.4rem;
+
+            @include small-tablet {
+                top: 3.2rem;
+                right: 2.2rem;
+                max-width: 4.8rem;
+                width: 100%;
+                height: 4.8rem;
+            }
         }
     }
 }
@@ -67,11 +86,26 @@
     .modal__logo {
         @include sizes(7.3rem, 9.3rem);
         margin-bottom: 2.5rem;
+
+        @include small-tablet {
+            max-width: 8.4rem;
+            width: 100%;
+            height: 10rem;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     .modal__content {
         display: flex;
         gap: 10rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 5.4rem;
+        }
 
         &-info {
             max-width: 37.3rem;
@@ -80,7 +114,13 @@
             flex-direction: column;
             padding-top: 6rem;
 
+            @include small-tablet {
+                max-width: 100%;
+                padding-top: 0;
+            }
+
             &-title {
+                font-family: Philosopher;
                 font-size: 2.7rem;
                 font-style: normal;
                 font-weight: 400;
@@ -88,6 +128,16 @@
                 text-transform: uppercase;
                 margin-bottom: 3.2rem;
                 color: $black;
+
+                @include small-tablet {
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-bottom: 4.4rem;
+                    font-size: 3.7rem;
+                    line-height: 135%;
+                }
             }
 
             &-description {
@@ -98,6 +148,15 @@
                 font-weight: 400;
                 line-height: 140%;
                 letter-spacing: 0;
+                max-width: 95%;
+
+                @include small-tablet {
+                    color: $grey;
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
             }
 
             &-phone {
@@ -105,6 +164,10 @@
                 display: flex;
                 align-items: center;
                 gap: 1.2rem;
+
+                @include small-tablet {
+                    display: none;
+                }
 
                 img {
                     @include sizes(2.4rem, 2.4rem);
@@ -130,16 +193,35 @@
                 flex-direction: column;
                 height: 8.6rem;
 
+                @include small-tablet {
+                    height: 8.4rem;
+                    display: flex;
+                    gap: 2.2rem;
+                    justify-content: space-between;
+                }
+
                 &:not(:first-child) {
                     margin-top: 1.6rem;
+
+                    @include small-tablet {
+                        margin-top: 6rem;
+                    }
                 }
 
                 label {
+                    font-family: 'Gilroy';
                     color: $grey;
                     font-size: 1.8rem;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 140%;
+
+                    @include small-tablet {
+                        font-size: 2rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
 
                 input {
@@ -152,14 +234,34 @@
                 display: flex;
                 gap: 3.4rem;
 
+                @include small-tablet {
+                    flex-direction: column-reverse;
+                    gap: 6.4rem;
+                    margin-top: 6.4rem;
+                }
+
                 > button {
                     padding: 1.9rem 4rem;
                     width: fit-content;
                     height: 6rem;
 
+                    @include small-tablet {
+                        padding: 3.7rem 4rem;
+                        border-radius: 2.8rem;
+                        margin: 0 auto;
+                    }
+
                     span {
                         @extend %regular18;
                         color: $white;
+
+                        @include small-tablet {
+                            font-size: 2.3rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 120%;
+                            text-transform: uppercase;
+                        }
                     }
                 }
 
@@ -167,20 +269,8 @@
                     display: flex;
                     gap: 2.1rem;
 
-                    input {
-                        max-width: 1.8rem;
-                        width: 100%;
-                        height: 1.8rem;
-                    }
-
-                    label {
-                        color: $grey;
-                        font-family: Gilroy;
-                        font-size: 1.6rem;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 1.92rem;
-                        letter-spacing: 0;
+                    @include small-tablet {
+                        gap: 4.2rem;
                     }
                 }
             }
@@ -201,6 +291,13 @@
         line-height: 140%;
         margin-bottom: 1.6rem;
 
+        @include small-tablet {
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-bottom: 2.6rem;
+        }
+
         span {
             color: $black;
             font-family: Gilroy;
@@ -208,6 +305,12 @@
             font-style: normal;
             font-weight: 600;
             line-height: 120%;
+
+            @include small-tablet {
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+            }
         }
     }
 }
