@@ -75,6 +75,7 @@
     &__item {
         display: flex;
         flex-direction: row;
+        gap: 1.6rem;
         margin-bottom: 2.4rem;
 
         &-marker {
@@ -104,6 +105,7 @@
     }
     &__subscription {
         @extend %medium18Caps;
+        margin-bottom: 4rem;
     }
     &__action {
         max-width: 48.3rem;

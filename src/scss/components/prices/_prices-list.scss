@@ -1,0 +1,66 @@
+.prices-list {
+    &__table {
+        width: 100%;
+        margin-bottom: 2.4rem;
+        &-cell {
+            vertical-align: top;
+            padding-top: 2.4rem;
+            padding-bottom: 2.4rem;
+            padding-right: 2rem;
+            border-bottom: 0.2rem solid $white;
+
+            &-title {
+                max-width: 65.3rem;
+                display: flex;
+                align-items: center;
+
+                gap: 2.4rem;
+                @extend %semibold20;
+
+                &-number {
+                    @include sizes(3.2rem, 3.2rem);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    padding: 1rem 1.3rem;
+                    border-radius: 50%;
+                    border: 0.1rem solid $white;
+                    background-color: $bgCards;
+                    @extend %regularCaps16;
+                }
+            }
+
+            &-list {
+                max-width: 102.7rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-row-gap: 4rem;
+                grid-column-gap: 4.2rem;
+
+                &-item {
+                    &-text {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.8rem;
+
+                        @extend %regular18;
+
+                        &:before {
+                            content: '';
+                            min-width: 1rem;
+                            min-height: 1rem;
+                            @include sizes(1rem, 1rem);
+
+                            background-image: $gradientPurple;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__link {
+        float: right;
+    }
+}
