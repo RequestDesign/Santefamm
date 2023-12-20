@@ -2,6 +2,10 @@ body {
     @extend %flexColumn;
     min-height: 100vh;
     position: relative;
+
+    &.locked {
+        overflow: hidden;
+    }
 }
 
 main {
