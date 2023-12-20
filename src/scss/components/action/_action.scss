@@ -1,7 +1,79 @@
 .action {
+    &__slider {
+        &-block {
+            position: relative;
+
+            @include small-tablet {
+                display: none;
+            }
+        }
+    }
+
+    &-button {
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 50%;
+        }
+
+        &-prev {
+            left: -3rem;
+        }
+
+        &-next {
+            right: -2rem;
+        }
+    }
+
+    &__swiper {
+        margin-bottom: 4.8rem;
+    }
+
+    &__slide {
+        width: max-content;
+        padding: 1.8rem 2rem;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 4rem;
+        border: 0.2rem solid $white;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(1.5rem);
+
+        transition: 0.3s background-color ease-in;
+
+        &:hover {
+            background-color: $white;
+        }
+
+        &.--active {
+            background-color: $white;
+
+            .action__slide-title {
+                font-weight: 600;
+            }
+        }
+
+        &-title {
+            @extend %gradientColor;
+            @extend %regular18;
+
+            will-change: font-weight;
+            transition: 0.3s font-weight ease-in;
+        }
+    }
+
     &__list {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem;
+
+        &.--active {
+            display: grid;
+            animation: fade-bounce 0.8s both;
+        }
     }
 }
