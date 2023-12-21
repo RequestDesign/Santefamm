@@ -52,8 +52,23 @@
 }
 
 .btn-details {
-    margin-top: 4.8rem;
+    margin-top: 3.8rem;
     margin-left: auto;
+
+    &.--desc {
+        display: flex;
+
+        @include small-tablet {
+            display: none;
+        }
+    }
+
+    &.--mob {
+        @include small-tablet {
+            display: flex;
+            margin: 6.4rem auto 0;
+        }
+    }
 }
 
 .btn-secondary {

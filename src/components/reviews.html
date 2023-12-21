@@ -3,7 +3,7 @@
         <div class="reviews__container">
             <div class="reviews__titles">
                 <div class="reviews__title title">отзывы</div>
-                <div class="reviews__panel swiper-panel">
+                <div class="reviews__panel swiper-panel --desc">
                     <button type="button" class="swiper-panel__btn reviews-panel__btn-prev">
                         <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
                     </button>
@@ -38,6 +38,16 @@
                         <include src="./components/review-card.html"></include>
                     </div>
                 </div>
+            </div>
+
+            <div class="reviews__panel swiper-panel --mob">
+                <button type="button" class="swiper-panel__btn reviews-panel__btn-prev">
+                    <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
+                </button>
+                <div class="reviews-panel__fractions"></div>
+                <button type="button" class="swiper-panel__btn reviews-panel__btn-next">
+                    <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
+                </button>
             </div>
         </div>
     </div>

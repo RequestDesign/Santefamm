@@ -11,22 +11,38 @@ import 'swiper/css/effect-fade';
 function initReviewsSliders() {
     if (document.querySelector('.reviews__swiper')) {
         const slider = document.querySelector('.reviews__swiper');
+        const fractions = {
+            desktop: document.querySelector('.reviews__panel.--desc .reviews-panel__fractions'),
+            mobile: document.querySelector('.reviews__panel.--mob .reviews-panel__fractions')
+        };
         const fraction = document.querySelector('.reviews-panel__fractions');
         const btnPrev = document.querySelector('.reviews-panel__btn-prev');
         const btnNext = document.querySelector('.reviews-panel__btn-next');
 
         new Swiper(slider, {
             modules: [Pagination, Navigation],
-            slidesPerView: 3,
             allowTouchMove: true,
-            spaceBetween: remToPx(4),
-            pagination: {
-                el: fraction,
-                type: 'fraction'
-            },
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: remToPx(2),
+                    pagination: {
+                        el: fractions.mobile,
+                        type: 'fraction'
+                    }
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: remToPx(4),
+                    pagination: {
+                        el: fractions.desktop,
+                        type: 'fraction'
+                    }
+                }
             }
         });
     }
@@ -35,22 +51,37 @@ function initReviewsSliders() {
 function initDoctorsSliders() {
     if (document.querySelector('.doctors__swiper')) {
         const slider = document.querySelector('.doctors__swiper');
-        const fraction = document.querySelector('.doctors-panel__fractions');
+        const fractions = {
+            desktop: document.querySelector('.doctors__panel.--desc .doctors-panel__fractions'),
+            mobile: document.querySelector('.doctors__panel.--mob .doctors-panel__fractions')
+        };
         const btnPrev = document.querySelector('.doctors-panel__btn-prev');
         const btnNext = document.querySelector('.doctors-panel__btn-next');
 
         new Swiper(slider, {
             modules: [Pagination, Navigation],
-            slidesPerView: 2,
             allowTouchMove: true,
-            spaceBetween: remToPx(4),
-            pagination: {
-                el: fraction,
-                type: 'fraction'
-            },
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: remToPx(2),
+                    pagination: {
+                        el: fractions.mobile,
+                        type: 'fraction'
+                    }
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: remToPx(4),
+                    pagination: {
+                        el: fractions.desktop,
+                        type: 'fraction'
+                    }
+                }
             }
         });
     }
@@ -59,22 +90,37 @@ function initDoctorsSliders() {
 function initNewsSliders() {
     if (document.querySelector('.news__swiper')) {
         const slider = document.querySelector('.news__swiper');
-        const fraction = document.querySelector('.news-panel__fractions');
+        const fractions = {
+            desktop: document.querySelector('.news__panel.--desc .news-panel__fractions'),
+            mobile: document.querySelector('.news__panel.--mob .news-panel__fractions')
+        };
         const btnPrev = document.querySelector('.news-panel__btn-prev');
         const btnNext = document.querySelector('.news-panel__btn-next');
 
         new Swiper(slider, {
             modules: [Pagination, Navigation],
-            slidesPerView: 3,
             allowTouchMove: true,
-            spaceBetween: remToPx(4),
-            pagination: {
-                el: fraction,
-                type: 'fraction'
-            },
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: remToPx(2),
+                    pagination: {
+                        el: fractions.mobile,
+                        type: 'fraction'
+                    }
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: remToPx(4),
+                    pagination: {
+                        el: fractions.desktop,
+                        type: 'fraction'
+                    }
+                }
             }
         });
     }

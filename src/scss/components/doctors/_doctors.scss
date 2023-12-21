@@ -1,11 +1,39 @@
 .doctors {
     margin: 20rem 0;
 
+    &__container {
+        position: relative;
+    }
+
+    &__panel {
+        &.--desc {
+            display: flex;
+
+            @include small-tablet {
+                display: none;
+            }
+        }
+
+        &.--mob {
+            display: none;
+
+            @include small-tablet {
+                display: flex;
+            }
+        }
+    }
+
     &__heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 4.8rem;
+
+        @include small-tablet {
+            margin-bottom: 6.4rem;
+            justify-content: center;
+            text-align: center;
+        }
 
         &-title {
             margin-bottom: 0 !important;
@@ -16,15 +44,4 @@
         display: flex;
         gap: 4rem;
     }
-
-    // .title {
-    //     color: $black;
-    //     font-family: Philosopher;
-    //     font-size: 3.2rem;
-    //     font-style: normal;
-    //     font-weight: 400;
-    //     line-height: 120%;
-    //     text-transform: uppercase;
-    //     margin-bottom: 3.8rem;
-    // }
 }
