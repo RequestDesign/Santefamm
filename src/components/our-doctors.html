@@ -3,7 +3,7 @@
         <div class="doctors__container">
             <div class="doctors__heading">
                 <div class="doctors__title doctors__heading-title title">наши Врачи</div>
-                <div class="doctors__panel swiper-panel">
+                <div class="doctors__panel swiper-panel --desc">
                     <button type="button" class="swiper-panel__btn doctors-panel__btn-prev">
                         <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
                     </button>
@@ -37,10 +37,24 @@
                 </div>
             </div>
 
-            <a href="" class="doctors__link btn-secondary btn-details">
+            <div class="doctors__panel swiper-panel --mob">
+                <button type="button" class="swiper-panel__btn doctors-panel__btn-prev">
+                    <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
+                </button>
+                <div class="doctors-panel__fractions"></div>
+                <button type="button" class="swiper-panel__btn doctors-panel__btn-next">
+                    <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
+                </button>
+            </div>
+
+            <a href="" class="doctors__link btn-secondary btn-details --desc">
                 <span>Подробнее</span>
 
                 <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
+            </a>
+
+            <a href="" class="doctors__link btn-primary btn-details --mob">
+                <span>Подробнее</span>
             </a>
         </div>
     </div>

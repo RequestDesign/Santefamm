@@ -4,13 +4,50 @@
     color: $grey;
     @extend %philoCaps28;
 
+    &.--desc {
+        display: flex;
+
+        @include small-tablet {
+            display: none;
+        }
+    }
+
+    &.--mob {
+        display: none;
+
+        @include small-tablet {
+            display: flex;
+        }
+    }
+
+    @include small-tablet {
+        justify-content: center;
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-transform: uppercase;
+        margin-top: 4.8rem;
+        margin-bottom: 5.4rem;
+    }
+
     &__btn {
         @include sizes(6rem, 1.8rem);
         flex-shrink: 0;
         transition: 0.3s opacity ease-in;
 
+        @include small-tablet {
+            @include sizes(8rem, 2.6rem);
+        }
+
         img {
             height: auto;
+        }
+    }
+
+    .swiper-pagination-fraction {
+        @include small-tablet {
+            width: auto;
         }
     }
 

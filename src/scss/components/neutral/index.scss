@@ -1,6 +1,9 @@
 .neutral {
     margin-bottom: 24rem;
-    overflow: hidden;
+
+    @include small-tablet {
+        overflow: hidden;
+    }
 
     &__content {
         display: flex;
@@ -214,6 +217,14 @@
         width: 100%;
         margin-top: 17.8rem;
 
+        @include small-tablet {
+            max-width: 100%;
+            padding: 6.4rem 4rem;
+            border-radius: 2.8rem;
+            background: $white;
+            margin-top: 7rem;
+        }
+
         &-title {
             color: $black;
             font-family: Philosopher;
@@ -224,6 +235,14 @@
             text-transform: uppercase;
             margin-bottom: 2.2rem;
             max-width: 90%;
+
+            @include small-tablet {
+                font-size: 4.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
         }
 
         &-description {
@@ -234,6 +253,14 @@
             font-weight: 400;
             line-height: 120%;
             margin-bottom: 4.8rem;
+
+            @include small-tablet {
+                font-size: 3.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                margin-bottom: 4rem;
+            }
         }
 
         &-block {
@@ -246,7 +273,27 @@
             flex-direction: column;
             justify-content: space-between;
 
+            @include small-tablet {
+                display: none;
+            }
+
             &-link {
+                &.--desc {
+                    display: flex;
+
+                    @include small-tablet {
+                        display: none;
+                    }
+                }
+
+                &.--mob {
+                    display: none;
+
+                    @include small-tablet {
+                        display: flex;
+                    }
+                }
+
                 img {
                     height: auto;
                 }

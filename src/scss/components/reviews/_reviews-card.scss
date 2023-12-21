@@ -1,14 +1,28 @@
 .card-review {
     position: relative;
-    width: 54.7rem;
+    max-width: 54.7rem;
+    width: 100%;
     margin-top: 1.4rem;
+
+    @include small-tablet {
+        max-width: 100%;
+        margin-top: 0;
+    }
 
     &__desc {
         background: url('./assets/images/bg/review-bg.svg');
         background-size: contain;
         background-repeat: no-repeat;
         padding: 4rem 3.2rem 3.2rem;
-        @include sizes(54.7rem, 37.2rem);
+        width: 100%;
+        height: 37.2rem;
+
+        @include small-tablet {
+            height: 49.4rem;
+            padding: 4rem;
+            background: url('./assets/images/bg/review-bg-mobile.svg');
+            margin-top: 2rem;
+        }
     }
 
     &__title {
@@ -16,6 +30,19 @@
         max-width: 30.2rem;
         margin-bottom: 2rem;
         line-height: 2.16rem;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            max-width: 40.2rem;
+            margin-bottom: 2.4rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     }
 
     &__txt {
@@ -27,20 +54,47 @@
         overflow: hidden;
         margin-bottom: 2rem;
         line-height: 2.5rem;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-bottom: 4rem;
+        }
     }
 
     &__info {
         @extend %flexCenterBetween;
+
+        @include small-tablet {
+            align-items: center;
+        }
     }
 
     &__name {
         @extend %semibold18;
         margin-bottom: 0.4rem;
+
+        @include small-tablet {
+            margin-bottom: 0;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+        }
     }
 
     &__date {
         @extend %regular18;
         color: $grey;
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
     }
 
     &__site {
@@ -50,8 +104,16 @@
         backdrop-filter: blur(0.35rem);
         border-radius: 50%;
 
+        @include small-tablet {
+            @include sizes(11.2rem, 11.2rem);
+        }
+
         img {
             @include sizes(8.1rem, 6.9rem);
+
+            @include small-tablet {
+                @include sizes(9.6rem, 7.6rem);
+            }
         }
     }
 
@@ -62,5 +124,11 @@
         width: 17.6rem;
         padding-top: 1.7rem;
         padding-bottom: 1.7rem;
+
+        @include small-tablet {
+            width: 18rem;
+            top: -2rem;
+            height: 8.8rem;
+        }
     }
 }
