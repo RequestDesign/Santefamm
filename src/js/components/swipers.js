@@ -418,12 +418,67 @@ function initActionSlider() {
         new Swiper(slider, {
             modules: [Navigation],
             slidesPerView: 'auto',
-            spaceBetween: remToPx(1.6),
             speed: 1200,
             slideToClickedSlide: true,
             navigation: {
                 nextEl: next,
                 prevEl: prev
+            },
+            breakpoints: {
+                0: {
+                    spaceBetween: remToPx(0.8)
+                },
+                768: {
+                    spaceBetween: remToPx(1.6)
+                }
+            }
+        });
+    }
+}
+function initActionOtherSliders() {
+    if (document.querySelector('.action-other__swiper')) {
+        const slider = document.querySelector('.action-other__swiper');
+        const fractions = {
+            desktop: document.querySelector('.action-other__panel.--desc .action-other-panel__fractions'),
+            mobile: document.querySelector('.action-other__panel.--mob .action-other-panel__fractions')
+        };
+        const btnPrev = {
+            desktop: document.querySelector('.action-other__panel.--desc .action-other-panel__btn-prev'),
+            mobile: document.querySelector('.action-other__panel.--mob .action-other-panel__btn-prev')
+        };
+        const btnNext = {
+            desktop: document.querySelector('.action-other__panel.--desc .action-other-panel__btn-next'),
+            mobile: document.querySelector('.action-other__panel.--mob .action-other-panel__btn-next')
+        };
+
+        new Swiper(slider, {
+            modules: [Pagination, Navigation],
+            allowTouchMove: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: remToPx(2),
+                    pagination: {
+                        el: fractions.mobile,
+                        type: 'fraction'
+                    },
+                    navigation: {
+                        nextEl: btnNext.mobile,
+                        prevEl: btnPrev.mobile
+                    }
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: remToPx(4),
+                    pagination: {
+                        el: fractions.desktop,
+                        type: 'fraction'
+                    },
+                    navigation: {
+                        nextEl: btnNext.desktop,
+                        prevEl: btnPrev.desktop
+                    }
+                }
             }
         });
     }
@@ -444,6 +499,7 @@ function initSliders() {
     initLicensesSlider();
     initServiceDetailedSwiper();
     initActionSlider();
+    initActionOtherSliders();
 }
 
 const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {

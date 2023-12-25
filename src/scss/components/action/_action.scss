@@ -1,10 +1,14 @@
 .action {
+    &__title {
+        @include small-tablet {
+            text-align: center;
+        }
+    }
     &__slider {
         &-block {
             position: relative;
 
             @include small-tablet {
-                display: none;
             }
         }
     }
@@ -14,6 +18,10 @@
         &-next {
             position: absolute;
             top: 50%;
+
+            @include small-tablet {
+                visibility: hidden;
+            }
         }
 
         &-prev {
@@ -38,12 +46,16 @@
         align-items: center;
         justify-content: center;
 
-        border-radius: 4rem;
+        border-radius: 40rem;
         border: 0.2rem solid $white;
         background-color: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(1.5rem);
 
         transition: 0.3s background-color ease-in;
+
+        @include small-tablet {
+            padding: 2.4rem 4rem;
+        }
 
         &:hover {
             background-color: $white;
@@ -52,8 +64,19 @@
         &.--active {
             background-color: $white;
 
+            @include small-tablet {
+                background-image: $gradientPurple;
+            }
+
             .action__slide-title {
                 font-weight: 600;
+
+                @include small-tablet {
+                    font-weight: 500;
+
+                    color: $white;
+                    -webkit-text-fill-color: unset;
+                }
             }
         }
 
@@ -63,6 +86,11 @@
 
             will-change: font-weight;
             transition: 0.3s font-weight ease-in;
+
+            @include small-tablet {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
         }
     }
 
@@ -74,6 +102,11 @@
         &.--active {
             display: grid;
             animation: fade-bounce 0.8s both;
+
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
 }

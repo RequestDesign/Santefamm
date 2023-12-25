@@ -2,4 +2,10 @@
 
 .action {
     margin-bottom: 20rem;
+
+    &__titles {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
