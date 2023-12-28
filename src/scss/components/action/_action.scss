@@ -1,15 +1,23 @@
 .action {
+    @include small-tablet {
+        overflow: hidden;
+    }
+
     &__title {
         @include small-tablet {
             text-align: center;
         }
     }
+
+    &__swiper {
+        @include small-tablet {
+            overflow: visible;
+        }
+    }
+
     &__slider {
         &-block {
             position: relative;
-
-            @include small-tablet {
-            }
         }
     }
 
@@ -18,6 +26,7 @@
         &-next {
             position: absolute;
             top: 50%;
+            transform: translateY(-50%);
 
             @include small-tablet {
                 visibility: hidden;
@@ -25,7 +34,7 @@
         }
 
         &-prev {
-            left: -3rem;
+            left: -2rem;
         }
 
         &-next {
