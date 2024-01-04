@@ -1,5 +1,6 @@
 .doctor-card {
-    @include sizes(84rem, 39.5rem);
+    @include sizes(84rem, 100%);
+    min-height: 39.5rem;
     border-radius: 4rem;
     background: $white;
     display: flex;
@@ -22,7 +23,8 @@
     }
 
     &__img {
-        @include sizes(36.8rem, 36.3rem);
+        @include sizes(36.8rem, 100%);
+        min-height: 36.3rem;
         flex-shrink: 0;
         transition: $transitionTransform;
         position: relative;

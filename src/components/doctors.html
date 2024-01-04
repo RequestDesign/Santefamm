@@ -1,18 +1,30 @@
 <section class="doctors">
     <div class="container">
         <div class="doctors__container">
-            <div class="doctors__titles">
-                <h2 class="doctors__title title">другие Специалисты</h2>
+            <div class="doctors__heading">
+                <h2 class="doctors__title title doctors__heading-title">другие Специалисты</h2>
             </div>
 
-            <ul class="doctors__list">
-                <li>
-                    <include src="./components/doctor-card.html"></include>
-                </li>
-                <li>
-                    <include src="./components/doctor-card.html"></include>
-                </li>
-            </ul>
+            <div class="swiper doctors-swiper">
+                <ul class="swiper-wrapper doctors__list">
+                    <li class="swiper-slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </li>
+                    <li class="swiper-slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="doctors-detailed__panel swiper-panel --mob">
+                <button type="button" class="swiper-panel__btn doctors-detailed-panel__btn-prev">
+                    <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
+                </button>
+                <div class="doctors-detailed-panel__fractions"></div>
+                <button type="button" class="swiper-panel__btn doctors-detailed-panel__btn-next">
+                    <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
+                </button>
+            </div>
         </div>
     </div>
 </section>

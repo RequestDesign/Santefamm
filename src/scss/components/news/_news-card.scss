@@ -19,6 +19,10 @@
         @extend %gradientColorTxt;
         margin-bottom: 2rem;
         line-height: 95%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
 
         @include small-tablet {
             font-size: 4rem;
@@ -26,6 +30,7 @@
             font-weight: 400;
             line-height: 120%;
             text-transform: uppercase;
+            -webkit-line-clamp: 3;
         }
     }
 

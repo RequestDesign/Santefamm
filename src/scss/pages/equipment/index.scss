@@ -1,7 +1,11 @@
 @import '../../components/palomar';
 
 .equipment {
-    margin-bottom: 20rem;
+    margin-bottom: 17rem;
+
+    @include small-tablet {
+        margin-bottom: 14rem;
+    }
 
     &__title {
         @include small-tablet {
@@ -64,7 +68,7 @@
 
         &-item {
             display: flex;
-            gap: 4.3rem;
+            align-items: center;
             justify-content: space-between;
             border-radius: 2rem;
             border: 0.1rem solid $white;
@@ -79,7 +83,6 @@
                 width: auto;
                 padding: 2.4rem 4rem;
                 border-radius: 40rem;
-                max-width: 39rem;
                 background: rgba(255, 255, 255, 0.3);
             }
 
@@ -105,6 +108,15 @@
                 .equipment__tabs-item-icon {
                     background: $white;
                 }
+
+                .equipment__tabs-item-title {
+                    background-position: top left 100%;
+                    font-weight: 600;
+
+                    @include small-tablet {
+                        font-weight: 500;
+                    }
+                }
             }
 
             &-title {
@@ -113,6 +125,19 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
+                background-image: linear-gradient(
+                    to right,
+                    $black,
+                    $black 50%,
+                    #d65986 -15.39%,
+                    #a261f9 112.18%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 300% 100%;
+                background-position: top left;
+                transition: background-position 0.5s ease-out;
+                max-width: 25.2rem;
 
                 @include small-tablet {
                     font-size: 2.8rem;
@@ -125,6 +150,7 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    max-width: 31rem;
                 }
             }
 
