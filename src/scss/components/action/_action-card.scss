@@ -10,7 +10,7 @@
 
     background-color: $white;
     border-radius: 2rem;
-    padding: 4rem 3.2rem;
+    padding: 2rem 3.2rem;
 
     @include small-tablet {
         padding: 4rem;
@@ -20,8 +20,10 @@
 
     &__title {
         @extend %philoCaps28;
+        @extend %gradientColorTxt;
         margin-bottom: 2rem;
-        line-height: 95%;
+        line-height: 120%;
+        display: block;
 
         @include small-tablet {
             margin-bottom: 2.4rem;
@@ -46,10 +48,21 @@
     &__img {
         border-radius: 2rem;
         @include sizes(48.3rem, 19.8rem);
+        -webkit-mask-image: url('./assets/images/action/item1.webp');
+        mask-image: url('./assets/images/action/item1.webp');
+        -webkit-mask-position: top left;
+        mask-position: top left;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100%;
+        mask-size: 100%;
 
         @include small-tablet {
             width: 100%;
-            height: 27rem;
+            height: 26rem;
+
+            -webkit-mask-image: url('./assets/images/action/item1-mobile.webp');
+            mask-image: url('./assets/images/action/item1-mobile.webp');
         }
 
         img {
@@ -59,28 +72,19 @@
     }
 
     &__link {
-        background: url('./assets/images/bg/substract-news.svg') no-repeat center;
-        @include sizes(21.5rem, 10rem);
-        background-size: contain;
         position: absolute;
-        bottom: 3.8rem;
-        right: 3rem;
+        bottom: 4rem;
+        right: 3.2rem;
 
         @include small-tablet {
-            width: 32.5rem;
-            height: 16rem;
+            right: 4rem;
         }
-        .btn-primary {
-            position: absolute;
-            top: 3.8rem;
-            right: 0.2rem;
 
+        .btn-primary {
             width: 17.6rem;
 
             @include small-tablet {
-                width: auto;
-                bottom: 0;
-                top: unset;
+                width: 24.4rem;
             }
         }
     }
