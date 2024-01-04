@@ -56,11 +56,13 @@
         justify-content: center;
 
         border-radius: 40rem;
-        border: 0.2rem solid $white;
+        border: 0.1rem solid $white;
         background-color: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(1.5rem);
 
-        transition: 0.3s background-color ease-in;
+        transition:
+            0.3s background-color ease-in,
+            0.3s border ease;
 
         @include small-tablet {
             padding: 2.4rem 4rem;
@@ -72,6 +74,7 @@
 
         &.--active {
             background-color: $white;
+            border-color: transparent;
 
             @include small-tablet {
                 background-image: $gradientPurple;
@@ -100,7 +103,10 @@
             transition: 0.3s font-weight ease-in;
 
             @include small-tablet {
+                font-size: 2.8rem;
+                font-style: normal;
                 font-weight: 500;
+                line-height: 120%;
                 text-transform: uppercase;
             }
         }
@@ -111,7 +117,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem;
 
-        @include small-tablet{
+        @include small-tablet {
             gap: 2rem;
         }
 

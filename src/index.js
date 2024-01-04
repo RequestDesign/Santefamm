@@ -9,6 +9,7 @@ import './js/components/modal';
 import './js/components/accordion';
 import './js/components/footer';
 import './js/components/read-more';
+import './js/components/scroll-top';
 
 // Pages
 import './js/pages/contacts.js';

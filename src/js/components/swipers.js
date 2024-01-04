@@ -1,5 +1,5 @@
-import { Swiper, SwiperSlide } from 'swiper';
-import { EffectFade, EffectCards, Navigation, Pagination, Thumbs } from 'swiper/modules';
+import { Swiper } from 'swiper';
+import { EffectFade, Navigation, Pagination, Thumbs } from 'swiper/modules';
 import remToPx from '../utils/rem';
 
 // import Swiper and modules styles
@@ -15,7 +15,6 @@ function initReviewsSliders() {
             desktop: document.querySelector('.reviews__panel.--desc .reviews-panel__fractions'),
             mobile: document.querySelector('.reviews__panel.--mob .reviews-panel__fractions')
         };
-        const fraction = document.querySelector('.reviews-panel__fractions');
         const btnPrev = document.querySelector('.reviews-panel__btn-prev');
         const btnNext = document.querySelector('.reviews-panel__btn-next');
 
@@ -148,14 +147,22 @@ function initPalomarSlider() {
 
         new Swiper(slider, {
             modules: [Navigation],
-            slidesPerView: '3',
-            spaceBetween: remToPx(5.05),
             speed: 1200,
             slideToClickedSlide: true,
             loop: true,
             navigation: {
                 nextEl: next,
                 prevEl: prev
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: '2.2',
+                    spaceBetween: remToPx(1.6)
+                },
+                768: {
+                    slidesPerView: '3',
+                    spaceBetween: remToPx(5.05)
+                }
             }
         });
     }
@@ -535,6 +542,21 @@ resizableSwiper('(max-width: 768px)', '.equipment__swiper', {
     slidesPerView: 'auto',
     spaceBetween: remToPx(0.4),
     slideToClickedSlide: true
+});
+
+resizableSwiper('(max-width: 768px)', '.doctors-swiper', {
+    modules: [Pagination, Navigation],
+    speed: 1200,
+    slidesPerView: '1',
+    spaceBetween: remToPx(2),
+    pagination: {
+        el: document.querySelector('.doctors-detailed-panel__fractions'),
+        type: 'fraction'
+    },
+    navigation: {
+        nextEl: document.querySelector('.doctors-detailed-panel__btn-next'),
+        prevEl: document.querySelector('.doctors-detailed-panel__btn-prev')
+    }
 });
 
 document.addEventListener('DOMContentLoaded', initSliders);

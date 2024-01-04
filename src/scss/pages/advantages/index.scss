@@ -132,7 +132,7 @@
         right: 0;
 
         @include small-tablet {
-            position: initial;
+            position: relative;
             margin: 0 auto;
         }
     }

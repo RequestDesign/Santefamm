@@ -5,20 +5,13 @@
         padding: 3.2rem;
         background: $white;
         border-radius: 3.2rem;
-        position: relative;
         z-index: 1;
 
-        &::after {
-            @include pseudo {
-                border-radius: 4rem 4rem 0rem 0rem;
-                z-index: -1;
-                background: #f3f0ff;
-                height: calc(50% - 4rem);
-                opacity: 0.5;
-                left: 0;
-                right: 0;
-                top: 0;
-            }
+        @include small-tablet {
+            flex-direction: column;
+            gap: 6.4rem;
+            border-radius: 4rem;
+            padding: 4rem;
         }
     }
 
@@ -26,11 +19,31 @@
         position: relative;
         max-width: 40.8rem;
         width: 100%;
-        height: 100%;
+        z-index: 2;
+
+        @include small-tablet {
+            max-width: 100%;
+            height: 63.6rem;
+
+            &::after {
+                @include pseudo {
+                    inset: -4rem;
+                    background: #f3f0ff;
+                    opacity: 0.5;
+                    z-index: -1;
+                    border-radius: 4rem 4rem 0 0;
+                    bottom: -2rem;
+                }
+            }
+        }
 
         &-image {
             border-radius: 1.6rem;
-            height: 62.8rem;
+            height: 100%;
+
+            @include small-tablet {
+                border-radius: 4rem;
+            }
 
             img {
                 border-radius: inherit;
@@ -46,7 +59,23 @@
             border-radius: 20rem;
             background: #f3f0ff;
             backdrop-filter: blur(0.35rem);
-            @extend %regularCaps16;
+
+            span {
+                @extend %regularCaps16;
+                @extend %gradientColor;
+
+                @include small-tablet {
+                    font-size: 2.4rem;
+                    line-height: 120%;
+                }
+            }
+
+            @include small-tablet {
+                left: 0;
+                bottom: 2rem;
+                padding: 2.4rem 4rem;
+                border-radius: 40rem;
+            }
         }
     }
 
@@ -54,29 +83,74 @@
         &-heading {
             margin-bottom: 3.5rem;
             padding-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+
+            @include small-tablet {
+                padding-bottom: 0;
+                margin-bottom: 6.4rem;
+            }
+
+            &::after {
+                @include pseudo {
+                    border-radius: 3.2rem;
+                    z-index: -1;
+                    background: #f3f0ff;
+                    height: 100%;
+                    opacity: 0.5;
+                    left: -47.2rem;
+                    right: -3.2rem;
+                    top: -4.2rem;
+
+                    @include small-tablet {
+                        display: none;
+                    }
+                }
+            }
 
             &-list {
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
+
+                @include small-tablet {
+                    gap: 2.4rem;
+                }
             }
 
             &-item {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 gap: 0.4rem;
                 width: fit-content;
+
+                @include small-tablet {
+                    width: 100%;
+                }
 
                 &-title {
                     @extend %semibold18;
                     color: $black;
                     min-width: 14.7rem;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        line-height: 120%;
+                        min-width: 24rem;
+                    }
                 }
 
                 &-description {
                     color: $black;
                     @extend %regular18;
                     min-width: 36.3rem;
+
+                    @include small-tablet {
+                        color: #282828;
+                        min-width: initial;
+                        font-size: 2.8rem;
+                        line-height: 120%;
+                    }
                 }
             }
         }
@@ -94,6 +168,15 @@
             text-transform: uppercase;
             margin-bottom: 1.5rem;
             margin-top: 1rem;
+
+            @include small-tablet {
+                font-family: Philosopher;
+                font-size: 4rem;
+                font-weight: 400;
+                line-height: 120%;
+                margin-bottom: 3rem;
+                margin-top: 0;
+            }
         }
 
         &-content {
@@ -101,11 +184,24 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 14.6rem;
+
+            @include small-tablet {
+                flex-direction: column-reverse;
+                gap: 6.4rem;
+            }
         }
 
         &-description {
             @extend %regular18;
             color: $black;
+            max-width: 55.5rem;
+
+            @include small-tablet {
+                max-width: 100%;
+                font-size: 2.8rem;
+                font-weight: 400;
+                line-height: 120%;
+            }
         }
 
         &-bottom {
@@ -114,8 +210,18 @@
             justify-content: space-between;
             gap: 16.7rem;
 
+            @include small-tablet {
+                flex-direction: column;
+                gap: 6.4rem;
+            }
+
             &-block {
+                max-width: 55.5rem;
                 width: 100%;
+
+                @include small-tablet {
+                    max-width: 100%;
+                }
             }
 
             &-title {
@@ -123,12 +229,24 @@
                 color: $black;
                 @extend %regular18;
                 display: block;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                    margin-bottom: 2.4rem;
+                }
             }
 
             &-list {
                 display: flex;
                 flex-direction: column;
                 gap: 0.8rem;
+
+                @include small-tablet {
+                    gap: 1.6rem;
+                }
             }
 
             &-item {
@@ -138,11 +256,24 @@
                 &-title {
                     color: $black;
                     @extend %regular18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
 
                 &-description {
                     color: $grey;
                     @extend %regular18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
             }
         }
