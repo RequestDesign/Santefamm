@@ -33,7 +33,9 @@
         line-height: 120%;
 
         @include small-tablet {
-            margin-bottom: 4.8rem;
+            margin-bottom: 2.8rem;
+            font-size: 4.8rem;
+            line-height: 120%;
         }
     }
 
@@ -45,18 +47,29 @@
     }
 
     &__description {
-        @extend %regular18;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
         margin-bottom: 2.4rem;
 
         @include small-tablet {
+            gap: 3.8rem;
             margin-bottom: 4rem;
+        }
+
+        p {
+            @extend %regular18;
+
+            @include small-tablet {
+                line-height: 120%;
+            }
         }
     }
 
     &__card {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.4rem;
 
         max-width: fit-content;
         padding: 3.2rem;
@@ -69,6 +82,8 @@
 
         @include small-tablet {
             padding: 4.8rem 3.2rem;
+            gap: 3.4rem;
+            margin-bottom: 4rem;
         }
 
         &-text {
@@ -117,15 +132,27 @@
             margin-bottom: 0.8rem;
             color: $black;
             @extend %semibold18;
+
+            @include small-tablet {
+                margin-bottom: 0;
+            }
         }
         &-price {
             @extend %gradientColor;
             @extend %semibold18;
             margin-bottom: 1.2rem;
+
+            @include small-tablet {
+                margin-bottom: 0;
+            }
         }
         &-description {
             color: $black;
             @extend %regular18;
+
+            @include small-tablet {
+                line-height: 120%;
+            }
         }
     }
     &__subscription {
