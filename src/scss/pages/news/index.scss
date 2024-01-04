@@ -6,6 +6,7 @@
     &__title {
         @include small-tablet {
             text-align: center;
+            line-height: 120%;
         }
     }
 

@@ -18,6 +18,7 @@
         @include small-tablet {
             text-align: center;
             margin-bottom: 6.4rem;
+            line-height: 120%;
         }
     }
 
@@ -33,10 +34,20 @@
 
         &.--active {
             .specialists__slide-category {
+                border-color: transparent;
                 background: $white;
+
+                @include small-tablet {
+                    background: $gradientPurple;
+                }
 
                 span {
                     font-weight: 600;
+
+                    @include small-tablet {
+                        color: $white;
+                        -webkit-text-fill-color: unset;
+                    }
                 }
             }
         }
@@ -47,7 +58,9 @@
             background: rgba(255, 255, 255, 0.3);
             border-radius: 4rem;
             border: 0.2rem solid $white;
-            transition: 0.3s background ease-in;
+            transition:
+                0.3s background ease-in,
+                0.3s border ease;
 
             @include small-tablet {
                 padding: 2.4rem 4rem;
