@@ -244,7 +244,10 @@ function initDevicesSlider() {
 function initLicensesSlider() {
     if (document.querySelector('.licenses__swiper')) {
         const slider = document.querySelector('.licenses__swiper');
-        const fraction = document.querySelector('.licenses__panel-fractions');
+        const fractions = {
+            desktop: document.querySelector('.licenses__panel.--desc .licenses__panel-fractions'),
+            mobile: document.querySelector('.licenses__panel.--mob .licenses__panel-fractions')
+        };
         const btnPrev = document.querySelector('.licenses__panel-prev');
         const btnNext = document.querySelector('.licenses__panel-next');
 
@@ -253,13 +256,24 @@ function initLicensesSlider() {
         const license = new Swiper(sliderLicense, {
             modules: [Pagination, Navigation, EffectFade],
             effect: 'fade',
-            noSwiping: true,
-            noSwipingClass: 'swiper-slide',
             fadeEffect: {
                 crossFade: true
             },
             slidesPerView: 1,
-            speed: 1200
+            speed: 1200,
+            breakpoints: {
+                0: {
+                    noSwiping: false,
+                    pagination: {
+                        el: fractions.mobile,
+                        type: 'fraction'
+                    }
+                },
+                768: {
+                    noSwiping: true,
+                    noSwipingClass: 'swiper-slide'
+                }
+            }
         });
 
         new Swiper(slider, {
@@ -271,7 +285,7 @@ function initLicensesSlider() {
                 swiper: license
             },
             pagination: {
-                el: fraction,
+                el: fractions.desktop,
                 type: 'fraction'
             },
             navigation: {

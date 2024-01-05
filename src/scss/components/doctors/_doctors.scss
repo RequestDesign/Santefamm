@@ -40,7 +40,7 @@
 
             @include small-tablet {
                 font-family: Philosopher;
-                font-size: 4.8rem;
+                font-size: 7.2rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 120%;
@@ -53,7 +53,7 @@
         display: flex;
         gap: 4rem;
 
-        @include small-tablet{
+        @include small-tablet {
             gap: 0;
         }
     }
