@@ -21,12 +21,19 @@
         &-title {
             @extend %philoCaps70;
             color: $black;
+
+            @include small-tablet {
+                text-align: center;
+                margin-bottom: 6.4rem;
+            }
         }
 
         &-services {
+            color: $grey;
             @extend %philoCaps28;
             margin-top: auto;
             display: block;
+            text-transform: uppercase;
         }
     }
 
@@ -70,11 +77,15 @@
             gap: 1.8rem;
             position: relative;
 
+            &:hover {
+                .prices__categories-arrow {
+                    background: $white;
+                }
+            }
+
             &.--active {
                 .prices__categories-arrow {
                     background: #fff;
-                    padding: 2rem;
-                    border-radius: 1.5rem;
                 }
 
                 .prices__categories-item-title {
@@ -118,10 +129,16 @@
                 text-transform: uppercase;
                 color: $black;
             }
+        }
 
-            &-arrow {
-                margin-left: auto;
-                @include sizes(2rem, 2.8rem);
+        &-arrow {
+            margin-left: auto;
+            padding: 2rem;
+            transition: 0.3s background ease;
+            border-radius: 1.5rem;
+
+            img {
+                @include sizes(2.2rem, 2rem);
             }
         }
 
@@ -143,43 +160,75 @@
             }
 
             &-subcategory {
-                padding: 1.75rem 2rem;
-                border-radius: 4rem;
-                border: 0.2rem solid $white;
-                background: rgba(255, 255, 255, 0.3);
-                backdrop-filter: blur(1.5rem);
-                cursor: pointer;
-                transition: 0.3s background ease-out;
-                @extend %regular18;
-                min-width: 27rem;
+                display: flex;
+                align-items: center;
 
                 @include small-tablet {
                     min-width: initial;
                     width: auto;
-                    padding: 2.4rem 4rem;
                 }
 
                 &:hover {
-                    background: $white;
+                    button {
+                        background: $white;
+                    }
+                }
+
+                &-icon {
+                    height: 100%;
+                    width: 13.7rem;
+                    border-radius: 20rem;
                 }
 
                 button {
-                    display: block;
-                    @extend %gradientColor;
-                    transition: 0.3s font-weight ease-out;
+                    span {
+                        @extend %gradientColor;
+                        @extend %regular18;
+                        display: block;
+                        transition: 0.3s font-weight ease-out;
+
+                        @include small-tablet {
+                            font-size: 2.8rem;
+                            font-weight: 500;
+                            line-height: 120%;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    padding: 1.75rem 2rem;
+                    border-radius: 4rem;
+                    border: 0.2rem solid $white;
+                    background: rgba(255, 255, 255, 0.3);
+                    backdrop-filter: blur(1.5rem);
+                    cursor: pointer;
+                    transition: 0.3s background ease-out;
+                    min-width: 27rem;
 
                     @include small-tablet {
-                        font-size: 2.8rem;
-                        line-height: 120%;
-                        text-transform: uppercase;
+                        padding: 2.4rem 4rem;
                     }
                 }
 
                 &.--active {
-                    background: $white;
-
                     button {
-                        font-weight: 600;
+                        background: $white;
+
+                        @include small-tablet {
+                            background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                            border-color: transparent;
+                        }
+
+                        span {
+                            font-weight: 600;
+
+                            @include small-tablet {
+                                font-weight: 500;
+                                color: $white;
+                                background-clip: unset;
+                                background: transparent;
+                                -webkit-text-fill-color: $white;
+                            }
+                        }
                     }
                 }
             }
@@ -234,8 +283,25 @@
                 flex-direction: column;
                 width: 100%;
 
+                li {
+                    &:last-child {
+                        margin-top: 2.6rem;
+                        margin-left: auto;
+                        margin-right: 4rem;
+
+                        @include small-tablet {
+                            margin-left: initial;
+                            margin-top: 5rem;
+                        }
+
+                        img {
+                            height: auto;
+                        }
+                    }
+                }
+
                 @include small-tablet {
-                    gap: 2.4rem;
+                    gap: 0;
                 }
             }
 
