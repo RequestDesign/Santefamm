@@ -21,6 +21,17 @@ function accordion(trigger, selector) {
 
 if (document.querySelector('.prices')) {
     accordion();
+
+    const hideButtons = document.querySelectorAll('.prices__categories-info-button');
+
+    hideButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const article = button.closest('.prices__categories-info-article');
+            const articleIsActive = article.classList.contains('--active');
+
+            article.classList.toggle('--active', !articleIsActive);
+        });
+    });
 }
 if (document.querySelector('.service-description__info-accordion')) {
     accordion();

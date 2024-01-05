@@ -1,4 +1,8 @@
 .prices-categories {
+    @include small-tablet {
+        margin-bottom: 16rem;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
