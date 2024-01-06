@@ -170,7 +170,10 @@ function initPalomarSlider() {
 function initBeforeAfterSlider() {
     if (document.querySelector('.palomar__swiper-result')) {
         const slider = document.querySelector('.palomar__swiper-result');
-        const fraction = document.querySelector('.palomar__panel-fractions');
+        const fractions = {
+            desktop: document.querySelector('.palomar__panel.--desc .palomar__panel-fractions'),
+            mobile: document.querySelector('.palomar__panel.--mob .palomar__panel-fractions')
+        };
         const prevButton = document.querySelector('.palomar__result-prev');
         const nextButton = document.querySelector('.palomar__result-next');
 
@@ -178,10 +181,6 @@ function initBeforeAfterSlider() {
             modules: [Pagination, Navigation],
             allowTouchMove: true,
             speed: 1200,
-            pagination: {
-                el: fraction,
-                type: 'fraction'
-            },
             navigation: {
                 nextEl: nextButton,
                 prevEl: prevButton
@@ -189,10 +188,18 @@ function initBeforeAfterSlider() {
             breakpoints: {
                 0: {
                     slidesPerView: '2',
-                    spaceBetween: remToPx(1.3)
+                    spaceBetween: remToPx(1.3),
+                    pagination: {
+                        el: fractions.mobile,
+                        type: 'fraction'
+                    }
                 },
                 768: {
                     slidesPerView: '4',
+                    pagination: {
+                        el: fractions.desktop,
+                        type: 'fraction'
+                    },
                     spaceBetween: remToPx(1.2)
                 }
             }
@@ -371,24 +378,39 @@ function initPagesInfoSlider() {
 function initServiceDescriptionEqSlider() {
     if (document.querySelector('.service-description__swiper')) {
         const slider = document.querySelector('.service-description__swiper');
-        const fraction = document.querySelector('.service-description-panel__fractions');
+        const fractions = {
+            desktop: document.querySelector(
+                '.service-description__panel.--desc .service-description-panel__fractions'
+            ),
+            mobile: document.querySelector(
+                '.service-description__panel.--mob .service-description-panel__fractions'
+            )
+        };
         const btnPrev = document.querySelector('.service-description-panel__btn-prev');
         const btnNext = document.querySelector('.service-description-panel__btn-next');
 
         new Swiper(slider, {
             modules: [Pagination, Navigation, EffectFade],
             slidesPerView: 1,
-            effect: 'fade',
-            fadeEffect: { crossFade: true },
             spaceBetween: remToPx(4),
             speed: 1200,
-            pagination: {
-                el: fraction,
-                type: 'fraction'
-            },
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
+            },
+            breakpoints: {
+                0: {
+                    pagination: {
+                        el: fractions.mobile,
+                        type: 'fraction'
+                    }
+                },
+                768: {
+                    pagination: {
+                        el: fractions.desktop,
+                        type: 'fraction'
+                    }
+                }
             }
         });
     }
@@ -571,6 +593,13 @@ resizableSwiper('(max-width: 768px)', '.doctors-swiper', {
         nextEl: document.querySelector('.doctors-detailed-panel__btn-next'),
         prevEl: document.querySelector('.doctors-detailed-panel__btn-prev')
     }
+});
+
+resizableSwiper('(max-width: 768px)', '.services-description-swiper', {
+    speed: 1200,
+    slidesPerView: 'auto',
+    spaceBetween: remToPx(0.4),
+    slideToClickedSlide: true
 });
 
 document.addEventListener('DOMContentLoaded', initSliders);

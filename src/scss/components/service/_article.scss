@@ -1,10 +1,31 @@
 .service-article {
     margin-bottom: 20rem;
 
+    &__title {
+        @include small-tablet {
+            text-align: center;
+            font-family: Philosopher;
+            font-size: 4.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: uppercase;
+
+            &.title {
+                margin-bottom: 5.4rem;
+            }
+        }
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
         gap: 14.6rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 0;
+        }
     }
 
     &__img {
@@ -12,22 +33,42 @@
         width: 54.7rem;
         min-width: 54.7rem;
 
+        @include small-tablet {
+            width: 100%;
+            min-width: auto;
+            height: 85rem;
+        }
+
         &-link {
             position: absolute;
             bottom: 0;
             right: 0;
+
+            @include small-tablet {
+                a {
+                    padding: 2.7rem 3rem;
+                }
+            }
         }
     }
     &__description {
         max-width: 102.7rem;
-
         display: flex;
         flex-direction: column;
         gap: 4rem;
 
+        @include small-tablet {
+            max-width: 100%;
+        }
+
         &-top {
             display: flex;
             gap: 4rem;
+
+            @include small-tablet {
+                flex-direction: column;
+            }
+
             &-img {
                 width: 29.3rem;
                 min-width: 29.3rem;
@@ -35,6 +76,13 @@
             &-text {
                 color: $black;
                 @extend %semibold20;
+
+                @include small-tablet {
+                    font-size: 3.2rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                }
             }
         }
         &-bottom {
@@ -42,8 +90,19 @@
             flex-direction: column;
             gap: 2rem;
 
+            @include small-tablet {
+                gap: 3.2rem;
+            }
+
             &-text {
                 @extend %regular18;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
             }
         }
     }

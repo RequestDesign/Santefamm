@@ -1,15 +1,59 @@
 .service-description {
     margin-bottom: 20rem;
 
+    @include small-tablet {
+        overflow: hidden;
+    }
+
+    &__title {
+        @include small-tablet {
+            &.title {
+                font-family: Philosopher;
+                font-size: 7.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                text-transform: uppercase;
+                margin-bottom: 4.4rem;
+                text-align: center;
+            }
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 5.4rem;
+        }
     }
     &__tabs {
+        margin: 0;
+
+        &.swiper {
+            @include small-tablet {
+                overflow: visible;
+            }
+        }
+
         &-list {
             display: flex;
             flex-direction: column;
+
+            .swiper-slide {
+                height: auto;
+
+                @include small-tablet {
+                    width: max-content;
+                }
+            }
+
+            @include small-tablet {
+                flex-direction: row;
+            }
         }
         &-item {
             display: flex;
@@ -28,6 +72,15 @@
 
             transition: 0.3s background-color ease-in;
 
+            @include small-tablet {
+                min-width: initial;
+                max-width: initial;
+                padding: 2.4rem 4rem;
+                border-radius: 40rem;
+                background: rgba(255, 255, 255, 0.3);
+                gap: 0;
+            }
+
             &:not(:first-child) {
                 margin-top: -0.2rem;
             }
@@ -43,8 +96,21 @@
             &.--active {
                 background-color: $bgCards;
 
+                @include small-tablet {
+                    background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                    border-color: transparent;
+                }
+
                 .service-description__tabs-title {
                     background-position: top left 100%;
+
+                    @include small-tablet {
+                        background: transparent;
+                        background-clip: unset;
+                        -webkit-background-clip: unset;
+                        -webkit-text-fill-color: $white;
+                        color: $white;
+                    }
                 }
                 .service-description__tabs-icon {
                     background-color: $white;
@@ -67,6 +133,10 @@
 
             transition: 0.3s background-color ease-in;
 
+            @include small-tablet {
+                display: none;
+            }
+
             img {
                 @include sizes(3rem, 2.2rem);
             }
@@ -80,6 +150,18 @@
             transition: background-position 0.5s ease-out;
 
             @extend %semibold18;
+
+            @include small-tablet {
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%;
+                text-transform: uppercase;
+                background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
     &__info {
@@ -89,20 +171,30 @@
 
         width: 100%;
 
-        display: flex;
+        display: none;
         visibility: hidden;
         flex-direction: column;
         gap: 2.4rem;
 
+        @include small-tablet {
+            position: static;
+            gap: 3.2rem;
+        }
+
         &-container {
             position: relative;
             width: 102.7rem;
+
+            @include small-tablet {
+                width: 100%;
+            }
         }
 
         &.--active {
             position: relative;
             visibility: visible;
             animation: fade-bounce 0.8s both;
+            display: flex;
         }
 
         &-titles {
@@ -111,14 +203,33 @@
         }
         &-title {
             @extend %philoCaps32;
+
+            @include small-tablet {
+                font-size: 4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
         }
         &-text {
             @extend %regular18;
+
+            @include small-tablet {
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
         }
         &-list {
             display: flex;
             flex-direction: column;
             gap: 1.6rem;
+
+            @include small-tablet {
+                gap: 2.4rem;
+            }
 
             &-item {
                 display: flex;
@@ -128,15 +239,34 @@
                 &-marker {
                     min-width: 2.4rem;
                     @include sizes(2.4rem, 2.4rem);
+
+                    @include small-tablet {
+                        max-width: 4rem;
+                        width: 100%;
+                        height: 4rem;
+                        min-width: initial;
+                    }
                 }
                 &-text {
                     @extend %regular18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
             }
         }
         &-tags {
             display: flex;
             gap: 1.6rem;
+            flex-wrap: wrap;
+
+            @include small-tablet {
+                gap: 3.2rem;
+            }
         }
         &-tag {
             display: flex;
@@ -148,18 +278,32 @@
             border-radius: 20rem;
             background-color: $lightPurple;
 
+            @include small-tablet {
+                padding: 1.6rem 3.2rem;
+                border-radius: 40rem;
+            }
+
             &-text {
                 @extend %regularCaps16;
                 @extend %gradientColor;
+
+                @include small-tablet {
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                }
             }
         }
         &-colums {
             display: flex;
             gap: 4rem;
 
-            &-img {
-                width: 44rem;
+            @include small-tablet {
+                flex-direction: column;
             }
+
             &-bottom {
                 display: flex;
                 flex-direction: column;
@@ -168,6 +312,21 @@
                 &-description {
                     color: $grey;
                     @extend %regular18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
+                }
+            }
+            &-img {
+                width: 44rem;
+
+                @include small-tablet {
+                    width: 100%;
+                    height: 55.6rem;
                 }
             }
         }
@@ -176,9 +335,19 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 4rem;
 
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+            }
+
             &-item {
                 display: flex;
                 flex-direction: column;
+
+                @include small-tablet {
+                    gap: 1.6rem;
+                }
 
                 &-number {
                     display: flex;
@@ -191,15 +360,41 @@
                     color: $white;
                     background-image: $gradientPurple;
 
+                    @include small-tablet {
+                        @include sizes(5.6rem, 5.6rem);
+                    }
+
                     p {
                         @extend %philoCaps28;
+
+                        @include small-tablet {
+                            font-size: 4rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%;
+                            text-transform: uppercase;
+                        }
                     }
                 }
                 &-title {
                     @extend %semibold18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                    }
                 }
                 &-description {
                     @extend %regular18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
             }
         }
@@ -230,6 +425,14 @@
 
                 p {
                     padding: 2rem 10.7rem 2rem 4rem;
+
+                    @include small-tablet {
+                        padding: 4.8rem;
+                        font-size: 3.2rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
             }
         }

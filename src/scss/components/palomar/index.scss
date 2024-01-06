@@ -254,17 +254,10 @@
     }
 
     &__bottom {
-        @include small-tablet {
-            display: flex;
-            flex-direction: column-reverse;
-        }
-
         .palomar__panel {
-            width: fit-content;
-            margin-left: auto;
-            display: flex;
-            gap: 4.8rem;
             margin-bottom: 4.9rem;
+            margin-left: auto;
+            width: fit-content;
 
             @include small-tablet {
                 margin: 4.8rem auto 0;
