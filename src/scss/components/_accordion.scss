@@ -43,11 +43,14 @@
     }
 
     &-icon {
-        @include sizes(6rem, 6rem);
+        width: 100%;
+        max-width: 6rem;
+        height: 6rem;
         transition: 0.3s transform ease-in-out;
 
         @include small-tablet {
-            @include sizes(8.4rem, 8.4rem);
+            max-width: 8.4rem;
+            height: 8.4rem;
         }
     }
 }

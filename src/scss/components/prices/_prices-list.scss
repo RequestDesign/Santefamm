@@ -1,14 +1,42 @@
 .prices-list {
+    &__title {
+        &.title {
+            @include small-tablet {
+                text-align: center;
+                margin-bottom: 3.2rem;
+                padding-bottom: 6.4rem;
+                border-bottom: 0.1rem solid $white;
+            }
+        }
+    }
+
     &__table {
         width: 100%;
         margin-bottom: 2.4rem;
-        &-cell {
-            vertical-align: top;
-            padding-top: 2.4rem;
-            padding-bottom: 2.4rem;
-            padding-right: 2rem;
-            border-bottom: 0.2rem solid $white;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
 
+        @include small-tablet {
+            margin-bottom: 4.8rem;
+        }
+
+        &-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border-bottom: 0.2rem solid $white;
+            padding-bottom: 2.6rem;
+            padding-right: 7.6rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                gap: 2.4rem;
+                padding-bottom: 3.2rem;
+            }
+        }
+
+        &-cell {
             &-title {
                 max-width: 65.3rem;
                 display: flex;
@@ -16,6 +44,11 @@
 
                 gap: 2.4rem;
                 @extend %semibold20;
+
+                @include small-tablet {
+                    max-width: 100%;
+                    align-items: flex-start;
+                }
 
                 &-number {
                     @include sizes(3.2rem, 3.2rem);
@@ -28,6 +61,22 @@
                     border: 0.1rem solid $white;
                     background-color: $bgCards;
                     @extend %regularCaps16;
+
+                    @include small-tablet {
+                        padding: 0;
+                        border: 0;
+                        background: transparent;
+                        width: initial;
+                        height: initial;
+                        background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 3.2rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
                 }
             }
 
@@ -35,16 +84,38 @@
                 max-width: 102.7rem;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                grid-row-gap: 4rem;
-                grid-column-gap: 4.2rem;
+                grid-row-gap: 5rem;
+                grid-column-gap: 7.2rem;
+
+                @include small-tablet {
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+                    padding-left: 6rem;
+                }
 
                 &-item {
+                    ul {
+                        @include small-tablet {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.6rem;
+                        }
+                    }
                     &-text {
                         display: flex;
                         align-items: center;
                         gap: 0.8rem;
 
                         @extend %regular18;
+
+                        @include small-tablet {
+                            font-size: 2.8rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 120%;
+                        }
 
                         &:before {
                             content: '';
@@ -54,6 +125,11 @@
 
                             background-image: $gradientPurple;
                             border-radius: 50%;
+
+                            @include small-tablet {
+                                @include sizes(1.6rem, 1.6rem);
+                                left: -1.6rem;
+                            }
                         }
                     }
                 }
@@ -62,5 +138,9 @@
     }
     &__link {
         float: right;
+
+        @include small-tablet {
+            float: initial;
+        }
     }
 }

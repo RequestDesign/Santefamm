@@ -3,7 +3,7 @@
         <div class="service-article__title title">лимфодренажный массаж</div>
 
         <div class="service-article__content">
-            <div class="service-article__img">
+            <div class="service-article__img --desc">
                 <img src="./assets/images/services/massage1.png" alt="" />
                 <div class="service-article__img-link">
                     <a href="#" class="btn-primary">
@@ -17,11 +17,20 @@
                         Лимфодренажный массаж — это методика аппаратного (механического) или мануального
                         (ручного) воздействия на организм, оказывающая влияние на движение лимфы по телу.
                     </p>
-                    <div class="service-article__description-top-img">
+                    <div class="service-article__description-top-img --desc">
                         <img src="./assets/images/services/massage2.png" alt="" />
                     </div>
+
+                    <div class="service-article__img --mob">
+                        <img src="./assets/images/services/massage1.png" alt="" />
+                        <div class="service-article__img-link">
+                            <a href="#" class="btn-primary">
+                                <span>Запись на прием</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-article__description-bottom">
+                <div class="service-article__description-bottom --desc">
                     <p class="service-article__description-bottom-text">
                         Лимфодренажный массаж — это методика аппаратного (механического) или мануального
                         (ручного) воздействия на организм, оказывающая влияние на движение лимфы по телу.
@@ -39,6 +48,31 @@
                         на движение лимфы по телу.
                     </p>
                 </div>
+
+                <div data-showmore class="--mob">
+                    <div class="service-article__description-bottom" data-showmore-content="120">
+                        <p class="service-article__description-bottom-text">
+                            Лимфодренажный массаж — это методика аппаратного (механического) или мануального
+                            (ручного) воздействия на организм, оказывающая влияние на движение лимфы по телу.
+                            Такой вид массажа оказывает не только косметический, но и оздоровительный эффект.
+                        </p>
+                        <p class="service-article__description-bottom-text">
+                            Ключевой особенностью является воздействие массажиста на выбранные заранее участки
+                            тела, а не просто разминка определенных мышц. Массажные движения выполняются
+                            специалистом строго вдоль линий лимфотока, что способствует активизации движения
+                            жидкости в организме.Лимфодренажный массаж — это методика аппаратного
+                            (механического) или мануального (ручного) воздействия на организм, оказывающая
+                            влияние на движение лимфы по телу. Такой вид массажа оказывает не только
+                            косметический, но и оздоровительный эффект. Лимфодренажный массаж — это методика
+                            аппаратного (механического) или мануального (ручного) воздействия на организм,
+                            оказывающая влияние на движение лимфы по телу.
+                        </p>
+                    </div>
+                    <button hidden data-showmore-button type="button" class="showmore-button mobile">
+                        <span>читать все</span>
+                        <span>Скрыть </span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -49,51 +83,66 @@
         <div class="service-description__title title">Описание</div>
 
         <div class="service-description__content">
-            <aside class="service-description__tabs">
-                <ul class="service-description__tabs-list">
-                    <li
-                        data-content-open="service-description-1"
-                        class="service-description__tabs-item --active"
-                    >
-                        <p class="service-description__tabs-title">Об услуге</p>
-                        <div class="service-description__tabs-icon">
-                            <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+            <aside class="service-description__tabs swiper services-description-swiper">
+                <ul class="swiper-wrapper service-description__tabs-list">
+                    <li class="swiper-slide">
+                        <div
+                            data-content-open="service-description-1"
+                            class="service-description__tabs-item --active"
+                        >
+                            <p class="service-description__tabs-title">Об услуге</p>
+                            <div class="service-description__tabs-icon">
+                                <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                            </div>
                         </div>
                     </li>
-                    <li data-content-open="service-description-2" class="service-description__tabs-item">
-                        <p class="service-description__tabs-title">Показания</p>
-                        <div class="service-description__tabs-icon">
-                            <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                    <li class="swiper-slide">
+                        <div data-content-open="service-description-2" class="service-description__tabs-item">
+                            <p class="service-description__tabs-title">Показания</p>
+                            <div class="service-description__tabs-icon">
+                                <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                            </div>
                         </div>
                     </li>
-                    <li data-content-open="service-description-3" class="service-description__tabs-item">
-                        <p class="service-description__tabs-title">Обрудование</p>
-                        <div class="service-description__tabs-icon">
-                            <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                    <li class="swiper-slide">
+                        <div data-content-open="service-description-3" class="service-description__tabs-item">
+                            <p class="service-description__tabs-title">Обрудование</p>
+                            <div class="service-description__tabs-icon">
+                                <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                            </div>
                         </div>
                     </li>
-                    <li data-content-open="service-description-4" class="service-description__tabs-item">
-                        <p class="service-description__tabs-title">Этапы проведения</p>
-                        <div class="service-description__tabs-icon">
-                            <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                    <li class="swiper-slide">
+                        <div data-content-open="service-description-4" class="service-description__tabs-item">
+                            <p class="service-description__tabs-title">Этапы проведения</p>
+                            <div class="service-description__tabs-icon">
+                                <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                            </div>
                         </div>
                     </li>
-                    <li data-content-open="service-description-5" class="service-description__tabs-item">
-                        <p class="service-description__tabs-title">Процесс</p>
-                        <div class="service-description__tabs-icon">
-                            <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                    <li class="swiper-slide">
+                        <div data-content-open="service-description-5" class="service-description__tabs-item">
+                            <p class="service-description__tabs-title">Процесс</p>
+                            <div class="service-description__tabs-icon">
+                                <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                            </div>
                         </div>
                     </li>
-                    <li data-content-open="service-description-6" class="service-description__tabs-item">
-                        <p class="service-description__tabs-title">Противопоказания</p>
-                        <div class="service-description__tabs-icon">
-                            <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                    <li class="swiper-slide">
+                        <div data-content-open="service-description-6" class="service-description__tabs-item">
+                            <p class="service-description__tabs-title">Противопоказания</p>
+                            <div class="service-description__tabs-icon">
+                                <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                            </div>
                         </div>
                     </li>
-                    <li data-content-open="service-description-7" class="service-description__tabs-item">
-                        <p class="service-description__tabs-title">Вопрос/Ответ</p>
-                        <div class="service-description__tabs-icon">
-                            <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+
+                    <li class="swiper-slide">
+                        <div data-content-open="service-description-7" class="service-description__tabs-item">
+                            <p class="service-description__tabs-title">Вопрос/Ответ</p>
+                            <div class="service-description__tabs-icon">
+                                <img src="./assets/images/icons/gradient-arrow.svg" alt="" />
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -228,7 +277,7 @@
                 <div data-content-block="service-description-3" class="service-description__info">
                     <div class="service-description__info-titles">
                         <div class="service-description__info-title">оборудование</div>
-                        <div class="service-description__panel swiper-panel">
+                        <div class="service-description__panel swiper-panel --desc">
                             <button
                                 type="button"
                                 class="swiper-panel__btn service-description-panel__btn-prev"
@@ -246,8 +295,8 @@
                     </div>
                     <div class="service-description__swiper-container">
                         <div class="swiper service-description__swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide service-description__info-colums">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide service-description__info-colums">
                                     <p class="service-description__info-text">
                                         Ключевой особенностью является воздействие массажиста на выбранные
                                         заранее участки тела, а не просто разминка определенных мышц.
@@ -269,9 +318,9 @@
                                             Palomar ICON
                                         </p>
                                     </div>
-                                </div>
+                                </li>
 
-                                <div class="swiper-slide service-description__info-colums">
+                                <li class="swiper-slide service-description__info-colums">
                                     <p class="service-description__info-text">
                                         Ключевой особенностью является воздействие массажиста на выбранные
                                         заранее участки тела, а не просто разминка определенных мышц.
@@ -286,8 +335,23 @@
                                             Palomar ICON
                                         </p>
                                     </div>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-description__panel swiper-panel --mob">
+                            <button
+                                type="button"
+                                class="swiper-panel__btn service-description-panel__btn-prev"
+                            >
+                                <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
+                            </button>
+                            <div class="service-description-panel__fractions"></div>
+                            <button
+                                type="button"
+                                class="swiper-panel__btn service-description-panel__btn-next"
+                            >
+                                <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -296,26 +360,26 @@
                     <div class="service-description__info-titles">
                         <div class="service-description__info-title">Этапы проведения</div>
                     </div>
-                    <div class="service-description__info-grid">
-                        <div class="service-description__info-grid-item">
+                    <ul class="service-description__info-grid">
+                        <li class="service-description__info-grid-item">
                             <div class="service-description__info-grid-item-number"><p>1</p></div>
                             <div class="service-description__info-grid-item-title">Релаксация</div>
                             <p class="service-description__info-grid-item-description">
                                 Продолжительность этапа – 2-3 минуты. Специалист легкими массажными движениями
                                 поглаживает и растирает кожу.
                             </p>
-                        </div>
+                        </li>
 
-                        <div class="service-description__info-grid-item">
+                        <li class="service-description__info-grid-item">
                             <div class="service-description__info-grid-item-number"><p>2</p></div>
                             <div class="service-description__info-grid-item-title">Массирование поясницы</div>
                             <p class="service-description__info-grid-item-description">
                                 Массажист последовательно применяет приемы, начиная и заканчивая
                                 поглаживаниями.
                             </p>
-                        </div>
+                        </li>
 
-                        <div class="service-description__info-grid-item">
+                        <li class="service-description__info-grid-item">
                             <div class="service-description__info-grid-item-number"><p>3</p></div>
                             <div class="service-description__info-grid-item-title">
                                 Акцент на центральную зону
@@ -324,9 +388,9 @@
                                 В области между лопатками мастер применяет щадящие техники. Особенное внимание
                                 удаляют позвоночнику
                             </p>
-                        </div>
+                        </li>
 
-                        <div class="service-description__info-grid-item">
+                        <li class="service-description__info-grid-item">
                             <div class="service-description__info-grid-item-number"><p>4</p></div>
                             <div class="service-description__info-grid-item-title">
                                 Массирование воротниковой зоны
@@ -334,17 +398,17 @@
                             <p class="service-description__info-grid-item-description">
                                 Предпочтение обычно отдают схемам поглаживания и растирания шеи.
                             </p>
-                        </div>
+                        </li>
 
-                        <div class="service-description__info-grid-item">
+                        <li class="service-description__info-grid-item">
                             <div class="service-description__info-grid-item-number"><p>5</p></div>
                             <div class="service-description__info-grid-item-title">Релаксация</div>
                             <p class="service-description__info-grid-item-description">
                                 Продолжительность этапа – 2-3 минуты. Специалист легкими массажными движениями
                                 поглаживает и растирает кожу.
                             </p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
 
                 <div data-content-block="service-description-5" class="service-description__info">
@@ -642,8 +706,8 @@
     <div class="container">
         <div class="service-before-after__content">
             <div class="service-before-after__titles">
-                <div class="service-before-after__title title">до/после</div>
-                <div class="palomar__panel swiper-panel">
+                <h2 class="service-before-after__title title">до/после</h2>
+                <div class="palomar__panel swiper-panel --desc">
                     <button type="button" class="swiper-panel__btn palomar__result-prev">
                         <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
                     </button>
@@ -699,6 +763,15 @@
                         <span class="palomar__result-title">После процедуры</span>
                     </a>
                 </div>
+            </div>
+            <div class="palomar__panel swiper-panel --mob">
+                <button type="button" class="swiper-panel__btn palomar__result-prev">
+                    <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
+                </button>
+                <div class="palomar__panel-fractions"></div>
+                <button type="button" class="swiper-panel__btn palomar__result-next">
+                    <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
+                </button>
             </div>
         </div>
     </div>

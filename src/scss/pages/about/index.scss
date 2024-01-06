@@ -90,7 +90,7 @@
     &__video {
         padding: 4rem 3.2rem 4rem 17.5rem;
         position: relative;
-        background: url('../../../assets/images/about/video-poster-background.svg') no-repeat center;
+        background: url('./assets/images/about/video-poster-background.svg') no-repeat center;
         background-size: cover;
 
         @include small-tablet {
