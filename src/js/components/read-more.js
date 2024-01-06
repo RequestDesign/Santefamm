@@ -1,125 +1,124 @@
-const ReadMore = (() => {
-    let s;
+import { dataMediaQueries, _slideUp, _slideDown } from '../utils';
 
-    return {
-        settings() {
-            return {
-                content: document.querySelectorAll('.js-read-more'),
-                originalContentArr: [],
-                truncatedContentArr: [],
-                moreLink: 'Читать все',
-                lessLink: 'Скрыть'
-            };
-        },
+function showMore() {
+    const showMoreBlocks = document.querySelectorAll('[data-showmore]');
+    let showMoreBlocksRegular;
+    let mdQueriesArray;
+    if (showMoreBlocks.length) {
+        // get regular objects
+        showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
+            return !item.dataset.showmoreMedia;
+        });
+        // regular objects initialization
+        showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
 
-        init() {
-            s = this.settings();
-            this.bindEvents();
-        },
+        document.addEventListener('click', showMoreActions);
+        window.addEventListener('resize', showMoreActions);
 
-        bindEvents() {
-            ReadMore.truncateText();
-        },
-
-        /**
-         * Count Words
-         * Helper to handle word count.
-         * @param {string} str - Target content string.
-         */
-        countWords(str) {
-            return str.split(/\s+/).length;
-        },
-
-        /**
-         * Ellpise Content
-         * @param {string} str - content string.
-         * @param {number} wordsNum - Number of words to show before truncation.
-         */
-        ellipseContent(str, wordsNum) {
-            return str.split(/\s+/).slice(0, wordsNum).join(' ') + '...';
-        },
-
-        /**
-         * Truncate Text
-         * Truncate and ellipses contented content
-         * based on specified word count.
-         * Calls createLink() and handleClick() methods.
-         */
-        truncateText() {
-            for (let i = 0; i < s.content.length; i++) {
-                //console.log(s.content)
-                const originalContent = s.content[i].innerHTML;
-                const numberOfWords = s.content[i].dataset.rmWords;
-                const truncateContent = ReadMore.ellipseContent(originalContent, numberOfWords);
-                const originalContentWords = ReadMore.countWords(originalContent);
-
-                s.originalContentArr.push(originalContent);
-                s.truncatedContentArr.push(truncateContent);
-
-                if (numberOfWords < originalContentWords) {
-                    s.content[i].innerHTML = s.truncatedContentArr[i];
-                    let self = i;
-                    ReadMore.createLink(self);
+        // get objects with media queries
+        mdQueriesArray = dataMediaQueries(showMoreBlocks, 'showmoreMedia');
+        if (mdQueriesArray && mdQueriesArray.length) {
+            mdQueriesArray.forEach((mdQueriesItem) => {
+                // event
+                mdQueriesItem.matchMedia.addEventListener('change', function () {
+                    initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                });
+            });
+            initItemsMedia(mdQueriesArray);
+        }
+    }
+    function initItemsMedia(mdQueriesArray) {
+        mdQueriesArray.forEach((mdQueriesItem) => {
+            initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+        });
+    }
+    function initItems(showMoreBlocks, matchMedia) {
+        showMoreBlocks.forEach((showMoreBlock) => {
+            initItem(showMoreBlock, matchMedia);
+        });
+    }
+    function initItem(showMoreBlock, matchMedia = false) {
+        showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
+        let showMoreContent = showMoreBlock.querySelectorAll('[data-showmore-content]');
+        let showMoreButton = showMoreBlock.querySelectorAll('[data-showmore-button]');
+        showMoreContent = Array.from(showMoreContent).filter(
+            (item) => item.closest('[data-showmore]') === showMoreBlock
+        )[0];
+        showMoreButton = Array.from(showMoreButton).filter(
+            (item) => item.closest('[data-showmore]') === showMoreBlock
+        )[0];
+        const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+        if (matchMedia.matches || !matchMedia) {
+            if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+                _slideUp(showMoreContent, 0, hiddenHeight);
+                showMoreButton.hidden = false;
+            } else {
+                _slideDown(showMoreContent, 0, hiddenHeight);
+                showMoreButton.hidden = true;
+            }
+        } else {
+            _slideDown(showMoreContent, 0, hiddenHeight);
+            showMoreButton.hidden = true;
+        }
+    }
+    function getHeight(showMoreBlock, showMoreContent) {
+        let hiddenHeight = 0;
+        const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
+        if (showMoreType === 'items') {
+            const showMoreTypeValue = showMoreContent.dataset.showmoreContent
+                ? showMoreContent.dataset.showmoreContent
+                : 3;
+            const showMoreItems = showMoreContent.children;
+            for (let index = 1; index < showMoreItems.length; index++) {
+                const showMoreItem = showMoreItems[index - 1];
+                hiddenHeight += showMoreItem.offsetHeight;
+                if (index == showMoreTypeValue) break;
+            }
+        } else {
+            const showMoreTypeValue = showMoreContent.dataset.showmoreContent
+                ? showMoreContent.dataset.showmoreContent
+                : 150;
+            hiddenHeight = showMoreTypeValue;
+        }
+        return hiddenHeight;
+    }
+    function getOriginalHeight(showMoreContent) {
+        let parentHidden;
+        let hiddenHeight = showMoreContent.offsetHeight;
+        showMoreContent.style.removeProperty('height');
+        if (showMoreContent.closest(`[hidden]`)) {
+            parentHidden = showMoreContent.closest(`[hidden]`);
+            parentHidden.hidden = false;
+        }
+        let originalHeight = showMoreContent.offsetHeight;
+        parentHidden ? (parentHidden.hidden = true) : null;
+        showMoreContent.style.height = `${hiddenHeight}px`;
+        return originalHeight;
+    }
+    function showMoreActions(e) {
+        const targetEvent = e.target;
+        const targetType = e.type;
+        if (targetType === 'click') {
+            if (targetEvent.closest('[data-showmore-button]')) {
+                const showMoreButton = targetEvent.closest('[data-showmore-button]');
+                const showMoreBlock = showMoreButton.closest('[data-showmore]');
+                const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
+                const showMoreSpeed = showMoreBlock.dataset.showmoreButton
+                    ? showMoreBlock.dataset.showmoreButton
+                    : '500';
+                const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                if (!showMoreContent.classList.contains('_slide')) {
+                    showMoreBlock.classList.contains('_showmore-active')
+                        ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight)
+                        : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+                    showMoreBlock.classList.toggle('_showmore-active');
                 }
             }
-            ReadMore.handleClick(s.content);
-        },
-
-        /**
-         * Create Link
-         * Creates and Inserts Read More Link
-         * @param {number} index - index reference of looped item
-         */
-        createLink(index) {
-            const linkWrap = document.createElement('span');
-
-            linkWrap.className = 'read-more__link-wrap';
-
-            linkWrap.innerHTML = `<a id="read-more_${index}" class="read-more__link" style="cursor:pointer;">${s.moreLink}</a>`;
-
-            // Inset created link
-            s.content[index].parentNode.insertBefore(linkWrap, s.content[index].nextSibling);
-        },
-
-        /**
-         * Handle Click
-         * Toggle Click eve
-         */
-        handleClick(el) {
-            const readMoreLink = document.querySelectorAll('.read-more__link');
-
-            for (let j = 0, l = readMoreLink.length; j < l; j++) {
-                readMoreLink[j].addEventListener('click', function () {
-                    const moreLinkID = this.getAttribute('id');
-                    let index = moreLinkID.split('_')[1];
-
-                    el[index].classList.toggle('is-expanded');
-
-                    if (this.dataset.clicked !== 'true') {
-                        el[index].innerHTML = s.originalContentArr[index];
-                        this.innerHTML = s.lessLink;
-                        this.dataset.clicked = true;
-                    } else {
-                        el[index].innerHTML = s.truncatedContentArr[index];
-                        this.innerHTML = s.moreLink;
-                        this.dataset.clicked = false;
-                    }
-                });
-            }
-        },
-
-        /**
-         * Open All
-         * Method to expand all instances on the page.
-         */
-        openAll() {
-            const instances = document.querySelectorAll('.read-more__link');
-            for (let i = 0; i < instances.length; i++) {
-                content[i].innerHTML = s.truncatedContentArr[i];
-                instances[i].innerHTML = s.moreLink;
-            }
+        } else if (targetType === 'resize') {
+            showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+            mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
         }
-    };
-})();
+    }
+}
 
-ReadMore.init();
+showMore();
