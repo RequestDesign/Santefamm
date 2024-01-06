@@ -1,6 +1,25 @@
 .neutral {
     margin-bottom: 24rem;
 
+    &__wrapper {
+        transition: 0.3s opacity ease;
+        opacity: 0;
+        user-select: none;
+        pointer-events: none;
+
+        &.--active {
+            opacity: 1;
+            user-select: auto;
+            pointer-events: auto;
+        }
+
+        &.--visible {
+            opacity: 1;
+            user-select: auto;
+            pointer-events: auto;
+        }
+    }
+
     @include small-tablet {
         overflow: hidden;
     }

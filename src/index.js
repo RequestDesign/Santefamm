@@ -10,6 +10,7 @@ import './js/components/accordion';
 import './js/components/footer';
 import './js/components/read-more';
 import './js/components/scroll-top';
+import './js/pages/main';
 
 // Pages
 import './js/pages/contacts.js';

@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 function bindModal(trigger, modal, close, callback = () => null) {
     if (!document.querySelector('.modal')) return;
 
