@@ -8,6 +8,59 @@
     position: absolute;
     z-index: 4;
 
+    &.--woman {
+        .layer__content-problems-view {
+            transform: translate(8rem, -2rem);
+            max-width: 73rem;
+            width: 100%;
+            height: 73rem;
+        }
+
+        .layer__content-bottom {
+            position: relative;
+            bottom: 15rem;
+            left: 4rem;
+            z-index: 3;
+        }
+
+        .layer__content-problems-list > li {
+            &:nth-child(1) .layer__content-problems-item {
+                right: -0.5rem;
+                top: 2.5rem;
+            }
+
+            &:nth-child(2) .layer__content-problems-item {
+                right: 28.5rem;
+                top: 11.5rem;
+            }
+
+            &:nth-child(3) .layer__content-problems-item {
+                left: 35.5rem;
+                top: 22.5rem;
+            }
+
+            &:nth-child(4) .layer__content-problems-item {
+                right: 3.5rem;
+                top: 26.5rem;
+            }
+
+            &:nth-child(5) .layer__content-problems-item {
+                right: 22.5rem;
+                top: 30.5rem;
+            }
+
+            &:nth-child(6) .layer__content-problems-item {
+                right: 29.5rem;
+                top: 40.5rem;
+            }
+
+            &:nth-child(7) .layer__content-problems-item {
+                left: 46.5rem;
+                top: 45.5rem;
+            }
+        }
+    }
+
     &-wrapper {
         user-select: none;
         z-index: -1;
@@ -60,14 +113,14 @@
 
                 &:nth-child(1) {
                     .layer__content-problems-item {
-                        right: 28.5rem;
+                        right: 21.5rem;
                         top: -1.5rem;
                     }
                 }
 
                 &:nth-child(2) {
                     .layer__content-problems-item {
-                        right: 13.5rem;
+                        right: 6.5rem;
                         top: 8.5rem;
                     }
                 }
@@ -75,27 +128,27 @@
                 &:nth-child(3) {
                     .layer__content-problems-item {
                         left: 12.5rem;
-                        top: 7.5rem;
+                        top: 9.5rem;
                     }
                 }
 
                 &:nth-child(4) {
                     .layer__content-problems-item {
-                        right: 20.5rem;
+                        right: 13.5rem;
                         top: 23.5rem;
                     }
                 }
 
                 &:nth-child(5) {
                     .layer__content-problems-item {
-                        right: 38.5rem;
+                        right: 32.5rem;
                         top: 33.5rem;
                     }
                 }
 
                 &:nth-child(6) {
                     .layer__content-problems-item {
-                        right: 19.5rem;
+                        right: 13.5rem;
                         top: 40.5rem;
                     }
                 }
