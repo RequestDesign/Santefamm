@@ -328,15 +328,16 @@ function initPagesInfoSlider() {
                     let titleNextIndex = this.realIndex + 1;
                     let fadeSpeed = 6;
 
-                    if (titlePrevIndex == -1) {
+                    if (titlePrevIndex === -1) {
                         titlePrevIndex = slides.length - 1;
                     }
-                    if (titleNextIndex == slides.length) {
+                    if (titleNextIndex === slides.length) {
                         titleNextIndex = 0;
                     }
                     function fadeIn(fade) {
-                        var opacity = 0;
-                        var intervalID = setInterval(function () {
+                        let opacity = 0;
+
+                        const intervalID = setInterval(function () {
                             if (opacity < 1) {
                                 opacity = opacity + 0.01;
                                 fade.style.opacity = opacity;
@@ -346,8 +347,9 @@ function initPagesInfoSlider() {
                         }, fadeSpeed);
                     }
                     function fadeOut(fade) {
-                        var opacity = 1;
-                        var intervalID = setInterval(function () {
+                        let opacity = 1;
+
+                        const intervalID = setInterval(function () {
                             if (opacity > 0) {
                                 opacity = opacity - 0.01;
                                 fade.style.opacity = opacity;
