@@ -310,10 +310,23 @@ function initPagesInfoSlider() {
         const btnNext = document.querySelector('.pages-info__link-rotate-next');
         const slides = slider.querySelectorAll('.swiper-slide .pages-info__title');
 
+        const categoriesSlider = document.querySelector('.pages-info-categories-swiper');
+
+        const categoriesSwiper = new Swiper(categoriesSlider, {
+            slidesPerView: 'auto',
+            speed: 1200,
+            spaceBetween: remToPx(0.8)
+        });
+
         new Swiper(slider, {
-            modules: [Navigation, EffectFade],
+            modules: [Navigation, EffectFade, Thumbs],
+            thumbs: {
+                swiper: categoriesSwiper
+            },
+            autoHeight: true,
             slidesPerView: 1,
             loop: true,
+            runCallbacksOnInit: false,
             spaceBetween: remToPx(10),
             effect: 'fade',
             fadeEffect: { crossFade: true },
@@ -348,7 +361,6 @@ function initPagesInfoSlider() {
                     }
                     function fadeOut(fade) {
                         let opacity = 1;
-
                         const intervalID = setInterval(function () {
                             if (opacity > 0) {
                                 opacity = opacity - 0.01;

@@ -1,9 +1,23 @@
 <section class="pages-info">
     <div class="container">
         <div class="pages-info__container">
+            <div class="swiper pages-info-categories-swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <p>о клинике</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Преимущества</p>
+                    </li>
+                    <li class="swiper-slide">
+                        <p>Оборудование</p>
+                    </li>
+                </ul>
+            </div>
+
             <div class="swiper pages-info__swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
                         <div class="pages-info__info">
                             <div class="pages-info__titles">
                                 <h2 class="pages-info__title title">О клинике</h2>
@@ -21,11 +35,11 @@
                                     результатами, поскольку клиника имеет свою лабораторию.
                                 </p>
                             </div>
-                            <a href="" class="pages-info__link btn-secondary">
-                                <span>подробнее</span>
+<!--                            <a href="" class="pages-info__link btn-secondary">-->
+<!--                                <span>подробнее</span>-->
 
-                                <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
-                            </a>
+<!--                                <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />-->
+<!--                            </a>-->
                             <div class="pages-info__info-card">
                                 <div class="pages-info__info-card-decription">
                                     <p>Наши специалисты внимательно отнесутся к каждой вашей просьбе.</p>
@@ -43,29 +57,31 @@
                                         <p class="pages-info__info-card-person-post">Главврач</p>
                                     </div>
                                 </div>
-                                <div class="pages-info__info-card-lines">
-                                    <img src="./assets/images/icons/lines.svg" alt="" />
-                                </div>
                             </div>
                         </div>
                         <div class="pages-info__3d">
                             <div class="pages-info__3d-img">
                                 <img src="./assets/images/pages-info/photo.png" alt="" />
-                                <button class="pages-info__3d-button">
+                                <a href="#" class="pages-info__3d-button">
                                     <div class="pages-info__3d-button-img">
                                         <img src="./assets/images/icons/cube.svg" alt="" />
                                     </div>
-                                    <a class="pages-info__3d-button-text">
+                                    <div class="pages-info__3d-button-text">
                                         <p>3D-тур по клинике</p>
                                         <div class="pages-info__3d-button-text-icon">
                                             <img src="./assets/images/icons/arrow-black.svg" alt="" />
                                         </div>
+                                    </div>
+                                </a>
+                                <div class="pages-info__3d-link">
+                                    <a href="#" class="btn-primary">
+                                        <span>Запись на прием</span>
                                     </a>
-                                </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
+                    </li>
+                    <li class="swiper-slide">
                         <div class="pages-info__info">
                             <div class="pages-info__titles">
                                 <h2 class="pages-info__title title">Преимущества</h2>
@@ -75,16 +91,12 @@
                                     Мы редлагаем индивидуальный комплекс процедур для каждого клиента. Работа
                                     клиники организована с учетом комфортного пребывания посетителей.
                                 </p>
-                                <p class="pages-info__info-decription-text">
-                                    Новейшее оборудование центра помогает провести диагностику организма
-                                    пациента для составления плана лечения и профилактики.
-                                </p>
                             </div>
                             <div class="pages-info__ellipse">
                                 <div class="pages-info__ellipse-img">
-                                    <img src="./assets/images/pages-info/ellipse.png" alt="" />
+                                    <img src="./assets/images/pages-info/ellipse.webp" alt="" />
                                 </div>
-                                <div class="pages-info__ellipse-item --item1">
+                                <div class="pages-info__ellipse-item">
                                     <div class="pages-info__ellipse-item-circle"></div>
                                     <div class="pages-info__ellipse-item-text">
                                         <p class="pages-info__ellipse-item-title">Индивидуальный подход</p>
@@ -93,7 +105,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="pages-info__ellipse-item --item2">
+                                <div class="pages-info__ellipse-item">
                                     <div class="pages-info__ellipse-item-circle"></div>
                                     <div class="pages-info__ellipse-item-text">
                                         <p class="pages-info__ellipse-item-title">Комфорт</p>
@@ -102,7 +114,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="pages-info__ellipse-item --item3">
+                                <div class="pages-info__ellipse-item">
                                     <div class="pages-info__ellipse-item-circle"></div>
                                     <div class="pages-info__ellipse-item-text">
                                         <p class="pages-info__ellipse-item-title">Оборудование</p>
@@ -111,7 +123,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="pages-info__ellipse-item --item4">
+                                <div class="pages-info__ellipse-item">
                                     <div class="pages-info__ellipse-item-circle"></div>
                                     <div class="pages-info__ellipse-item-text">
                                         <p class="pages-info__ellipse-item-title">Своя лаборатория</p>
@@ -121,6 +133,11 @@
                                     </div>
                                 </div>
                             </div>
+<!--                            <a href="" class="pages-info__ellipse-button btn-secondary">-->
+<!--                                <span> подробнее </span>-->
+
+<!--                                <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />-->
+<!--                            </a>-->
                         </div>
                         <div class="pages-info__3d">
                             <div class="pages-info__3d-img">
@@ -136,10 +153,15 @@
                                         </div>
                                     </a>
                                 </button>
+                                <div class="pages-info__3d-link">
+                                    <a href="#" class="btn-primary">
+                                        <span>Запись на прием</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
+                    </li>
+                    <li class="swiper-slide">
                         <div class="pages-info__info">
                             <div class="pages-info__titles">
                                 <h2 class="pages-info__title title">оборудование</h2>
@@ -188,6 +210,11 @@
                                     </div>
                                 </li>
                             </ul>
+<!--                            <a href="" class="pages-info__link-details btn-secondary">-->
+<!--                                <span> подробнее </span>-->
+
+<!--                                <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />-->
+<!--                            </a>-->
                         </div>
 
                         <div class="pages-info__3d">
@@ -204,24 +231,24 @@
                                         </div>
                                     </a>
                                 </button>
+                                <div class="pages-info__3d-link">
+                                    <a href="#" class="btn-primary">
+                                        <span>Запись на прием</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="pages-info__3d-link">
-                    <a href="#" class="btn-primary">
-                        <span>Запись на прием</span>
-                    </a>
-                </div>
+                    </li>
+                </ul>
             </div>
 
-            <button href="#" class="pages-info__link-rotate pages-info__link-rotate-next">
+            <button class="pages-info__link-rotate pages-info__link-rotate-next">
                 <p class="pages-info__link-rotate-text">Преимущества</p>
                 <div class="pages-info__link-rotate-icon">
                     <img src="./assets/images/icons/arrow-white.svg" alt="" />
                 </div>
             </button>
-            <button href="#" class="pages-info__link-rotate pages-info__link-rotate-prev">
+            <button class="pages-info__link-rotate pages-info__link-rotate-prev">
                 <p class="pages-info__link-rotate-text">Оборудование</p>
                 <div class="pages-info__link-rotate-icon">
                     <img src="./assets/images/icons/arrow-white.svg" alt="" />
