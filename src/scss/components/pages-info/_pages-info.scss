@@ -1,8 +1,76 @@
 .pages-info {
+    @include small-tablet {
+        overflow: hidden;
+    }
+
+    &__title {
+        @include small-tablet {
+            &.title {
+                text-align: center;
+                margin-bottom: 4.4rem;
+                font-size: 7.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
+        }
+    }
+
     &__container {
         display: flex;
         flex-direction: row;
         gap: 2rem;
+
+        @include small-tablet {
+            display: block;
+        }
+    }
+
+    &-categories {
+        &-swiper {
+            @media (min-width: 48em) {
+                display: none;
+            }
+
+            overflow: visible;
+            margin-bottom: 4.4rem;
+
+            .swiper-slide {
+                width: auto;
+                padding: 2.4rem 4rem;
+                border-radius: 20rem;
+                border: 0.1rem solid $white;
+                background: rgba(255, 255, 255, 0.3);
+                transition:
+                    0.3s background ease,
+                    0.3s border ease;
+
+                &-thumb {
+                    &-active {
+                        background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                        border-color: transparent;
+
+                        p {
+                            background-clip: unset;
+                            -webkit-background-clip: unset;
+                            -webkit-text-fill-color: $white;
+                            color: $white;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%;
+                    text-transform: uppercase;
+
+                    @extend %gradientColor;
+                }
+            }
+        }
     }
 
     &__link {
@@ -11,15 +79,27 @@
         img {
             height: auto;
         }
+
+        &-details {
+            margin-top: 6.4rem;
+
+            img {
+                height: auto;
+            }
+        }
     }
 
     & .swiper {
-        overflow: unset;
-        max-width: 143rem;
+        @media (min-width: 48em) {
+            overflow: unset;
+            max-width: 143rem;
+        }
     }
     & .swiper-slide {
-        display: flex;
-        justify-content: space-between;
+        @media (min-width: 48em) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
     & .swiper-slide-prev {
         .pages-info__info {
@@ -27,11 +107,13 @@
         }
     }
     & .swiper-slide-active {
-        .pages-info__info {
-            animation: fade-translateX50 1.2s ease-in-out;
-        }
-        .pages-info__3d-img {
-            animation: fade 1.2s ease-in-out;
+        @media (min-width: 48em) {
+            .pages-info__info {
+                animation: fade-translateX50 1.2s ease-in-out;
+            }
+            .pages-info__3d-img {
+                animation: fade-in 1.2s ease-in-out;
+            }
         }
     }
     & .swiper-slide-next {
@@ -46,27 +128,74 @@
         margin-top: 3.7rem;
         max-width: 64.1rem;
 
+        @include small-tablet {
+            max-width: 100%;
+            margin-top: 0;
+            margin-bottom: 4.8rem;
+        }
+
         &-decription {
             margin-bottom: 4rem;
             display: flex;
             flex-direction: column;
             gap: 1.6rem;
 
+            @include small-tablet {
+                gap: 3.2rem;
+                margin-bottom: 2.4rem;
+            }
+
             &-text {
                 @extend %regular18;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
             }
         }
         &-card {
             position: relative;
             min-width: 64.1rem;
             min-height: 30.3rem;
-            background: url('./assets/images/quotes.svg') no-repeat top left $white;
-            border-radius: 2rem;
+            border-radius: 1.8rem;
+            background: $white;
             padding: 4rem 8rem;
+            z-index: 2;
 
             display: flex;
             flex-direction: column;
             gap: 3.6rem;
+
+            &::after {
+                @include pseudo {
+                    left: 0;
+                    top: 0;
+                    max-width: 18.4rem;
+                    width: 100%;
+                    height: 10.7rem;
+                    z-index: -1;
+                    background: url('./assets/images/icons/blockquote.svg') no-repeat center;
+                    background-size: cover;
+                    border-radius: 1.8rem 0 0 0;
+
+                    @include small-tablet {
+                        max-width: 24.2rem;
+                        height: 14rem;
+                        border-radius: 2.8rem 0 0 0;
+                    }
+                }
+            }
+
+            @include small-tablet {
+                min-width: initial;
+                min-height: initial;
+                border-radius: 2.8rem;
+                padding: 4rem;
+                gap: 4rem;
+            }
 
             &-decription {
                 display: flex;
@@ -74,6 +203,13 @@
 
                 p {
                     @extend %semibold18;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                    }
                 }
             }
             &-person {
@@ -81,28 +217,45 @@
                 align-items: center;
                 gap: 1.2rem;
 
+                @include small-tablet {
+                    gap: 3.2rem;
+                }
+
                 &-text {
                     display: flex;
                     flex-direction: column;
                 }
                 &-img {
                     @include sizes(9.6rem, 9.9rem);
+
+                    @include small-tablet {
+                        max-width: 14rem;
+                        width: 100%;
+                        height: 14rem;
+                    }
                 }
                 &-name {
                     @extend %semibold20;
                     @extend %gradientColor;
+
+                    @include small-tablet {
+                        font-size: 3.2rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                    }
                 }
                 &-post {
                     @extend %regular18;
                     @extend %gradientColor;
-                }
-            }
-            &-lines {
-                position: absolute;
-                right: 4rem;
-                top: 4rem;
 
-                @include sizes(auto, 17.6rem);
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%;
+                    }
+                }
             }
         }
         &-list {
@@ -138,11 +291,30 @@
         }
     }
     &__ellipse {
+        &-button {
+            margin-top: auto;
+            margin-bottom: 4rem;
+
+            img {
+                height: auto;
+            }
+        }
+
         &-img {
             position: absolute;
-            left: -16.1rem;
-            bottom: -1.1rem;
-            @include sizes(51.6rem, 51.6rem);
+            left: -5.1rem;
+            bottom: 18.9rem;
+            max-width: 29.5rem;
+            width: 100%;
+            height: 29.5rem;
+
+            &::after {
+                @include pseudo {
+                    inset: -8.6rem;
+                    border-radius: 50%;
+                    border: 0.2rem solid rgba(255, 255, 255, 0.37);
+                }
+            }
         }
         &-item {
             position: absolute;
@@ -165,31 +337,34 @@
                 border: 0.7rem solid $white;
                 border-radius: 50%;
             }
-            &.--item1 {
-                bottom: 40.3rem;
-                left: 27.6rem;
+            &:nth-child(2) {
+                bottom: 49.3rem;
+                left: 24.6rem;
+
                 .pages-info__ellipse-item-circle {
                     align-self: flex-end;
                 }
             }
-            &.--item2 {
-                bottom: 28.9rem;
-                left: 32.2rem;
+            &:nth-child(3) {
+                bottom: 37.9rem;
+                left: 29.2rem;
+
                 .pages-info__ellipse-item-circle {
                     align-self: flex-start;
                 }
             }
-            &.--item3 {
-                bottom: 17.5rem;
-                left: 34.3rem;
+            &:nth-child(4) {
+                bottom: 26.5rem;
+                left: 31.3rem;
+
                 .pages-info__ellipse-item-circle {
                     align-self: flex-start;
                 }
             }
-            &.--item4 {
-                // top: 68.6rem;
-                bottom: 6.1rem;
-                left: 31rem;
+            &:nth-child(5) {
+                bottom: 15.5rem;
+                left: 28.3rem;
+
                 .pages-info__ellipse-item-circle {
                     align-self: flex-start;
                 }
@@ -206,6 +381,10 @@
 
             a {
                 padding: 1.9rem 5.7rem;
+
+                @include small-tablet {
+                    padding: 2.7rem 4rem;
+                }
             }
         }
         &-button {
@@ -221,20 +400,52 @@
             max-width: 28.7rem;
             padding: 0.8rem;
 
+            @include small-tablet {
+                padding: 1.6rem;
+                max-width: 39.4rem;
+                border-radius: 2.8rem;
+            }
+
             &-img {
                 min-width: 11.6rem;
                 min-height: 10rem;
+
+                @include small-tablet {
+                    min-height: initial;
+                    min-width: initial;
+                    max-width: 16.2rem;
+                    height: 13.6rem;
+                    width: 100%;
+                }
             }
             &-text {
                 display: flex;
                 flex-direction: column;
                 gap: 3.3rem;
 
+                @include small-tablet {
+                    justify-content: space-between;
+                }
+
                 p {
                     @extend %medium18Caps;
+
+                    @include small-tablet {
+                        font-size: 2.8rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                        text-transform: uppercase;
+                    }
                 }
                 &-icon {
                     @include sizes(1.8rem, 1.2rem);
+
+                    @include small-tablet {
+                        max-width: 3.6rem;
+                        width: 100%;
+                        height: 2.4rem;
+                    }
                 }
             }
         }
@@ -242,6 +453,26 @@
             position: relative;
             max-width: 69.4rem;
             max-height: 81.9rem;
+
+            > img {
+                -webkit-mask-image: url('./assets/images/pages-info/photo.png');
+                mask-image: url('./assets/images/pages-info/photo.png');
+                -webkit-mask-position: top left;
+                mask-position: top left;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: 100%;
+                mask-size: 100%;
+
+                @include small-tablet {
+                    -webkit-mask-image: url('./assets/images/pages-info/photo-mobile.webp');
+                    mask-image: url('./assets/images/pages-info/photo-mobile.webp');
+                }
+            }
+
+            @include small-tablet {
+                max-width: 100%;
+            }
         }
     }
 
@@ -258,6 +489,11 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        max-height: 82rem;
+
+        @include small-tablet {
+            display: none;
+        }
 
         &::after {
             transition: opacity 0.3s ease-in-out;

@@ -310,10 +310,23 @@ function initPagesInfoSlider() {
         const btnNext = document.querySelector('.pages-info__link-rotate-next');
         const slides = slider.querySelectorAll('.swiper-slide .pages-info__title');
 
+        const categoriesSlider = document.querySelector('.pages-info-categories-swiper');
+
+        const categoriesSwiper = new Swiper(categoriesSlider, {
+            slidesPerView: 'auto',
+            speed: 1200,
+            spaceBetween: remToPx(0.8)
+        });
+
         new Swiper(slider, {
-            modules: [Navigation, EffectFade],
+            modules: [Navigation, EffectFade, Thumbs],
+            thumbs: {
+                swiper: categoriesSwiper
+            },
+            autoHeight: true,
             slidesPerView: 1,
             loop: true,
+            runCallbacksOnInit: false,
             spaceBetween: remToPx(10),
             effect: 'fade',
             fadeEffect: { crossFade: true },
@@ -328,15 +341,16 @@ function initPagesInfoSlider() {
                     let titleNextIndex = this.realIndex + 1;
                     let fadeSpeed = 6;
 
-                    if (titlePrevIndex == -1) {
+                    if (titlePrevIndex === -1) {
                         titlePrevIndex = slides.length - 1;
                     }
-                    if (titleNextIndex == slides.length) {
+                    if (titleNextIndex === slides.length) {
                         titleNextIndex = 0;
                     }
                     function fadeIn(fade) {
-                        var opacity = 0;
-                        var intervalID = setInterval(function () {
+                        let opacity = 0;
+
+                        const intervalID = setInterval(function () {
                             if (opacity < 1) {
                                 opacity = opacity + 0.01;
                                 fade.style.opacity = opacity;
@@ -346,8 +360,8 @@ function initPagesInfoSlider() {
                         }, fadeSpeed);
                     }
                     function fadeOut(fade) {
-                        var opacity = 1;
-                        var intervalID = setInterval(function () {
+                        let opacity = 1;
+                        const intervalID = setInterval(function () {
                             if (opacity > 0) {
                                 opacity = opacity - 0.01;
                                 fade.style.opacity = opacity;
