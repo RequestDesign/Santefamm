@@ -235,6 +235,22 @@
         max-width: 40rem;
         width: 100%;
         margin-top: 17.8rem;
+        transition: 0.3s opacity ease;
+        opacity: 0;
+        user-select: none;
+        pointer-events: none;
+
+        &.--active {
+            opacity: 1;
+            user-select: auto;
+            pointer-events: auto;
+        }
+
+        &.--visible {
+            opacity: 1;
+            user-select: auto;
+            pointer-events: auto;
+        }
 
         @include small-tablet {
             max-width: 100%;

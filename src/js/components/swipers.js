@@ -527,6 +527,36 @@ function initActionOtherSliders() {
     }
 }
 
+function initDotsSlide() {
+    if (document.querySelector('.layer__content-problems-dot-swiper')) {
+        $('.layer__content-problems-dot-slider').each(function (index, swiper) {
+            const slider = swiper.querySelector('.layer__content-problems-dot-swiper');
+            const fraction = swiper.querySelector('.dots__panel-fractions');
+            const btnPrev = swiper.querySelector('.dots__panel-prev');
+            const btnNext = swiper.querySelector('.dots__panel-next');
+
+            new Swiper(slider, {
+                modules: [Pagination, Navigation, EffectFade],
+                slidesPerView: '1',
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                spaceBetween: remToPx(4),
+                speed: 1200,
+                pagination: {
+                    el: fraction,
+                    type: 'fraction'
+                },
+                navigation: {
+                    nextEl: btnNext,
+                    prevEl: btnPrev
+                }
+            });
+        });
+    }
+}
+
 function initSliders() {
     initReviewsSliders();
     initNewsSliders();
@@ -543,6 +573,7 @@ function initSliders() {
     initServiceDetailedSwiper();
     initActionSlider();
     initActionOtherSliders();
+    initDotsSlide();
 }
 
 const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
