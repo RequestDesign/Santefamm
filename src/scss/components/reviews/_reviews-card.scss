@@ -10,9 +10,15 @@
     }
 
     &__desc {
-        background: url('./assets/images/bg/review-bg.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
+        -webkit-mask-image: url('./assets/images/bg/review-bg.svg');
+        mask-image: url('./assets/images/bg/review-bg.svg');
+        -webkit-mask-position: top left;
+        mask-position: top left;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: 100%;
+        mask-size: 100%;
+        background: $white;
         padding: 4rem 3.2rem 3.2rem;
         width: 100%;
         height: 37.2rem;
@@ -20,8 +26,9 @@
         @include small-tablet {
             height: 49.4rem;
             padding: 4rem;
-            background: url('./assets/images/bg/review-bg-mobile.svg');
             margin-top: 2rem;
+            -webkit-mask-image: url('./assets/images/bg/review-bg-mobile.svg');
+            mask-image: url('./assets/images/bg/review-bg-mobile.svg');
         }
     }
 

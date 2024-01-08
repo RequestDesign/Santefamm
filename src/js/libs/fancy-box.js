@@ -20,8 +20,8 @@ Fancybox.bind('[data-fancybox]', {
         }
     },
     Html: {
-        videoTpl: `<video class="fancybox__html5video" muted  controls controlsList="nodownload" poster="{{poster}}">
+        videoTpl: `<video class="fancybox__html5video" muted controls controlsList="nodownload" poster="{{poster}}">
   <source  src="{{src}}" type="{{format}}" />Sorry, your browser doesn't support embedded videos.</video>`,
-        videoAutoplay: false
+        videoAutoplay: false,
     }
 });

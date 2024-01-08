@@ -1,9 +1,26 @@
 .services {
     margin-bottom: 20rem;
 
+    &__container {
+        margin-bottom: 20rem;
+    }
+
     .title {
         @include small-tablet {
             text-align: center;
+        }
+    }
+
+    &__list {
+        &-item {
+            display: none;
+            flex-direction: column;
+            gap: 20rem;
+
+            &.--active {
+                display: flex;
+                animation: fade-in 0.8s both;
+            }
         }
     }
 
@@ -38,6 +55,12 @@
             width: 100%;
             margin: 0 !important;
             min-height: 20rem;
+        }
+
+        &.--active {
+            .services__item-tit {
+                background-position: top left 100%;
+            }
         }
 
         &:hover {
