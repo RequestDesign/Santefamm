@@ -143,14 +143,33 @@
                         </div>
 
                         <form action="#" class="modal__content-form">
-                            <div class="modal__content-form-field">
+                            <div class="modal__content-form-field input">
                                 <label for="name">Имя</label>
-                                <input type="text" id="name" />
+                                <input
+                                    id="name"
+                                    data-validate=""
+                                    data-required=""
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form"
+                                    data-error="Заполните поле"
+                                    class="input__field"
+                                />
                             </div>
 
-                            <div class="modal__content-form-field">
+                            <div class="modal__content-form-field input">
                                 <label for="phone">Телефон</label>
-                                <input type="text" id="phone" />
+                                <input
+                                    id="phone"
+                                    data-validate=""
+                                    data-required=""
+                                    data-phone-mask=""
+                                    autocomplete="off"
+                                    type="tel"
+                                    name="form[]"
+                                    data-error="Заполните поле"
+                                    class="input__field"
+                                />
                             </div>
 
                             <div class="modal__content-form-submit">
@@ -212,7 +231,7 @@
 
                             <div class="modal__content-form-field">
                                 <label for="phone">Телефон</label>
-                                <input type="text" id="phone" />
+                                <input data-phone-mask type="tel" id="phone" />
                             </div>
 
                             <div class="modal__content-form-submit">

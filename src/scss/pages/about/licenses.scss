@@ -48,6 +48,7 @@
         &-image {
             width: auto;
             height: auto;
+            margin: 0;
         }
 
         &-button {
@@ -166,6 +167,7 @@
                 padding: 4rem;
                 max-width: 54rem;
                 width: 100%;
+                cursor: pointer;
 
                 @include small-tablet {
                     max-width: 100%;

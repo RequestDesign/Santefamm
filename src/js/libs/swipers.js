@@ -233,7 +233,7 @@ function initDevicesSlider() {
 
         new Swiper(slider, {
             modules: [Pagination, Navigation],
-            slidesPerView: '3',
+            slidesPerView: 'auto',
             spaceBetween: remToPx(4),
             speed: 1200,
             pagination: {
@@ -266,6 +266,7 @@ function initLicensesSlider() {
             fadeEffect: {
                 crossFade: true
             },
+            loop: true,
             slidesPerView: 1,
             speed: 1200,
             breakpoints: {
@@ -286,8 +287,10 @@ function initLicensesSlider() {
         new Swiper(slider, {
             modules: [Pagination, Navigation, Thumbs],
             slidesPerView: '3',
+            grabCursor: true,
             spaceBetween: remToPx(4),
             speed: 1200,
+            loop: true,
             thumbs: {
                 swiper: license
             },
@@ -320,6 +323,7 @@ function initPagesInfoSlider() {
 
         new Swiper(slider, {
             modules: [Navigation, EffectFade, Thumbs],
+            allowTouchMove: false,
             thumbs: {
                 swiper: categoriesSwiper
             },
@@ -406,6 +410,9 @@ function initServiceDescriptionEqSlider() {
         new Swiper(slider, {
             modules: [Pagination, Navigation, EffectFade],
             slidesPerView: 1,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            loop: true,
             spaceBetween: remToPx(4),
             speed: 1200,
             navigation: {
@@ -551,11 +558,10 @@ function initDotsSlide() {
 
             new Swiper(slider, {
                 modules: [Pagination, Navigation, EffectFade],
-                slidesPerView: '1',
+                slidesPerView: 1,
                 effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
+                fadeEffect: { crossFade: true },
+                loop: true,
                 spaceBetween: remToPx(4),
                 speed: 1200,
                 pagination: {

@@ -58,6 +58,8 @@
     },
     "dependencies": {
         "@babel/core": "^7.23.3",
+        "@fancyapps/ui": "^5.0.33",
+        "imask": "^7.3.0",
         "jquery": "^3.7.1",
         "swiper": "^11.0.4",
         "ymaps": "^0.2.1"
