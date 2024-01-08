@@ -320,6 +320,7 @@ function initPagesInfoSlider() {
 
         new Swiper(slider, {
             modules: [Navigation, EffectFade, Thumbs],
+            allowTouchMove: false,
             thumbs: {
                 swiper: categoriesSwiper
             },
@@ -406,6 +407,9 @@ function initServiceDescriptionEqSlider() {
         new Swiper(slider, {
             modules: [Pagination, Navigation, EffectFade],
             slidesPerView: 1,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            loop: true,
             spaceBetween: remToPx(4),
             speed: 1200,
             navigation: {
@@ -551,11 +555,10 @@ function initDotsSlide() {
 
             new Swiper(slider, {
                 modules: [Pagination, Navigation, EffectFade],
-                slidesPerView: '1',
+                slidesPerView: 1,
                 effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
+                fadeEffect: { crossFade: true },
+                loop: true,
                 spaceBetween: remToPx(4),
                 speed: 1200,
                 pagination: {
