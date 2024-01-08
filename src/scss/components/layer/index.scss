@@ -8,12 +8,49 @@
     position: absolute;
     z-index: 4;
 
+    @include small-tablet {
+        max-width: 100%;
+        transform: none;
+        margin-top: 3rem;
+        position: static;
+        height: initial;
+    }
+
+    &::after {
+        @include pseudo {
+            inset: -53rem;
+            border-radius: 83.6rem;
+            border: 0.2rem solid rgba(255, 255, 255, 0.37);
+            top: 53%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+
+            @include small-tablet {
+                border-radius: 50%;
+                transform: none;
+                width: 75rem;
+                height: 76rem;
+                inset: initial;
+                top: 30rem;
+                left: -3rem;
+            }
+        }
+    }
+
     &.--woman {
         .layer__content-problems-view {
             transform: translate(8rem, -2rem);
             max-width: 73rem;
             width: 100%;
             height: 73rem;
+
+            @include small-tablet {
+                transform: translate(11rem, 2rem);
+                max-width: 73rem;
+                width: 100%;
+                height: 79rem;
+            }
         }
 
         .layer__content-bottom {
@@ -21,42 +58,83 @@
             bottom: 15rem;
             left: 4rem;
             z-index: 3;
+
+            @include small-tablet {
+                left: 0;
+                bottom: 19rem;
+                z-index: 3;
+            }
         }
 
         .layer__content-problems-list > li {
             &:nth-child(1) .layer__content-problems-item {
                 right: -0.5rem;
                 top: 2.5rem;
+
+                @include small-tablet {
+                    right: -2.5rem;
+                    top: 0.5rem;
+                }
             }
 
             &:nth-child(2) .layer__content-problems-item {
                 right: 28.5rem;
                 top: 11.5rem;
+
+                @include small-tablet {
+                    right: 26.5rem;
+                    top: 12.5rem;
+                }
             }
 
             &:nth-child(3) .layer__content-problems-item {
                 left: 35.5rem;
                 top: 22.5rem;
+
+                @include small-tablet {
+                    left: 38.5rem;
+                    top: 22.5rem;
+                }
             }
 
             &:nth-child(4) .layer__content-problems-item {
                 right: 3.5rem;
                 top: 26.5rem;
+
+                @include small-tablet {
+                    right: -2.5rem;
+                    top: 31.5rem;
+                }
             }
 
             &:nth-child(5) .layer__content-problems-item {
                 right: 22.5rem;
                 top: 30.5rem;
+
+                @include small-tablet {
+                    right: 20.5rem;
+                    top: 34.5rem;
+                }
             }
 
             &:nth-child(6) .layer__content-problems-item {
                 right: 29.5rem;
                 top: 40.5rem;
+
+                @include small-tablet {
+                    right: 29.5rem;
+                    top: 46.5rem;
+                }
             }
 
             &:nth-child(7) .layer__content-problems-item {
                 left: 46.5rem;
                 top: 45.5rem;
+
+                @include small-tablet {
+                    left: 53.5rem;
+                    top: 49.5rem;
+                }
             }
         }
     }
@@ -101,6 +179,12 @@
             max-width: 56rem;
             width: 100%;
             height: 61rem;
+
+            @include small-tablet {
+                max-width: 100%;
+                transform: translate(-4rem, 0rem);
+                height: 66rem;
+            }
         }
 
         &-list {
@@ -115,6 +199,10 @@
                     .layer__content-problems-item {
                         right: 21.5rem;
                         top: -1.5rem;
+
+                        @include small-tablet {
+                            top: -7.5rem;
+                        }
                     }
                 }
 
@@ -122,6 +210,11 @@
                     .layer__content-problems-item {
                         right: 6.5rem;
                         top: 8.5rem;
+
+                        @include small-tablet {
+                            right: 5.5rem;
+                            top: 6.5rem;
+                        }
                     }
                 }
 
@@ -129,6 +222,11 @@
                     .layer__content-problems-item {
                         left: 12.5rem;
                         top: 9.5rem;
+
+                        @include small-tablet {
+                            left: 11.5rem;
+                            top: 5.5rem;
+                        }
                     }
                 }
 
@@ -136,6 +234,11 @@
                     .layer__content-problems-item {
                         right: 13.5rem;
                         top: 23.5rem;
+
+                        @include small-tablet {
+                            right: 13.5rem;
+                            top: 21.5rem;
+                        }
                     }
                 }
 
@@ -143,6 +246,11 @@
                     .layer__content-problems-item {
                         right: 32.5rem;
                         top: 33.5rem;
+
+                        @include small-tablet {
+                            right: 33.5rem;
+                            top: 32.5rem;
+                        }
                     }
                 }
 
@@ -150,6 +258,11 @@
                     .layer__content-problems-item {
                         right: 13.5rem;
                         top: 40.5rem;
+
+                        @include small-tablet {
+                            right: 11.5rem;
+                            top: 43.5rem;
+                        }
                     }
                 }
 
@@ -157,6 +270,11 @@
                     .layer__content-problems-item {
                         left: 13.5rem;
                         top: 46.5rem;
+
+                        @include small-tablet {
+                            left: 13.5rem;
+                            top: 47.5rem;
+                        }
                     }
                 }
             }
@@ -168,6 +286,11 @@
             height: 2.4rem;
             position: absolute;
             z-index: 4;
+
+            @include small-tablet {
+                max-width: 4rem;
+                height: 4rem;
+            }
 
             &-counter {
                 width: 100%;
@@ -189,6 +312,16 @@
                     0.3s color ease-in,
                     0.3s background ease-in;
                 cursor: pointer;
+
+                @include small-tablet {
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                    margin-top: -0.5rem;
+                    margin-left: -0.5rem;
+                }
 
                 &.--active {
                     background: $white;
@@ -227,6 +360,11 @@
                         background: rgba(255, 255, 255, 0.5);
                         backdrop-filter: blur(0.35rem);
                         transition: 0.3s background ease-in;
+
+                        @include small-tablet {
+                            width: 7.6rem;
+                            height: 7.6rem;
+                        }
                     }
                 }
 
@@ -241,6 +379,13 @@
                         background: $white;
                         z-index: -1;
                         transition: 0.3s background ease-in;
+
+                        @include small-tablet {
+                            max-width: 3.6rem;
+                            height: 3.6rem;
+                            top: 3rem;
+                            right: 2.3rem;
+                        }
                     }
                 }
             }
@@ -459,33 +604,16 @@
         }
     }
 
-    &::after {
-        @include pseudo {
-            inset: -53rem;
-            border-radius: 83.6rem;
-            border: 0.2rem solid rgba(255, 255, 255, 0.37);
-            top: 53%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-
-            @include small-tablet {
-                border-radius: 50%;
-                transform: none;
-                width: 75rem;
-                height: 76rem;
-                inset: initial;
-                top: -4rem;
-                left: -3rem;
-            }
-        }
-    }
-
     &-bottom {
         position: relative;
         bottom: 3rem;
         left: 4rem;
         z-index: 3;
+
+        @include small-tablet {
+            bottom: 5rem;
+            left: 0;
+        }
 
         &-reverse {
             max-width: 12rem;
@@ -495,6 +623,13 @@
             top: -3rem;
             left: 34%;
             transition: 0.3s transform ease;
+
+            @include small-tablet {
+                max-width: 15.6rem;
+                height: 7.6rem;
+                top: -4rem;
+                left: 38%;
+            }
 
             &.--active {
                 transform: rotateY(180deg);
@@ -509,25 +644,46 @@
             width: 100%;
             height: 15.8rem;
             background: url('./assets/images/layer/bottom-background.svg') no-repeat center;
-            background-size: cover;
+            background-size: contain;
             padding-left: 6.6rem;
             padding-right: 4.4rem;
+
+            @include small-tablet {
+                height: 20rem;
+                padding-left: 7.8rem;
+                padding-right: 6.4rem;
+                max-width: 100%;
+            }
         }
 
         &-view {
             max-height: 12.4rem;
             cursor: pointer;
 
+            @include small-tablet {
+                max-height: 16.4rem;
+            }
+
             &:nth-child(1) {
                 max-width: 6.3rem;
                 width: 100%;
                 height: 12.4rem;
+
+                @include small-tablet {
+                    max-width: 8.4rem;
+                    height: 16.4rem;
+                }
             }
 
             &:nth-child(2) {
                 max-width: 9.5rem;
                 width: 100%;
                 height: 11.3rem;
+
+                @include small-tablet {
+                    max-width: 11.2rem;
+                    height: 13.2rem;
+                }
             }
         }
     }

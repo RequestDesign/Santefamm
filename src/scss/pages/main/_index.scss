@@ -1,7 +1,19 @@
 .main {
-    &__bg-neit {
-        background: url('./assets/images/bg/bg.png') no-repeat center;
-        background-size: cover;
+    &__bg {
+        &-neutral {
+            background: url('./assets/images/bg/bg.svg') no-repeat center;
+            background-size: cover;
+        }
+
+        &-man {
+            background: url('./assets/images/bg/man-bg.svg') no-repeat center;
+            background-size: cover;
+        }
+
+        &-woman {
+            background: url('./assets/images/bg/woman-bg.svg') no-repeat center;
+            background-size: cover;
+        }
     }
 }
 
