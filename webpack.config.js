@@ -335,7 +335,7 @@ module.exports = {
                     }
                 ],
                 generator: {
-                    filename: 'assets/videos/[name][ext]'
+                    filename: 'assets/video/[name][ext]'
                 }
             }
         ]

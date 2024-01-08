@@ -233,7 +233,7 @@ function initDevicesSlider() {
 
         new Swiper(slider, {
             modules: [Pagination, Navigation],
-            slidesPerView: '3',
+            slidesPerView: 'auto',
             spaceBetween: remToPx(4),
             speed: 1200,
             pagination: {
@@ -266,6 +266,7 @@ function initLicensesSlider() {
             fadeEffect: {
                 crossFade: true
             },
+            loop: true,
             slidesPerView: 1,
             speed: 1200,
             breakpoints: {
@@ -286,8 +287,10 @@ function initLicensesSlider() {
         new Swiper(slider, {
             modules: [Pagination, Navigation, Thumbs],
             slidesPerView: '3',
+            grabCursor: true,
             spaceBetween: remToPx(4),
             speed: 1200,
+            loop: true,
             thumbs: {
                 swiper: license
             },
