@@ -79,6 +79,13 @@
     display: flex;
     align-items: center;
 
+    &:hover {
+        img,
+        svg {
+            transform: translateX(1rem);
+        }
+    }
+
     @include small-tablet {
         gap: 3.2rem;
     }
@@ -98,6 +105,7 @@
     img,
     svg {
         @include sizes(4.4rem, 100%);
+        transition: 0.3s transform ease;
 
         @include small-tablet {
             @include sizes(8.8rem, 100%);
