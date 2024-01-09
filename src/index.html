@@ -147,12 +147,12 @@
                                 <label for="name">Имя</label>
                                 <input
                                     id="name"
-                                    data-validate=""
+                                    data-validate="name"
                                     data-required=""
                                     autocomplete="off"
                                     type="text"
                                     name="form"
-                                    data-error="Заполните поле"
+                                    data-error="Поле должно быть заполнено"
                                     class="input__field"
                                 />
                             </div>
@@ -161,13 +161,13 @@
                                 <label for="phone">Телефон</label>
                                 <input
                                     id="phone"
-                                    data-validate=""
+                                    data-validate="phone"
                                     data-required=""
                                     data-phone-mask=""
                                     autocomplete="off"
                                     type="tel"
                                     name="form[]"
-                                    data-error="Заполните поле"
+                                    data-error="Поле должно быть заполнено"
                                     class="input__field"
                                 />
                             </div>
@@ -224,14 +224,33 @@
                         </div>
 
                         <form action="#" class="modal__content-form">
-                            <div class="modal__content-form-field">
+                            <div class="modal__content-form-field input">
                                 <label for="name">Имя</label>
-                                <input type="text" id="name" />
+                                <input
+                                    id="name"
+                                    data-validate="name"
+                                    data-required=""
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form"
+                                    data-error="Поле должно быть заполнено"
+                                    class="input__field"
+                                />
                             </div>
 
-                            <div class="modal__content-form-field">
+                            <div class="modal__content-form-field input">
                                 <label for="phone">Телефон</label>
-                                <input data-phone-mask type="tel" id="phone" />
+                                <input
+                                    id="phone"
+                                    data-validate="phone"
+                                    data-required=""
+                                    data-phone-mask=""
+                                    autocomplete="off"
+                                    type="tel"
+                                    name="form[]"
+                                    data-error="Поле должно быть заполнено"
+                                    class="input__field"
+                                />
                             </div>
 
                             <div class="modal__content-form-submit">
@@ -240,10 +259,10 @@
                                 </button>
 
                                 <div class="modal__content-form-submit-agreement">
-                                    <label for="appointment-agree" class="checkbox">
-                                        <input id="appointment-agree" type="checkbox" />
+                                    <label for="agree" class="checkbox">
+                                        <input id="agree" type="checkbox" />
                                         <span
-                                            >Согласен(-а) с обработкой моих персональных данных в соответствии
+                                        >Согласен(-а) с обработкой моих персональных данных в соответствии
                                              с политикой конфиденциальности
                                         </span>
                                     </label>

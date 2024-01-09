@@ -88,6 +88,26 @@ export let formValidate = {
     validateInput(formRequiredItem) {
         let error = 0;
 
+        if (formRequiredItem.dataset.validate === 'phone') {
+            const value = formRequiredItem.value.replace(/\D/g, '');
+
+            if (value.length < 11) {
+                this.addTextError(formRequiredItem, 'Поле должно содеражить не менее 11 символов');
+                error++;
+            }
+        }
+
+        if (formRequiredItem.dataset.validate === 'name') {
+            const pattern = /^[А-ЯЁ][а-яё]+(\s[А-ЯЁ][а-яё]+)?$/;
+            console.log(formRequiredItem.value)
+
+            if (!pattern.test(formRequiredItem.value)) {
+                this.addTextError(formRequiredItem, 'Неверный формат имени');
+                error++;
+            }
+
+        }
+
         if (formRequiredItem.dataset.required === 'email') {
             formRequiredItem.value = formRequiredItem.value.replace(' ', '');
             if (this.emailTest(formRequiredItem)) {
@@ -104,14 +124,12 @@ export let formValidate = {
                 this.addError(formRequiredItem);
                 error++;
             } else if (formRequiredItem.dataset.validate === 'letters-only') {
-                const pattern = /[0-9`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+                const pattern = /^[a-zA-Z]+$/;
                 if (pattern.test(formRequiredItem.value)) {
                     formRequiredItem.dataset.error = ``;
                     this.addError(formRequiredItem);
                     error++;
                 }
-            } else {
-                this.removeError(formRequiredItem);
             }
         }
         return error;
@@ -128,6 +146,20 @@ export let formValidate = {
                 `<div class="form-error txt txt_16">${formRequiredItem.dataset.error}</div>`
             );
         }
+        if (formRequiredItem.closest('.input_validate')) {
+            formRequiredItem.closest('form').classList.add('_error');
+        }
+    },
+    addTextError(formRequiredItem, text) {
+        formRequiredItem.classList.add('_form-error');
+        formRequiredItem.parentElement.classList.add('_form-error');
+        formRequiredItem.parentElement.classList.remove('_filled');
+        let inputError = formRequiredItem.parentElement.querySelector('.form-error');
+        if (inputError) formRequiredItem.parentElement.removeChild(inputError);
+        formRequiredItem.parentElement.insertAdjacentHTML(
+            'beforeend',
+            `<div class="form-error txt txt_16">${text}</div>`
+        );
         if (formRequiredItem.closest('.input_validate')) {
             formRequiredItem.closest('form').classList.add('_error');
         }

@@ -23,6 +23,7 @@ import './js/form';
 // Pages
 import './js/pages/contacts.js';
 import './js/pages/main';
+import './js/pages/advantages';
 
 // Styles
 import './index.scss';

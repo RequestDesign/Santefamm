@@ -199,10 +199,10 @@
                 justify-content: space-between;
 
                 &:not(:first-child) {
-                    margin-top: 1.6rem;
+                    margin-top: 2.6rem;
 
                     @include small-tablet {
-                        margin-top: 4rem;
+                        margin-top: 5rem;
                     }
                 }
 
@@ -234,14 +234,14 @@
             }
 
             &-submit {
-                margin-top: 3rem;
+                margin-top: 4rem;
                 display: flex;
                 gap: 3.4rem;
 
                 @include small-tablet {
                     flex-direction: column-reverse;
                     gap: 6.4rem;
-                    margin-top: 6.4rem;
+                    margin-top: 7.4rem;
                 }
 
                 > button {
