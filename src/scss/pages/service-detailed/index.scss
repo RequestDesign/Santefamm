@@ -28,6 +28,21 @@
         display: flex;
         align-items: center;
 
+        &.--active {
+            @include small-tablet {
+                .accommodation__slide-title {
+                    background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                    border-color: transparent;
+
+                    span {
+                        background: transparent;
+                        background-clip: unset;
+                        -webkit-text-fill-color: $white;
+                    }
+                }
+            }
+        }
+
         &-image {
             max-width: 18.8rem;
             width: 100%;
@@ -37,16 +52,27 @@
         &-title {
             padding: 2.4rem 4rem;
             border-radius: 40rem;
-            background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
             backdrop-filter: blur(1.5rem);
             display: block;
-            color: $white;
-            font-size: 2.8rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-            text-transform: uppercase;
-            white-space: nowrap;
+            transition:
+                0.3s background ease,
+                0.3s border ease;
+            border: 0.1rem solid $white;
+            background: rgba(255, 255, 255, 0.3);
+
+            span {
+                color: $white;
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%;
+                text-transform: uppercase;
+                white-space: nowrap;
+                background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
     }
 

@@ -76,10 +76,10 @@
                 align-items: center;
                 border-radius: 2.8rem;
                 padding: 4rem 5rem;
-                border: .1rem solid $white;
-                background: rgba(255, 255, 255, 0.30);
+                border: 0.1rem solid $white;
+                background: rgba(255, 255, 255, 0.3);
                 backdrop-filter: blur(1.5rem);
-                transition: .3s border ease;
+                transition: 0.3s border ease;
             }
 
             &:hover {
