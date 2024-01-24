@@ -118,6 +118,7 @@
         margin-bottom: 2.8rem;
         position: relative;
         z-index: 5;
+        max-width: 80%;
 
         @include small-tablet {
             color: $black;
@@ -220,7 +221,11 @@
         &-item {
             border-radius: 20rem;
             background: #f3f0ff;
-            backdrop-filter: blur(0.35rem);
+            transition: .3s background ease;
+
+            &:hover{
+                background: $lightWhite;
+            }
 
             a {
                 display: block;
