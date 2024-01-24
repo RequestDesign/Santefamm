@@ -149,20 +149,25 @@
     }
 
     &__burger-menu {
-        position: fixed;
-        z-index: 300;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100dvh;
-        transition: 0.8s transform ease 0.1s;
-        transform: translateX(-100%);
+        display: none;
 
-        &.--active {
-            transform: translateX(0);
+        @include small-tablet {
+            display: block;
+            position: fixed;
+            z-index: 300;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            transition: 0.8s transform ease;
+            transform: translateX(-100%);
 
-            .header__menu-close {
-                opacity: 1;
+            &.--active {
+                transform: translateX(0);
+
+                .header__menu-close {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -179,7 +184,7 @@
             max-width: 4.8rem;
             width: 100%;
             height: 4.8rem;
-            transition: 0.3s opacity ease 0.8s;
+            transition: 0.3s opacity ease;
             opacity: 0;
 
             img {
@@ -280,7 +285,7 @@
                     max-width: 4.8rem;
                     width: 100%;
                     height: 4.8rem;
-                    transition: .3s transform ease;
+                    transition: 0.3s transform ease;
 
                     img {
                         height: 100%;
