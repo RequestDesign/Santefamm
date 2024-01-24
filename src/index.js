@@ -13,6 +13,7 @@ import './js/components/read-more';
 import './js/components/scroll-top';
 import './js/components/phone-mask';
 import './js/components/dynamic-adapter';
+import './js/components/burger-menu';
 
 //libs
 import './js/libs/fancy-box';
