@@ -1,16 +1,20 @@
 .action-card {
     position: relative;
-
-    background: url('./assets/images/bg/action-card.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    background: $white;
 
     width: 54.7rem;
     min-height: 42rem;
 
-    background-color: $white;
     border-radius: 2rem;
     padding: 2rem 3.2rem;
+
+    &:hover {
+        .action-card__title {
+            background-position: top left 100%;
+        }
+    }
 
     @include small-tablet {
         padding: 4rem;

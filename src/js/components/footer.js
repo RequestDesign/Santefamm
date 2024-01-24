@@ -1,11 +1,10 @@
 import $ from 'jquery';
 import remToPx from '../utils/rem';
 import { isMobile } from '../utils/is-mobile';
-console.log(isMobile());
-
 $('.footer__nav-item').each(function (_, item) {
     $(item).on('click', function (event) {
-        if (!isMobile()) {
+        console.log($(window).innerWidth());
+        if (!isMobile() || $(window).innerWidth() > 768) {
             return;
         }
 

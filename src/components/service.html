@@ -277,7 +277,7 @@
                 <div data-content-block="service-description-3" class="service-description__info">
                     <div class="service-description__info-titles">
                         <div class="service-description__info-title">оборудование</div>
-                        <div class="service-description__panel swiper-panel --desc">
+                        <div data-da=".service-description__swiper-container,768,last" class="service-description__panel swiper-panel ">
                             <button
                                 type="button"
                                 class="swiper-panel__btn service-description-panel__btn-prev"
@@ -337,21 +337,6 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="service-description__panel swiper-panel --mob">
-                            <button
-                                type="button"
-                                class="swiper-panel__btn service-description-panel__btn-prev"
-                            >
-                                <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
-                            </button>
-                            <div class="service-description-panel__fractions"></div>
-                            <button
-                                type="button"
-                                class="swiper-panel__btn service-description-panel__btn-next"
-                            >
-                                <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -707,7 +692,7 @@
         <div class="service-before-after__content">
             <div class="service-before-after__titles">
                 <h2 class="service-before-after__title title">до/после</h2>
-                <div class="palomar__panel swiper-panel --desc">
+                <div data-da=".service-before-after .panel-wrapper,768,first" class="palomar__panel swiper-panel">
                     <button type="button" class="swiper-panel__btn palomar__result-prev">
                         <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
                     </button>
@@ -764,14 +749,8 @@
                     </a>
                 </div>
             </div>
-            <div class="palomar__panel swiper-panel --mob">
-                <button type="button" class="swiper-panel__btn palomar__result-prev">
-                    <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
-                </button>
-                <div class="palomar__panel-fractions"></div>
-                <button type="button" class="swiper-panel__btn palomar__result-next">
-                    <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
-                </button>
+
+            <div class="panel-wrapper">
             </div>
         </div>
     </div>

@@ -2,21 +2,51 @@
     margin-bottom: 20rem;
 
     &.--man {
+        .akcii__item-content {
+            @include small-tablet{
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+
         .akcii__item {
             height: 14rem;
+
+            @include small-tablet {
+                height: 22.2rem;
+            }
         }
 
         .akcii__item-tit {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 1rem;
+            @media (min-width: 48em) {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                top: 50%;
+            }
         }
 
         .akcii__item-txt {
-            position: absolute;
-            left: 6rem;
-            top: 1rem;
+            @media (min-width: 48em) {
+                position: absolute;
+                left: 6rem;
+                transform: translateY(-50%);
+                top: 50%;
+            }
+        }
+
+        .akcii__man {
+            @include small-tablet{
+                left: auto;
+                right: 0;
+            }
+        }
+
+        .akcii__item-tit {
+            @include small-tablet{
+                text-align: start;
+            }
         }
     }
 
@@ -72,12 +102,11 @@
         @include sizes(100%, 17.1rem);
         border-radius: 4rem;
         background: $white;
-        padding: 4.5rem 0;
         user-select: none;
 
         @include small-tablet {
-            padding: 2.8rem 0;
             @include sizes(100%, 22.2rem);
+            padding: 0 3rem;
         }
     }
 
@@ -89,6 +118,7 @@
         justify-content: center;
         row-gap: 0.6rem;
         user-select: text;
+        height: 100%;
 
         @include small-tablet {
             text-align: center;
@@ -106,7 +136,7 @@
             font-weight: 400;
             line-height: 120%;
             text-transform: uppercase;
-            max-width: 40%;
+            max-width: 60%;
         }
     }
 

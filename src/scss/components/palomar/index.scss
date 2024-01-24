@@ -44,9 +44,6 @@
     &__slide {
         &.--active {
             .palomar__slide-wrapper {
-                background: $white;
-                border-color: transparent;
-
                 @include small-tablet {
                     background: linear-gradient(284deg, #d65986 -15.39%, #a261f9 112.18%);
                     border-color: transparent;
@@ -61,6 +58,14 @@
                         color: $white;
                         -webkit-text-fill-color: initial;
                     }
+                }
+            }
+
+            .palomar__slide-title {
+                background: $white;
+
+                @include small-tablet{
+                    background: transparent;
                 }
             }
         }

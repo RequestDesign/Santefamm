@@ -1,4 +1,6 @@
 .news-card {
+    display: flex;
+    flex-direction: column;
     max-width: 54.7rem;
     width: 100%;
     background: $white;
@@ -6,6 +8,12 @@
     background-size: contain;
     padding: 4rem 3.2rem;
     position: relative;
+
+    &:hover{
+        .news-card__title {
+            background-position: top left 100%;
+        }
+    }
 
     @include small-tablet {
         max-width: 100%;

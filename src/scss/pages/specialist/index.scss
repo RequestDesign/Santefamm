@@ -43,10 +43,15 @@
 
             @include small-tablet {
                 border-radius: 4rem;
+                background: $white;
             }
 
             img {
                 border-radius: inherit;
+
+                @include small-tablet{
+                    object-fit: contain;
+                }
             }
         }
 
@@ -96,7 +101,7 @@
                     border-radius: 3.2rem;
                     z-index: -1;
                     background: #f3f0ff;
-                    height: 100%;
+                    height: -webkit-fill-available;
                     opacity: 0.5;
                     left: -47.2rem;
                     right: -3.2rem;
