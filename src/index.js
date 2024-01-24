@@ -12,6 +12,7 @@ import './js/components/footer';
 import './js/components/read-more';
 import './js/components/scroll-top';
 import './js/components/phone-mask';
+import './js/components/dynamic-adapter';
 
 //libs
 import './js/libs/fancy-box';

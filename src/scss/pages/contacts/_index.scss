@@ -49,9 +49,6 @@
         backdrop-filter: blur(1.5rem);
 
         &-desc {
-            a {
-                @extend %gradientColorTxt;
-            }
         }
     }
 
@@ -85,12 +82,12 @@
 
     &__connect-tit {
         @extend %semibold20;
-        @extend %gradientColorTxt;
         margin-bottom: 0.8rem;
     }
 
     &__connect-txt {
         @extend %regular20;
+        @extend %gradientColorTxt;
         color: $grey;
     }
 
@@ -204,7 +201,6 @@
 
         &__connect-tit {
             @extend %semibold20;
-            @extend %gradientColorTxt;
             margin-bottom: 0.8rem;
         }
 

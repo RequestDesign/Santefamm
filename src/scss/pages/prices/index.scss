@@ -162,6 +162,7 @@
             &-subcategory {
                 display: flex;
                 align-items: center;
+                cursor: pointer;
 
                 @include small-tablet {
                     min-width: initial;

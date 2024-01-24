@@ -43,7 +43,7 @@
                     </ul>
                 </div>
 
-                <div class="swiper-button-prev palomar-button-prev">
+                <button class="swiper-button-prev palomar-button-prev">
                     <svg
                         width="24"
                         height="24"
@@ -70,8 +70,8 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                </div>
-                <div class="swiper-button-next palomar-button-next">
+                </button>
+                <button class="swiper-button-next palomar-button-next">
                     <svg
                         width="24"
                         height="24"
@@ -98,7 +98,7 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                </div>
+                </button>
             </div>
 
             <div data-content-block="palomar-1" class="palomar__block --active">
@@ -347,7 +347,7 @@
             </div>
 
             <div class="palomar__bottom">
-                <div class="palomar__panel swiper-panel --desc">
+                <div data-da=".palomar__bottom .panel-wrapper,768,first" class="palomar__panel swiper-panel">
                     <button type="button" class="swiper-panel__btn palomar__result-prev">
                         <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
                     </button>
@@ -406,15 +406,7 @@
                     </div>
                 </div>
 
-                <div class="palomar__panel swiper-panel --mob">
-                    <button type="button" class="swiper-panel__btn palomar__result-prev">
-                        <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
-                    </button>
-                    <div class="palomar__panel-fractions"></div>
-                    <button type="button" class="swiper-panel__btn palomar__result-next">
-                        <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
-                    </button>
-                </div>
+                <div class="panel-wrapper"></div>
             </div>
         </div>
     </div>
