@@ -496,7 +496,10 @@ function initDotsSlide() {
     if (document.querySelector('.layer__content-problems-dot-swiper')) {
         $('.layer__content-problems-dot-slider').each(function (index, swiper) {
             const slider = swiper.querySelector('.layer__content-problems-dot-swiper');
-            const fraction = swiper.querySelector('.dots__panel-fractions');
+            const fractions = {
+                desktop: swiper.querySelector('.dots__panel.--desc .dots__panel-fractions'),
+                mobile: swiper.querySelector('.dots__panel.--mob .dots__panel-fractions')
+            }
             const btnPrev = swiper.querySelector('.dots__panel-prev');
             const btnNext = swiper.querySelector('.dots__panel-next');
 
@@ -508,13 +511,23 @@ function initDotsSlide() {
                 loop: true,
                 spaceBetween: remToPx(4),
                 speed: 1200,
-                pagination: {
-                    el: fraction,
-                    type: 'fraction'
-                },
                 navigation: {
                     nextEl: btnNext,
                     prevEl: btnPrev
+                },
+                breakpoints: {
+                    0: {
+                        pagination: {
+                            el: fractions.mobile,
+                            type: 'fraction'
+                        },
+                    },
+                    768: {
+                        pagination: {
+                            el: fractions.desktop,
+                            type: 'fraction'
+                        },
+                    }
                 }
             });
         });

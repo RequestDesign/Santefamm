@@ -45,10 +45,16 @@ $('.layer__content-bottom-view').each(function (index, view) {
 $('.layer__content-problems-item').each(function (index, problem) {
     $(problem).on('click', function () {
         const dots = $(this).parent().find('.layer__content-problems-dots');
+
         const neutralWrapper = $('.neutral__wrapper');
         const neutralService = $('.neutral__service');
 
         neutralWrapper.attr('class', 'neutral__wrapper');
+
+        if ($(window).innerWidth() <= 768) {
+            $('body').addClass('blocked');
+            $(problem).siblings('.layer__content-problems-dots-wrapper').addClass('--active');
+        }
 
         if ($(dots).hasClass('--active')) {
             neutralWrapper.addClass('--active');
@@ -92,7 +98,12 @@ $('.layer__content-problems-dot').each(function (index, dot) {
         });
 
         $(dot).find('.layer__content-problems-dot-slider').addClass('--active');
-        $(dot).addClass('--active');
+
+        if ($(window).innerWidth() > 768) {
+            $(dot).addClass('--active');
+        } else {
+            $(dot).find('.layer__content-problems-dot-detailed').addClass('--active');
+        }
     });
 });
 
@@ -122,3 +133,45 @@ function resetDotSliderActiveClasses() {
         $(this).removeClass('--active');
     });
 }
+
+//close 3-rd stage mobile menu on back click
+$('.layer__content-problems-dots-button').on('click', function () {
+    $(this).parent().removeClass('--active');
+    $('body').removeClass('blocked');
+});
+
+//close 4-th stage mobile menu on back click
+$('.layer__content-problems-dot-detailed').on('click', function (event) {
+    event.stopPropagation();
+});
+
+$('.layer__content-problems-dot-detailed-heading button').on('click', function () {
+    $(this).parent().parent().removeClass('--active');
+});
+
+//set active stage element on category click
+
+// $('.layer__content-problems-dot-category').on('click', function() {
+//     $(this).closest('.layer__content-problems-dot-detailed').removeClass('--active');
+// })
+
+$('.layer__content-problems-dot-detailed').each(function () {
+    $(this)
+        .find('.layer__content-problems-dot-category')
+        .each(function (index, category) {
+            $(category).on('click', function () {
+                const detailed = this.closest('.layer__content-problems-dot-detailed');
+
+                $(detailed).removeClass('--active');
+
+                setTimeout(() => {
+                    $(detailed)
+                        .closest('.layer__content-problems-dots')
+                        .find('.layer__content-problems-dot')
+                        .eq(index)
+                        .find('.layer__content-problems-dot-detailed')
+                        .addClass('--active');
+                }, 300)
+            });
+        });
+});
