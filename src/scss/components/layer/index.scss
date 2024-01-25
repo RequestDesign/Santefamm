@@ -580,6 +580,7 @@
             &-detailed {
                 @include small-tablet {
                     position: fixed;
+                    overflow-y: scroll;
                     z-index: 301;
                     inset: 0;
                     padding: 4.8rem 3.2rem;
