@@ -14,6 +14,7 @@ import './js/components/scroll-top';
 import './js/components/phone-mask';
 import './js/components/dynamic-adapter';
 import './js/components/burger-menu';
+import './js/components/navigation-menu';
 
 //libs
 import './js/libs/fancy-box';

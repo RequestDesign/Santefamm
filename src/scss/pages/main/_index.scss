@@ -1,25 +1,25 @@
 .main {
-    &__bg {
-        &-neutral {
-            background: url('./assets/images/bg/bg.svg') no-repeat center;
-            background-size: cover;
-        }
-
-        &-man {
-            background: url('./assets/images/bg/man-bg.svg') no-repeat center;
-            background-size: cover;
-        }
-
-        &-woman {
-            background: url('./assets/images/bg/woman-bg.svg') no-repeat center;
-            background-size: cover;
-        }
-
-        &-error {
-            background: url('./assets/images/bg/404-bg.svg') no-repeat center;
-            background-size: cover;
-        }
-    }
+    //&__bg {
+    //    &-neutral {
+    //        background: url('./assets/images/bg/bg.svg') no-repeat center;
+    //        background-size: cover;
+    //    }
+    //
+    //    &-man {
+    //        background: url('./assets/images/bg/man-bg.svg') no-repeat center;
+    //        background-size: cover;
+    //    }
+    //
+    //    &-woman {
+    //        background: url('./assets/images/bg/woman-bg.svg') no-repeat center;
+    //        background-size: cover;
+    //    }
+    //
+    //    &-error {
+    //        background: url('./assets/images/bg/404-bg.svg') no-repeat center;
+    //        background-size: cover;
+    //    }
+    //}
 }
 
 @import './akcii';
