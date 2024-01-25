@@ -86,9 +86,11 @@ function resetActiveClasses() {
 
 $('.layer__content-problems-dot').each(function (index, dot) {
     $(dot).on('click', function () {
-        const neutralService = $('.neutral__service');
+        if ($(window).innerWidth() > 768) {
+            const neutralService = $('.neutral__service');
 
-        neutralService.attr('class', 'neutral__service');
+            neutralService.attr('class', 'neutral__service');
+        }
 
         $('.layer__content-problems-dot').each(function () {
             if ($(this).hasClass('--active')) {
@@ -150,11 +152,6 @@ $('.layer__content-problems-dot-detailed-heading button').on('click', function (
 });
 
 //set active stage element on category click
-
-// $('.layer__content-problems-dot-category').on('click', function() {
-//     $(this).closest('.layer__content-problems-dot-detailed').removeClass('--active');
-// })
-
 $('.layer__content-problems-dot-detailed').each(function () {
     $(this)
         .find('.layer__content-problems-dot-category')
@@ -171,7 +168,7 @@ $('.layer__content-problems-dot-detailed').each(function () {
                         .eq(index)
                         .find('.layer__content-problems-dot-detailed')
                         .addClass('--active');
-                }, 300)
+                }, 300);
             });
         });
 });

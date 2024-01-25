@@ -2,6 +2,8 @@ import $ from 'jquery';
 $('.header__burger').on('click', function () {
     $('.header__burger-menu').addClass('--active');
     $('body').addClass('locked');
+
+    window.scrollTo({ top: 0, behavior: 'auto' });
 });
 
 $('.header__menu-close').on('click', function () {
@@ -22,6 +24,6 @@ $('.header__burger-menu').on('click', function (event) {
     $('body').removeClass('locked');
 });
 
-$('.header__menu-content').on('click', function( event) {
-    event.stopPropagation()
-})
+$('.header__menu-content').on('click', function (event) {
+    event.stopPropagation();
+});
