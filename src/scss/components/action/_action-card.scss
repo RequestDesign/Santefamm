@@ -8,7 +8,8 @@
     min-height: 42rem;
 
     border-radius: 2rem;
-    padding: 2rem 3.2rem;
+    padding: 4rem 3.2rem;
+    height: 100%;
 
     &:hover {
         .action-card__title {
@@ -83,12 +84,8 @@
 
     &__link {
         position: absolute;
-        bottom: 4rem;
-        right: 3.2rem;
-
-        @include small-tablet {
-            right: 4rem;
-        }
+        bottom: 0rem;
+        right: 0;
 
         .btn-primary {
             width: 17.6rem;
@@ -97,5 +94,10 @@
                 width: 24.4rem;
             }
         }
+    }
+
+    &__bottom {
+        position: relative;
+        margin-top: auto;
     }
 }

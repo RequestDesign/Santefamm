@@ -33,6 +33,19 @@
             flex-direction: column;
             gap: 2.4rem;
             width: 100%;
+
+            &.--six, &.--seven {
+                .services__item:nth-of-type(6) {
+                    overflow: hidden;
+
+                    .services__item-img {
+                        @include sizes(25.6rem, 20.4rem);
+                        position: absolute;
+                        right: 3rem;
+                        bottom: -4rem;
+                    }
+                }
+            }
         }
     }
 

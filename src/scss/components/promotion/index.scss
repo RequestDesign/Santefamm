@@ -1,0 +1,210 @@
+.promotion {
+    &__content {
+        display: flex;
+
+        @include small-tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        max-width: 84rem;
+        width: 100%;
+        padding: 4rem;
+        border-radius: 1.8rem;
+        background-color: $white;
+        position: relative;
+        z-index: 1;
+
+        @include small-tablet {
+            max-width: 100%;
+            border-radius: 3.6rem;
+        }
+
+        &-subtitle {
+            font-size: 1.8rem;
+            line-height: 120%;
+            text-transform: uppercase;
+            color: #282828;
+            display: block;
+            margin-bottom: 6.4rem;
+
+            @include small-tablet {
+                font-weight: 500;
+                font-size: 2.8rem;
+                line-height: 120%;
+                margin-bottom: 14.4rem;
+            }
+        }
+
+        &-title {
+            font-size: 3.2rem;
+            line-height: 120%;
+            text-transform: uppercase;
+            color: #282828;
+            margin-bottom: 1rem;
+            max-width: 39.6rem;
+            width: 100%;
+            font-family: 'Philosopher', sans-serif;
+
+            @include small-tablet {
+                max-width: 100%;
+                font-size: 4.8rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: flex-end;
+            gap: 0.6rem;
+            font-size: 1.8rem;
+            line-height: 140%;
+            font-family: 'Philosopher', sans-serif;
+            @extend %gradientColor;
+
+            @include small-tablet {
+                gap: 1rem;
+                font-size: 2.8rem;
+            }
+
+            span {
+                display: flex;
+                align-items: flex-end;
+                font-size: 3.2rem;
+                line-height: 120%;
+                text-transform: uppercase;
+                @extend %gradientColor;
+
+                @include small-tablet {
+                    font-size: 4.8rem;
+                }
+
+                small {
+                    font-size: 2.8rem;
+
+                    @include small-tablet {
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+
+        &-logo {
+            @include sizes(7.4rem, 9.3rem);
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+
+            @include small-tablet {
+                @include sizes(11.2rem, 14rem);
+            }
+        }
+    }
+
+    &__info {
+        max-width: 98.6rem;
+        width: 100%;
+        margin-left: -10rem;
+        position: relative;
+        z-index: 0;
+
+        @include small-tablet {
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: -9rem;
+        }
+
+        svg {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        &-wrapper {
+            padding: 4rem;
+            padding-left: 14.6rem;
+            clip-path: url(#promotion__info-background);
+            border-radius: 0 1.8rem 1.8rem 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 0.2rem solid $white;
+            height: 100%;
+
+            @include small-tablet {
+                padding-top: 12.4rem;
+                padding-left: 4rem;
+                border-radius: 3.6rem;
+                clip-path: url(#promotion__info-background-mobile);
+            }
+        }
+
+        &-heading {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 8rem;
+
+            @include small-tablet {
+                justify-content: flex-start;
+                margin-bottom: 4.8rem;
+            }
+        }
+
+        &-reviews-icon {
+            @include sizes(27.6rem, 8rem);
+
+            img {
+                height: auto;
+            }
+
+            @include small-tablet{
+                @include sizes(34rem, 8.8rem);
+                margin-bottom: 5.8rem;
+            }
+        }
+
+        &-link {
+            position: absolute;
+            right: 0;
+            bottom: -0.4rem;
+
+            @include small-tablet{
+                bottom: 0;
+            }
+        }
+    }
+
+    &__heading {
+        &-title {
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: #282828;
+            max-width: 50rem;
+            width: 100%;
+
+            @include small-tablet{
+                max-width: 100%;
+                font-size: 2.8rem;
+            }
+        }
+
+        &-subtitle {
+            font-size: 1.8rem;
+            line-height: 120%;
+            text-transform: uppercase;
+            @extend %gradientColor;
+
+            @include small-tablet{
+                font-size: 2.8rem;
+                max-width: 24rem;
+                width: 100%;
+            }
+        }
+    }
+}

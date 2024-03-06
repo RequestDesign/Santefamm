@@ -277,7 +277,10 @@
                 <div data-content-block="service-description-3" class="service-description__info">
                     <div class="service-description__info-titles">
                         <div class="service-description__info-title">оборудование</div>
-                        <div data-da=".service-description__swiper-container,768,last" class="service-description__panel swiper-panel ">
+                        <div
+                            data-da=".service-description__swiper-container,768,last"
+                            class="service-description__panel swiper-panel"
+                        >
                             <button
                                 type="button"
                                 class="swiper-panel__btn service-description-panel__btn-prev"
@@ -599,21 +602,12 @@
         <div class="service-benefits__content">
             <div class="service-benefits__titles">
                 <div class="service-benefits__title title">преимущества</div>
-                <div class="service-benefits__panel swiper-panel">
-                    <button type="button" class="swiper-panel__btn service-benefits__btn-prev">
-                        <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
-                    </button>
-                    <div class="service-benefits__fractions"></div>
-                    <button type="button" class="swiper-panel__btn service-benefits__btn-next">
-                        <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
-                    </button>
-                </div>
             </div>
 
             <div class="service-benefits__swiper-container">
                 <div class="swiper service-benefits__swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide service-benefits__card">
+                    <ul class="swiper-wrapper service-benefits__cards">
+                        <li class="swiper-slide service-benefits__card">
                             <div class="service-benefits__card-top">
                                 <span class="service-benefits__card-top-title">Быстрое действие</span>
                                 <div class="service-benefits__card-top-number"><p>1</p></div>
@@ -628,9 +622,9 @@
                                     эффективность при минимальных концентрациях
                                 </p>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="swiper-slide service-benefits__card">
+                        <li class="swiper-slide service-benefits__card">
                             <div class="service-benefits__card-top">
                                 <span class="service-benefits__card-top-title">Быстрое действие</span>
                                 <div class="service-benefits__card-top-number"><p>2</p></div>
@@ -645,9 +639,9 @@
                                     эффективность при минимальных концентрациях
                                 </p>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="swiper-slide service-benefits__card">
+                        <li class="swiper-slide service-benefits__card">
                             <div class="service-benefits__card-top">
                                 <span class="service-benefits__card-top-title">Быстрое действие</span>
                                 <div class="service-benefits__card-top-number"><p>3</p></div>
@@ -662,9 +656,9 @@
                                     эффективность при минимальных концентрациях
                                 </p>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="swiper-slide service-benefits__card">
+                        <li class="swiper-slide service-benefits__card">
                             <div class="service-benefits__card-top">
                                 <span class="service-benefits__card-top-title">Быстрое действие</span>
                                 <div class="service-benefits__card-top-number"><p>4</p></div>
@@ -679,8 +673,18 @@
                                     эффективность при минимальных концентрациях
                                 </p>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-benefits__panel swiper-panel --mob">
+                    <button type="button" class="swiper-panel__btn service-benefits__btn-prev">
+                        <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
+                    </button>
+                    <div class="service-benefits__fractions"></div>
+                    <button type="button" class="swiper-panel__btn service-benefits__btn-next">
+                        <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
+                    </button>
                 </div>
             </div>
         </div>
@@ -692,7 +696,10 @@
         <div class="service-before-after__content">
             <div class="service-before-after__titles">
                 <h2 class="service-before-after__title title">до/после</h2>
-                <div data-da=".service-before-after .panel-wrapper,768,first" class="palomar__panel swiper-panel">
+                <div
+                    data-da=".service-before-after .panel-wrapper,768,first"
+                    class="palomar__panel swiper-panel"
+                >
                     <button type="button" class="swiper-panel__btn palomar__result-prev">
                         <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
                     </button>
@@ -750,8 +757,155 @@
                 </div>
             </div>
 
-            <div class="panel-wrapper">
+            <div class="panel-wrapper"></div>
+        </div>
+    </div>
+</section>
+
+<section class="promotion">
+    <div class="container">
+        <div class="promotion__content">
+            <div class="promotion__text">
+                <span class="promotion__text-subtitle"> акция </span>
+
+                <h2 class="promotion__text-title">Программа 3d-лазерное омоложение</h2>
+
+                <p class="promotion__text-price">
+                    <span> 900 <small> ₽ </small> </span>
+
+                    за процедуру
+                </p>
+
+                <a href="#" class="promotion__text-logo">
+                    <img src="./assets/images/icons/logo.svg" alt="" />
+                </a>
+            </div>
+
+            <div class="promotion__info">
+                <svg
+                    preserveAspectRatio="none"
+                    width="987"
+                    height="289"
+                    viewBox="0 0 987 289"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <clipPath clipPathUnits="objectBoundingBox" id="promotion__info-background">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0.001,0.062 V0.938 C0.001,0.972,0.009,1,0.019,1 H0.776 C0.787,1,0.795,0.972,0.795,0.938 V0.82 C0.795,0.786,0.803,0.758,0.813,0.758 H0.982 C0.992,0.758,1,0.73,1,0.696 V0.062 C1,0.028,0.992,0,0.982,0 H0.019 C0.009,0,0.001,0.028,0.001,0.062"
+                            fill="white"
+                            fill-opacity="0.3"
+                        />
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0.002,0.063 V0.944 C0.002,0.977,0.009,1,0.019,1 H0.778 C0.788,1,0.795,0.977,0.795,0.944 V0.826 C0.795,0.789,0.804,0.76,0.815,0.76 H0.984 C0.994,0.76,1,0.733,1,0.7 V0.063 C1,0.03,0.994,0.003,0.984,0.003 H0.019 C0.009,0.003,0.002,0.03,0.002,0.063"
+                            stroke="white"
+                            stroke-width="2"
+                        />
+                    </clipPath>
+                    <defs>
+                        <filter
+                            id="filter0_b_2902_16637"
+                            x="-29.5"
+                            y="-30"
+                            width="1046.5"
+                            height="349"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                        >
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="15" />
+                            <feComposite
+                                in2="SourceAlpha"
+                                operator="in"
+                                result="effect1_backgroundBlur_2902_16637"
+                            />
+                            <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_backgroundBlur_2902_16637"
+                                result="shape"
+                            />
+                        </filter>
+                    </defs>
+                </svg>
+
+                <svg
+                    preserveAspectRatio="none"
+                    width="987"
+                    height="289"
+                    viewBox="0 0 987 289"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <clipPath clipPathUnits="objectBoundingBox" id="promotion__info-background-mobile">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0,0.073 V0.927 C0,0.967,0.023,1,0.052,1 H0.539 C0.568,1,0.592,0.967,0.592,0.927 V0.824 C0.592,0.784,0.615,0.751,0.644,0.751 L0.948,0.751 C0.977,0.751,1,0.718,1,0.678 V0.073 C1,0.033,0.977,-0.006 e-05,325,-1.52588, e-05, H0.052 C0.023,-0.006 e-05,0,8.05885,0,18,"
+                            fill="white"
+                            fill-opacity="0.3"
+                        />
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0.001,0.073 V0.931 C0.001,0.97,0.024,1,0.053,1 H0.541 C0.569,1,0.592,0.97,0.592,0.931 V0.827 C0.592,0.786,0.616,0.752,0.646,0.752 L0.95,0.752 C0.979,0.752,1,0.72,1,0.681 V0.073 C1,0.034,0.979,0.002,0.95,0.002 H0.053 C0.024,0.002,0.001,0.034,0.001,0.073"
+                            stroke="white"
+                            stroke-width="2"
+                        />
+                    </clipPath>
+                    <defs>
+                        <filter
+                            id="filter0_b_2902_16637"
+                            x="-29.5"
+                            y="-30"
+                            width="1046.5"
+                            height="349"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                        >
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="15" />
+                            <feComposite
+                                in2="SourceAlpha"
+                                operator="in"
+                                result="effect1_backgroundBlur_2902_16637"
+                            />
+                            <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_backgroundBlur_2902_16637"
+                                result="shape"
+                            />
+                        </filter>
+                    </defs>
+                </svg>
+
+                <div class="promotion__info-wrapper">
+                    <div class="promotion__info-heading">
+                        <p class="promotion__heading-title">
+                            Получите персональную скидку до 50% на процедуры лазерного омоложения
+                        </p>
+
+                        <span class="promotion__heading-subtitle --desc"> Лучшее предложение </span>
+                    </div>
+
+                    <figure class="promotion__info-reviews-icon">
+                        <img src="./assets/images/promotion/promotion-reviews-icon.svg" alt="" />
+                    </figure>
+
+                    <span class="promotion__heading-subtitle --mob"> Лучшее предложение </span>
+                </div>
+
+                <a href="#" class="promotion__info-link btn-primary">
+                    <span>подробнее</span>
+                </a>
             </div>
         </div>
     </div>
 </section>
+
+

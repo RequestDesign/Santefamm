@@ -70,4 +70,16 @@ reviewButtons.forEach((button, index) => {
         authorNameText.html(authorName);
         date.html(dateText);
     });
+
+    $('.modal').each(function (_, modal) {
+        const form = $(modal).find('form');
+
+        $(form)
+            .find('input')
+            .on('change', function () {
+                const isChecked = $(this).is(':checked');
+
+                $(form).find('button[type="submit"]').prop('disabled', !isChecked);
+            });
+    });
 });

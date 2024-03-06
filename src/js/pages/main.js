@@ -51,6 +51,8 @@ $('.layer__content-problems-item').each(function (index, problem) {
 
         neutralWrapper.attr('class', 'neutral__wrapper');
 
+        $('.navigation').addClass('--active')
+
         if ($(window).innerWidth() <= 768) {
             $('body').addClass('blocked');
             $(problem).siblings('.layer__content-problems-dots-wrapper').addClass('--active');
@@ -105,6 +107,7 @@ $('.layer__content-problems-dot').each(function (index, dot) {
             $(dot).addClass('--active');
         } else {
             $(dot).find('.layer__content-problems-dot-detailed').addClass('--active');
+            hideProblemDotsRowButtons();
         }
     });
 });
@@ -140,6 +143,9 @@ function resetDotSliderActiveClasses() {
 $('.layer__content-problems-dots-button').on('click', function () {
     $(this).parent().removeClass('--active');
     $('body').removeClass('blocked');
+
+    showProblemDotsRowButtons();
+    $('.navigation').removeClass('--active');
 });
 
 //close 4-th stage mobile menu on back click
@@ -149,6 +155,9 @@ $('.layer__content-problems-dot-detailed').on('click', function (event) {
 
 $('.layer__content-problems-dot-detailed-heading button').on('click', function () {
     $(this).parent().parent().removeClass('--active');
+    $(this).closest('.layer__content-problems-dot').find('p').css('opacity', 1);
+
+    showProblemDotsRowButtons();
 });
 
 //set active stage element on category click
@@ -161,6 +170,8 @@ $('.layer__content-problems-dot-detailed').each(function () {
 
                 $(detailed).removeClass('--active');
 
+                showProblemDotsRowButtons();
+
                 setTimeout(() => {
                     $(detailed)
                         .closest('.layer__content-problems-dots')
@@ -168,7 +179,31 @@ $('.layer__content-problems-dot-detailed').each(function () {
                         .eq(index)
                         .find('.layer__content-problems-dot-detailed')
                         .addClass('--active');
+
+                    hideProblemDotsRowButtons();
                 }, 300);
             });
         });
 });
+
+function showProblemDotsRowButtons() {
+    $('.layer__content-problems-dot').each(function (_, dot) {
+        const p = $(dot).find('p:first-child');
+        const icon = $(dot).find('.layer__content-problems-dot-icon');
+
+        $(p).css('opacity', 1);
+        $(icon).css('opacity', 1);
+        $(this).css('borderColor', 'white').css('userSelect', 'auto').css('pointerEvents', 'auto');
+    });
+}
+
+function hideProblemDotsRowButtons() {
+    $('.layer__content-problems-dot').each(function (_, dot) {
+        const p = $(dot).find('p:first-child');
+        const icon = $(dot).find('.layer__content-problems-dot-icon');
+
+        $(p).css('opacity', 0);
+        $(icon).css('opacity', 0);
+        $(this).css('borderColor', 'transparent').css('userSelect', 'none').css('pointerEvents', 'none');
+    });
+}
