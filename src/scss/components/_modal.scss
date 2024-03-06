@@ -249,6 +249,12 @@
                     width: fit-content;
                     height: 6rem;
 
+                    &:disabled{
+                        background: $grey;
+                        user-select: none;
+                        cursor: not-allowed;
+                    }
+
                     @include small-tablet {
                         padding: 4.7rem 4rem;
                         border-radius: 2.8rem;

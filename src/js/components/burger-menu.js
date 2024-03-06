@@ -3,7 +3,7 @@ $('.header__burger').on('click', function () {
     $('.header__burger-menu').addClass('--active');
     $('body').addClass('locked');
 
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    $('html, body').animate({ scrollTop: 0 }, '100');
 });
 
 $('.header__menu-close').on('click', function () {

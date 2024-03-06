@@ -581,33 +581,52 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
     checker();
 };
 
-resizableSwiper('(max-width: 768px)', '.equipment__swiper', {
-    speed: 1200,
-    slidesPerView: 'auto',
-    spaceBetween: remToPx(0.4),
-    slideToClickedSlide: true
-});
 
-resizableSwiper('(max-width: 768px)', '.doctors-swiper', {
-    modules: [Pagination, Navigation],
-    speed: 1200,
-    slidesPerView: '1',
-    spaceBetween: remToPx(2),
-    pagination: {
-        el: document.querySelector('.doctors-detailed-panel__fractions'),
-        type: 'fraction'
-    },
-    navigation: {
-        nextEl: document.querySelector('.doctors-detailed-panel__btn-next'),
-        prevEl: document.querySelector('.doctors-detailed-panel__btn-prev')
-    }
-});
 
-resizableSwiper('(max-width: 768px)', '.services-description-swiper', {
-    speed: 1200,
-    slidesPerView: 'auto',
-    spaceBetween: remToPx(0.4),
-    slideToClickedSlide: true
-});
+document.addEventListener('DOMContentLoaded', () => {
+    initSliders();
 
-document.addEventListener('DOMContentLoaded', initSliders);
+    resizableSwiper('(max-width: 768px)', '.equipment__swiper', {
+        speed: 1200,
+        slidesPerView: 'auto',
+        spaceBetween: remToPx(0.4),
+        slideToClickedSlide: true
+    });
+
+    resizableSwiper('(max-width: 768px)', '.doctors-swiper', {
+        modules: [Pagination, Navigation],
+        speed: 1200,
+        slidesPerView: '1',
+        spaceBetween: remToPx(2),
+        pagination: {
+            el: document.querySelector('.doctors-detailed-panel__fractions'),
+            type: 'fraction'
+        },
+        navigation: {
+            nextEl: document.querySelector('.doctors-detailed-panel__btn-next'),
+            prevEl: document.querySelector('.doctors-detailed-panel__btn-prev')
+        }
+    });
+
+    resizableSwiper('(max-width: 768px)', '.services-description-swiper', {
+        speed: 1200,
+        slidesPerView: 'auto',
+        spaceBetween: remToPx(0.4),
+        slideToClickedSlide: true
+    });
+
+    resizableSwiper('(max-width: 768px)', '.service-benefits__swiper', {
+        modules: [Pagination, Navigation],
+        speed: 1200,
+        slidesPerView: 1,
+        spaceBetween: remToPx(2.4),
+        navigation: {
+            prevEl: document.querySelector('.service-benefits__panel .service-benefits__btn-prev'),
+            nextEl: document.querySelector('.service-benefits__panel .service-benefits__btn-next')
+        },
+        pagination: {
+            el: document.querySelector('.service-benefits__fractions'),
+            type: 'fraction'
+        },
+    });
+});

@@ -61,8 +61,8 @@
 
             @include small-tablet {
                 left: 0;
-                bottom: 19rem;
-                z-index: 3;
+                bottom: -8rem;
+                z-index: 1;
             }
         }
 
@@ -443,6 +443,13 @@
                     width: 100%;
                     height: 100%;
                 }
+
+                &-close {
+                    @include small-tablet{
+                        pointer-events: auto;
+                        user-select: auto;
+                    }
+                }
             }
 
             &-title {
@@ -464,20 +471,20 @@
                     transform: translateX(100%);
                     transition: 0.3s transform ease;
                     background: radial-gradient(
-                                    31.12% 17.8% at 30.31% 46.13%,
-                                    rgba(255, 255, 255, 0.5) 0%,
-                                    rgba(255, 255, 255, 0) 100%
-                    ),
-                    linear-gradient(
-                                    193deg,
-                                    rgba(238, 234, 255, 0.3) 23.28%,
-                                    rgba(238, 234, 255, 0) 41.01%
-                    ),
-                    linear-gradient(115deg, #efe6ff 33.58%, rgba(239, 230, 255, 0) 53.79%),
-                    linear-gradient(124deg, rgba(231, 221, 255, 0.8) 41.5%, rgba(231, 221, 255, 0) 61.87%),
-                    linear-gradient(248deg, #e0dafd 13.09%, rgba(224, 218, 253, 0) 34.9%),
-                    linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
-                    #cfc3ec;
+                            31.12% 17.8% at 30.31% 46.13%,
+                            rgba(255, 255, 255, 0.5) 0%,
+                            rgba(255, 255, 255, 0) 100%
+                        ),
+                        linear-gradient(
+                            193deg,
+                            rgba(238, 234, 255, 0.3) 23.28%,
+                            rgba(238, 234, 255, 0) 41.01%
+                        ),
+                        linear-gradient(115deg, #efe6ff 33.58%, rgba(239, 230, 255, 0) 53.79%),
+                        linear-gradient(124deg, rgba(231, 221, 255, 0.8) 41.5%, rgba(231, 221, 255, 0) 61.87%),
+                        linear-gradient(248deg, #e0dafd 13.09%, rgba(224, 218, 253, 0) 34.9%),
+                        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+                        #cfc3ec;
                 }
 
                 &.--active {
@@ -554,6 +561,7 @@
                 &:not(:last-child) {
                     padding-bottom: 4.8rem;
                     border-bottom: 0.1rem solid $white;
+                    transition: .3s border ease;
                 }
             }
 
@@ -630,6 +638,11 @@
                         width: 100%;
                         height: 4.8rem;
 
+                        @include small-tablet{
+                            user-select: auto;
+                            pointer-events: auto;
+                        }
+
                         img {
                             height: 100%;
                         }
@@ -664,6 +677,8 @@
                     display: grid;
                     grid-template-columns: repeat(3, minmax(16.6rem, 1fr));
                     gap: 6.4rem;
+                    user-select: auto;
+                    pointer-events: auto;
                 }
             }
 
@@ -697,6 +712,7 @@
                 max-width: 5.6rem;
                 width: 100%;
                 height: 4rem;
+                transition: .3s opacity ease;
 
                 img {
                     height: 100%;
@@ -708,7 +724,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 120%;
-                transition: color 0.3s ease-out;
+                transition: color 0.3s ease-out, .3s opacity ease;
                 white-space: nowrap;
 
                 @include small-tablet {
@@ -777,7 +793,7 @@
                     width: fit-content;
                     margin-left: auto;
 
-                    @include small-tablet{
+                    @include small-tablet {
                         margin: 0 auto 9.2rem;
                     }
                 }
@@ -800,7 +816,7 @@
                 line-height: 120%;
                 margin-bottom: 10.1rem;
 
-                @include small-tablet{
+                @include small-tablet {
                     font-size: 3.2rem;
                     font-style: normal;
                     font-weight: 400;
@@ -820,7 +836,7 @@
                 gap: 2rem;
                 position: relative;
 
-                @include small-tablet{
+                @include small-tablet {
                     height: 45rem;
                     padding: 4.8rem 4rem;
                     border-radius: 2.8rem;
@@ -836,7 +852,7 @@
                     width: 100%;
                     height: 20rem;
 
-                    @include small-tablet{
+                    @include small-tablet {
                         right: -6.4rem;
                         top: 50%;
                         transform: translateY(-50%);
@@ -854,7 +870,7 @@
                     line-height: 120%;
                     text-transform: uppercase;
 
-                    @include small-tablet{
+                    @include small-tablet {
                         font-size: 4rem;
                         font-style: normal;
                         font-weight: 400;
