@@ -210,7 +210,7 @@ function initDevicesSlider() {
 
         new Swiper(slider, {
             modules: [Pagination, Navigation],
-            slidesPerView: 'auto',
+
             spaceBetween: remToPx(4),
             speed: 1200,
             pagination: {
@@ -220,6 +220,14 @@ function initDevicesSlider() {
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 'auto',
+                }
             }
         });
     }
