@@ -4,7 +4,7 @@
             <div class="devices__heading">
                 <h2 class="devices__title title">наше оборудование</h2>
 
-                <div class="devices__panel swiper-panel">
+                <div data-da=".devices .panel-wrapper,768,first" class="devices__panel swiper-panel">
                     <button type="button" class="swiper-panel__btn devices__panel-prev">
                         <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
                     </button>
@@ -86,10 +86,17 @@
                 </ul>
             </div>
 
-            <a href="" class="devices__link btn-secondary">
+            <div class="panel-wrapper">
+            </div>
+
+            <a href="" class="devices__link btn-secondary --desc">
                 <span>Подробнее</span>
 
                 <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="arrow-right" />
+            </a>
+
+            <a href="" class="btn-primary btn-details --mob">
+                <span>Подробнее</span>
             </a>
         </div>
     </div>

@@ -6,10 +6,21 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 4.8rem;
+
+        @include small-tablet{
+            margin-bottom: 6.4rem;
+            justify-content: center;
+        }
     }
 
     &__title {
         margin-bottom: 0;
+
+        @include small-tablet{
+            font-size: 7.2rem;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
     }
 
     &__swiper {
@@ -17,12 +28,18 @@
     }
 
     &__slide {
-        width: auto !important;
-        height: unset;
+        @media (min-width: 48em) {
+            width: auto !important;
+            height: unset;
+        }
 
         &.--bigger {
             .devices__slide-wrapper {
                 width: 84rem;
+
+                @include small-tablet{
+                    width: 100%;
+                }
             }
 
             .devices__slide-title {
@@ -44,12 +61,28 @@
             position: relative;
             display: flex;
             flex-direction: column;
+
+            @include small-tablet{
+                width: 100%;
+                min-height: 87.2rem;
+                padding: 4rem;
+                border-radius: 2.8rem;
+            }
         }
 
         &-image {
             position: absolute;
             inset: 0;
             z-index: -1;
+            border-radius: inherit;
+
+            img {
+                border-radius: inherit;
+
+                @include small-tablet{
+                    object-fit: cover;
+                }
+            }
         }
 
         &-title {
@@ -63,6 +96,12 @@
             font-weight: 400;
             line-height: 120%;
             text-transform: uppercase;
+
+            @include small-tablet{
+                font-size: 4.8rem;
+                line-height: 120%;
+                margin-bottom: 2.4rem;
+            }
         }
 
         &-description {
@@ -72,10 +111,19 @@
             max-width: 21.9rem;
             width: 100%;
             margin: 0 auto;
+
+            @include small-tablet{
+                font-size: 2.8rem;
+                line-height: 120%;
+                max-width: 44rem;
+            }
         }
     }
 
     &__link {
-        margin-left: auto;
+        @media (min-width: 48em) {
+            margin-left: auto;
+            display: flex;
+        }
     }
 }
