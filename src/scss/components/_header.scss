@@ -2,11 +2,17 @@
     background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 40.67%, rgba(255, 255, 255, 0) 88.81%);
     backdrop-filter: blur(1.5rem);
     margin-bottom: 4.8rem;
+    position: relative;
+    z-index: 10;
 
     @include small-tablet {
         margin-bottom: 6.4rem;
         position: relative;
         z-index: 301;
+    }
+
+    &__nav {
+        margin-right: -7rem;
     }
 
     &__container {
@@ -39,7 +45,253 @@
     &__menu {
         @extend %flexCenter;
         column-gap: 2.8rem;
-        margin-right: -7rem;
+        position: relative;
+        z-index: 2;
+
+        &-navbar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: #f3f0ff;
+            padding: 18rem 10rem 4rem;
+            z-index: -1;
+            transform: translateY(8rem);
+            opacity: 0;
+            transition:
+                0.3s transform ease-out,
+                0.3s opacity ease-out;
+            user-select: none;
+            pointer-events: none;
+            min-height: 86.4rem;
+
+            &.--active {
+                transform: translateY(0);
+                opacity: 1;
+                user-select: auto;
+                pointer-events: auto;
+            }
+
+            @include small-tablet {
+                display: none;
+            }
+
+            &::after {
+                @include pseudo {
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    top: 13.5rem;
+                    height: 0.1rem;
+                    background: $white;
+                }
+            }
+
+            &::before {
+                @include pseudo {
+                    top: -0.8rem;
+                    inset: 0;
+                    height: 5rem;
+                }
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                backdrop-filter: blur(3rem);
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 1.8rem;
+                border: 0.2rem solid $white;
+                max-width: 50.7rem;
+                width: 100%;
+            }
+
+            &-item {
+                transition: 0.3s background ease-out;
+
+                &:hover,
+                &.--active {
+                    > .header__menu-navbar-item-content {
+                        display: block;
+                    }
+
+                    > .header__menu-navbar-item-wrapper {
+                        background: rgba(255, 255, 255, 0.5);
+
+                        .header__menu-navbar-item-title {
+                            background-position: top left 100%;
+                        }
+
+                        .header__menu-navbar-item-icon-arrow {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &-wrapper {
+                    padding: 1rem 0rem 1rem 2rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 3rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.5);
+
+                        .header__menu-navbar-item-title {
+                            background-position: top left 100%;
+                        }
+
+                        .header__menu-navbar-item-icon-arrow {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &-icon {
+                    max-width: 5rem;
+                    width: 100%;
+                    height: 5rem;
+                    border-radius: 1rem;
+
+                    img {
+                        height: 100%;
+                        border-radius: inherit;
+                    }
+
+                    &-arrow {
+                        display: block;
+                        margin-left: auto;
+                        max-width: 2.4rem;
+                        width: 100%;
+                        height: 2.4rem;
+                        margin-right: 2rem;
+                        opacity: 0;
+                        transition: 0.3s opacity ease-out;
+                    }
+                }
+
+                &-title {
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 140%;
+                    color: #282828;
+                    background-image: linear-gradient(
+                        to right,
+                        $black,
+                        $black 50%,
+                        #d65986 -15.39%,
+                        #a261f9 112.18%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-size: 300% 100%;
+                    background-position: top left;
+                    transition: background-position 0.5s ease-out;
+                }
+
+                &-content {
+                    position: absolute;
+                    max-width: 111.3rem;
+                    width: 100%;
+                    left: 58.5rem;
+                    top: 2rem;
+                    display: none;
+
+                    &-title {
+                        font-weight: 400;
+                        font-size: 2.8rem;
+                        line-height: 120%;
+                        text-transform: uppercase;
+                        color: #282828;
+                        font-family: 'Philosopher';
+                        margin-bottom: 4.8rem;
+                        display: block;
+                    }
+
+                    &-catalog {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+
+                        .header__menu-navbar-item {
+                            &:hover {
+                                .header__menu-navbar-item-content {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .header__menu-navbar-item-content {
+                            left: 58.5rem;
+                        }
+                    }
+
+                    &-list {
+                        max-width: 50.4rem;
+                        width: 100%;
+                        background: rgba(255, 255, 255, 0.5);
+                        border: 0.2rem solid $white;
+                        border-radius: 1.8rem;
+                        padding: 1rem 0;
+                    }
+
+                    &-categories {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        padding-right: 12.7rem;
+                        overflow: hidden scroll;
+                        max-height: 55rem;
+                        margin-top: 5rem;
+                        width: 55rem;
+                        overscroll-behavior: contain;
+
+
+                        &::-webkit-scrollbar {
+                            border-radius: 50%;
+                            width: 0.6rem;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: rgba(255, 255, 255, 0.3);
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: #d5cfed;
+                        }
+                    }
+
+                    &-category {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            gap: 3rem;
+
+                            figure {
+                                max-width: 5rem;
+                                width: 100%;
+                                height: 5rem;
+                                border-radius: 1rem;
+
+                                img {
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: inherit;
+                                }
+                            }
+
+                            span {
+                                font-weight: 400;
+                                font-size: 1.8rem;
+                                line-height: 140%;
+                                color: #282828;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &__item {
