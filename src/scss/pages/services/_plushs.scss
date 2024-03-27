@@ -3,12 +3,14 @@
 
     &__btns {
         @extend %flexCenterStart;
-        column-gap: 4rem;
         margin-bottom: 4.8rem;
+        justify-content: space-between;
+        gap: 5.5rem;
     }
 
     &__btn {
         @extend %flexCenterStart;
+        flex: 1 1 100%;
 
         &.--active {
             .services-plushs__btn-txt {
@@ -34,7 +36,7 @@
         backdrop-filter: blur(1.5rem);
         padding: 0 2rem;
         transition: 0.3s background ease-out;
-        min-width: 27rem;
+        width: 100%;
 
         &:hover {
             background: $white;
