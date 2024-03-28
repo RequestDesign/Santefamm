@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             $(p).css('opacity', 1);
             $(icon).css('opacity', 1);
-            $(this).css('borderColor', 'white').css('userSelect', 'auto').css('pointerEvents', 'auto');
+            $(this).removeClass('--selected')
         });
     }
 
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             $(p).css('opacity', 0);
             $(icon).css('opacity', 0);
-            $(this).css('borderColor', 'transparent').css('userSelect', 'none').css('pointerEvents', 'none');
+            $(this).addClass('--selected')
         });
     }
 
