@@ -519,6 +519,7 @@ function initDotsSlide() {
                 loop: true,
                 spaceBetween: remToPx(4),
                 speed: 1200,
+                autoHeight: true,
                 navigation: {
                     nextEl: btnNext,
                     prevEl: btnPrev

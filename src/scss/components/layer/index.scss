@@ -597,6 +597,87 @@
                 }
             }
 
+            &-lifting {
+                padding: 3.2rem;
+                background-color: $white;
+                border-radius: 1.8rem;
+                margin-bottom: 4rem;
+
+                @include small-tablet{
+                    padding: 4rem 3.2rem;
+                    border-radius: 2.8rem;
+                }
+
+                &-title {
+                    display: block;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    line-height: 120%;
+                    color: #282828;
+
+                    @include small-tablet{
+                        font-weight: 600;
+                        font-size: 3.2rem;
+                        line-height: 120%;
+                        margin-bottom: 1.6rem;
+                    }
+                }
+
+                &-description {
+                    font-weight: 400;
+                    font-size: 2rem;
+                    line-height: 120%;
+                    margin-bottom: 3.2rem;
+
+                    @include small-tablet{
+                        font-size: 3.2rem;
+                        line-height: 120%;
+                        margin-bottom: 4rem;
+                    }
+                }
+
+                &-images {
+                    display: flex;
+                    gap: 1.6rem;
+                    margin-bottom: 4rem;
+
+                    @include small-tablet{
+                        gap: 2.2rem;
+                    }
+                }
+
+                &-image {
+                   figure {
+                       display: flex;
+                       flex-direction: column;
+                       gap: .4rem;
+
+                       @include small-tablet{
+                           gap: .8rem;
+                       }
+
+                       img {
+                           flex: 1 1 50%;
+                       }
+
+                       figcaption {
+                           font-weight: 400;
+                           font-size: 1.6rem;
+                           line-height: 120%;
+                           color: #8a8296;
+
+                           @include small-tablet{
+                               font-size: 2.8rem;
+                               line-height: 120%;
+                           }
+                       }
+                   }
+
+
+                }
+            }
+
             &-detailed {
                 @include small-tablet {
                     position: fixed;
@@ -809,9 +890,8 @@
                 }
 
                 .dots__panel {
-                    margin-bottom: 6.2rem;
                     width: fit-content;
-                    margin-left: auto;
+                    margin: 0 auto 6.2rem;
 
                     @include small-tablet {
                         margin: 0 auto 9.2rem;
