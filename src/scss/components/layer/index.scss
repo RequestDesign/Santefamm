@@ -346,16 +346,18 @@
                     }
                 }
 
-                &:hover {
-                    background: $white;
-                    color: #d57dad;
+                @media (hover: hover) {
+                    &:hover {
+                        background: $white;
+                        color: #d57dad;
 
-                    &::after {
-                        background: rgba(77, 58, 124, 0.15);
-                    }
+                        &::after {
+                            background: rgba(77, 58, 124, 0.15);
+                        }
 
-                    &::before {
-                        background: #d57dad;
+                        &::before {
+                            background: #d57dad;
+                        }
                     }
                 }
 
@@ -414,7 +416,7 @@
                 position: static;
                 display: flex;
                 flex-direction: column;
-                gap: 4.8rem;
+                gap: 3.2rem;
                 align-items: flex-start;
             }
 
@@ -445,7 +447,7 @@
                 }
 
                 &-close {
-                    @include small-tablet{
+                    @include small-tablet {
                         pointer-events: auto;
                         user-select: auto;
                     }
@@ -454,12 +456,11 @@
 
             &-title {
                 font-family: Philosopher;
-                margin-bottom: 5.4rem;
+                margin-bottom: 6.4rem;
                 font-size: 4.8rem;
-                font-style: normal;
-                font-weight: 400;
                 line-height: 120%;
                 text-transform: uppercase;
+                text-align: center;
             }
 
             &-wrapper {
@@ -556,12 +557,21 @@
             @include small-tablet {
                 width: 100%;
                 justify-content: space-between;
-                gap: 2.4rem;
+                gap: 4.8rem;
+                padding: 2.2rem 2.4rem 2.2rem 4rem;
+                min-height: 12rem;
+                border-radius: 4rem;
+                border: 0.1rem solid $white;
+                background: rgba(255, 255, 255, 0.5);
+                transition:
+                    0.3s background ease-out,
+                    0.3s border ease-out;
 
-                &:not(:last-child) {
-                    padding-bottom: 4.8rem;
-                    border-bottom: 0.1rem solid $white;
-                    transition: .3s border ease;
+                &.--selected {
+                    pointer-events: none !important;
+                    user-select: none !important;
+                    background: transparent;
+                    border-color: transparent;
                 }
             }
 
@@ -575,13 +585,15 @@
                 }
             }
 
-            &:hover {
-                > p {
-                    color: #d57dad;
-                }
+            @media (hover: hover) {
+                &:hover {
+                    > p {
+                        color: #d57dad;
+                    }
 
-                > span {
-                    background: rgba(77, 58, 124, 0.15);
+                    > span {
+                        background: rgba(77, 58, 124, 0.15);
+                    }
                 }
             }
 
@@ -638,7 +650,7 @@
                         width: 100%;
                         height: 4.8rem;
 
-                        @include small-tablet{
+                        @include small-tablet {
                             user-select: auto;
                             pointer-events: auto;
                         }
@@ -674,11 +686,24 @@
                 display: none;
 
                 @include small-tablet {
-                    display: grid;
-                    grid-template-columns: repeat(3, minmax(16.6rem, 1fr));
-                    gap: 6.4rem;
-                    user-select: auto;
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+                    gap: 3.2rem;
+                    margin: 0 -3.2rem;
+                    padding: 0 3.2rem;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
                     pointer-events: auto;
+                    user-select: auto;
+
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
                 }
             }
 
@@ -688,23 +713,16 @@
                 align-items: center;
                 justify-content: center;
                 gap: 1.6rem;
-
-                &-icon {
-                    max-width: 10.8rem;
-                    width: 100%;
-                    height: 10.8rem;
-                    border-radius: 50%;
-
-                    img {
-                        height: 100%;
-                    }
-                }
+                background: #f3f0ff;
+                padding: 1.6rem 3.2rem;
+                border-radius: 20rem;
 
                 &-title {
-                    font-size: 2.8rem;
-                    font-style: normal;
                     font-weight: 400;
+                    font-size: 2.4rem;
                     line-height: 120%;
+                    text-transform: uppercase;
+                    @extend %gradientColor;
                 }
             }
 
@@ -712,7 +730,7 @@
                 max-width: 5.6rem;
                 width: 100%;
                 height: 4rem;
-                transition: .3s opacity ease;
+                transition: 0.3s opacity ease;
 
                 img {
                     height: 100%;
@@ -724,7 +742,9 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 120%;
-                transition: color 0.3s ease-out, .3s opacity ease;
+                transition:
+                    color 0.3s ease-out,
+                    0.3s opacity ease;
                 white-space: nowrap;
 
                 @include small-tablet {
