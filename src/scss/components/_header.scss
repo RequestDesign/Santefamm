@@ -671,3 +671,73 @@
         }
     }
 }
+
+.main-body-bg {
+    position: absolute;
+    z-index: 0;
+    img {
+        width: 100%;
+    }
+    .main-body-bg--netral {
+        display: block;
+    }
+    .main-body-bg--man {
+        display: none;
+    }
+    .main-body-bg--fem {
+        display: none;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+.body-male {
+    .header__gender-neutral::after {
+        background: linear-gradient(231deg, #d659c2 0%, #a261f9 100%);
+    }
+    .header__gender-conscious a::after {
+        background: linear-gradient(231deg, #d659c2 0%, #a261f9 100%);
+    }
+    .main-body-bg {
+        .main-body-bg--netral {
+            display: none;
+        }
+        .main-body-bg--man {
+            display: block;
+        }
+        .main-body-bg--fem {
+            display: none;
+        }
+    }
+}
+.body-fem {
+    .header__gender-neutral::after {
+        background: linear-gradient(227deg, #d65986 0%, #c668dd 100%);
+    }
+    .header__gender-conscious a::after {
+        background: linear-gradient(227deg, #d65986 0%, #c668dd 100%);
+    }
+    .main-body-bg {
+        .main-body-bg--netral {
+            display: none;
+        }
+        .main-body-bg--man {
+            display: none;
+        }
+        .main-body-bg--fem {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .main-body-bg {
+        .mobile {
+            display: block;
+        }
+        .desktop {
+            display: none;
+        }
+    }
+}
