@@ -1,6 +1,27 @@
 import $ from 'jquery';
 //reverse button click
 document.addEventListener('DOMContentLoaded', () => {
+    $('[data-gender]').on('click', function(event) {
+        localStorage.setItem('gender', $(this).data("gender"));
+        setBody ()
+    });
+    $('.header__gender-neutral').on('click', function(event) {
+        console.log(123);
+        localStorage.removeItem('gender');
+        setBody ()
+    });
+    setBody ()
+    function setBody () {
+        switch (localStorage.getItem('gender')) {
+            case 'male':
+                $('body').addClass('body-male')
+                break;
+            case 'fem':
+                $('body').addClass('body-fem')
+                break;
+        }
+    }
+
     $('.layer__content-bottom-reverse').on('click', function () {
         const frontSide = $('.layer__content-problems.--front');
         const backSide = $('.layer__content-problems.--behind');
