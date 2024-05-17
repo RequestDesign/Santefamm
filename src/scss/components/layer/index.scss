@@ -340,7 +340,7 @@ body.body-male {
                 &.--active {
                     @media (min-width: 48em) {
                         background: $white;
-                        color: #d57dad;
+                        color: var(--backColor);
 
                         &::after {
                             background: rgba(77, 58, 124, 0.15);
@@ -355,14 +355,14 @@ body.body-male {
                 @media (hover: hover) {
                     &:hover {
                         background: $white;
-                        color: #d57dad;
+                        color: var(--backColor);
 
                         &::after {
                             background: rgba(77, 58, 124, 0.15);
                         }
 
                         &::before {
-                            background: #d57dad;
+                            background: var(--backColor);
                         }
                     }
                 }
