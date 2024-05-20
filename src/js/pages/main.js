@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setBody ()
     });
     $('.header__gender-neutral').on('click', function(event) {
-        console.log(123);
         localStorage.removeItem('gender');
+        $('body').removeClass('body-male')
+        $('body').removeClass('body-fem')
         setBody ()
     });
     setBody ()
@@ -15,9 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (localStorage.getItem('gender')) {
             case 'male':
                 $('body').addClass('body-male')
+                $('body').removeClass('body-fem')
                 break;
             case 'fem':
                 $('body').addClass('body-fem')
+                $('body').removeClass('body-male')
                 break;
         }
     }

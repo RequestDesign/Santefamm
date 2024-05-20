@@ -673,8 +673,9 @@
 }
 
 .main-body-bg {
+    display: none;
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     img {
         width: 100%;
     }
@@ -689,6 +690,22 @@
     }
     .mobile {
         display: none;
+    }
+}
+
+
+
+body {
+    background-color: #e9e5fd;
+    background-image: url('./assets/images/body/body--netral.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.body-male {
+        background-image: url('./assets/images/body/body--man.webp');
+    }
+    &.body-fem {
+        background-image: url('./assets/images/body/body--fem.webp');
     }
 }
 
@@ -738,6 +755,17 @@
         }
         .desktop {
             display: none;
+        }
+    }
+
+    body {
+        background-image: url('./assets/images/body/body--netral-mob.webp');
+    
+        &.body-male {
+            background-image: url('./assets/images/body/body--man-mob.webp');
+        }
+        &.body-fem {
+            background-image: url('./assets/images/body/body--fem-mob.webp');
         }
     }
 }
