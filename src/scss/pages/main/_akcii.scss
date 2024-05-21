@@ -141,9 +141,6 @@
     background-size: 300% 100%;
     background-position: top left;
     transition: background-position 0.5s ease-out;
-
-   
-
         @include small-tablet {
             font-family: Philosopher;
             font-size: 4rem;
