@@ -429,6 +429,7 @@ body.body-male {
                 align-items: flex-start;
                 transform: unset;
                 width: 100%;
+          
             }
 
             &.--active {
@@ -478,8 +479,8 @@ body.body-male {
                 @include small-tablet {
                     position: fixed;
                     z-index: 300;
-                    overflow-y: scroll;
-                    height: 100%;
+                    // overflow-y: scroll;
+                    // height: 100%;
                     inset: 0;
                     padding: 4.8rem 3.2rem 10rem;
                     transform: translateX(100%);
@@ -619,9 +620,11 @@ body.body-male {
                 @include small-tablet {
                     position: fixed;
                     overflow-y: scroll;
-                    z-index: 301;
-                    height: 100%;
+                    z-index: 400;
+                    // height: 100%;
                     inset: 0;
+                   
+                   
                     padding: 4.8rem 3.2rem 20rem;
                     transform: translateX(100%);
                     transition: 0.3s transform ease;
