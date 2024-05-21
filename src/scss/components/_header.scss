@@ -703,10 +703,10 @@ body {
     background: url('./assets/images/body/body--netral.webp')  no-repeat top/cover;
 
     &.body-male {
-        background-image: url('./assets/images/body/body--man.webp');
+        background: url('./assets/images/body/body--man.webp') no-repeat top/cover;;
     }
     &.body-fem {
-        background-image: url('./assets/images/body/body--fem.webp');
+        background: url('./assets/images/body/body--fem.webp') no-repeat top/cover;;
     }
 }
 
