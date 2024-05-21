@@ -3,7 +3,7 @@
 
     &.--man {
         .akcii__item-content {
-            @include small-tablet{
+            @include small-tablet {
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
@@ -37,14 +37,14 @@
         }
 
         .akcii__man {
-            @include small-tablet{
+            @include small-tablet {
                 left: auto;
                 right: 0;
             }
         }
 
         .akcii__item-tit {
-            @include small-tablet{
+            @include small-tablet {
                 text-align: start;
             }
         }
@@ -57,6 +57,7 @@
     }
 
     &__title {
+     
         @include small-tablet {
             text-align: center;
         }
@@ -114,6 +115,7 @@
         position: relative;
         z-index: 2;
         @extend %flexColumn;
+        
         align-items: center;
         justify-content: center;
         row-gap: 0.6rem;
@@ -124,10 +126,23 @@
             text-align: center;
             gap: 1.6rem;
         }
+        &:hover {
+            & .akcii__item-tit {
+                background-position: top left 100%;
+            }
+        }
     }
 
     &__item-tit {
         @extend %philoCaps32;
+        background-image: linear-gradient(to right, $black, $black 50%, #d65986 -15.39%, #a261f9 112.18%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 100%;
+    background-position: top left;
+    transition: background-position 0.5s ease-out;
+
+   
 
         @include small-tablet {
             font-family: Philosopher;
@@ -153,6 +168,62 @@
             &:first-child {
                 display: none;
             }
+        }
+    }
+
+    &--one {
+        .akcii__item-content {
+            align-items: flex-start;
+            padding-left: 51rem;
+            gap: 2rem;
+            @include small-tablet {
+            }
+        }
+
+        .akcii__item {
+            height: 29.8rem;
+
+            @include small-tablet {
+            }
+        }
+
+        .akcii__item-text {
+            width: 70rem;
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 120%;
+        }
+
+        &.--man {
+            .akcii__item-content {
+                align-items: flex-start;
+                padding-left: 6rem;
+                gap: 2rem;
+                @include small-tablet {
+                }
+            }
+
+            .akcii__item {
+                height: 29.8rem;
+
+                @include small-tablet {
+                }
+            }
+
+            .akcii__item-tit {
+                @media (min-width: 48em) {
+                    position: static;
+                    transform: none;
+                }
+            }
+
+            .akcii__item-txt {
+                @media (min-width: 48em) {
+                    position: static;
+                    transform: none;
+                }
+            }
+
         }
     }
 }
