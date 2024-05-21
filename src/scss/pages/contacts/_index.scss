@@ -129,6 +129,16 @@
     &__block-desc {
         @extend %regular18;
     }
+    [class*='ground-pane'] {
+        filter: grayscale(0.4);
+    }
+
+    ymaps [class*='-image'] {
+        width: 5.4rem !important;
+        height: 5.4rem !important;
+        background-size: 5.4rem 5.4rem !important;
+    }
+ 
 }
 
 @media screen and (max-width: 48em) {
@@ -233,6 +243,12 @@
             padding: 4rem;
             border-width: 0.4rem;
             margin: 0;
+        }
+
+        ymaps [class*='-image'] {
+            width: 8.8rem !important;
+            height: 8.8rem !important;
+            background-size: 8.8rem 8.8rem !important;
         }
     }
 }

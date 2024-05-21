@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 function initReviewsSliders() {
+    console.log('1234')
     if (document.querySelector('.reviews__swiper')) {
         const slider = document.querySelector('.reviews__swiper');
         const fractions = document.querySelector('.reviews-panel__fractions');
@@ -30,11 +31,11 @@ function initReviewsSliders() {
             breakpoints: {
                 0: {
                     slidesPerView: 1,
-                    spaceBetween: remToPx(2),
+                    spaceBetween: remToPx(2)
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: remToPx(4),
+                    spaceBetween: remToPx(4)
                 }
             }
         });
@@ -44,7 +45,7 @@ function initReviewsSliders() {
 function initDoctorsSliders() {
     if (document.querySelector('.doctors__swiper')) {
         const slider = document.querySelector('.doctors__swiper');
-        const fraction = document.querySelector('.doctors-panel__fractions')
+        const fraction = document.querySelector('.doctors-panel__fractions');
         const btnPrev = document.querySelector('.doctors-panel__btn-prev');
         const btnNext = document.querySelector('.doctors-panel__btn-next');
 
@@ -62,11 +63,11 @@ function initDoctorsSliders() {
             breakpoints: {
                 0: {
                     slidesPerView: 1,
-                    spaceBetween: remToPx(2),
+                    spaceBetween: remToPx(2)
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: remToPx(4),
+                    spaceBetween: remToPx(4)
                 }
             }
         });
@@ -94,11 +95,11 @@ function initNewsSliders() {
             breakpoints: {
                 0: {
                     slidesPerView: 1,
-                    spaceBetween: remToPx(2),
+                    spaceBetween: remToPx(2)
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: remToPx(4),
+                    spaceBetween: remToPx(4)
                 }
             }
         });
@@ -121,7 +122,7 @@ function initCategorySlider() {
 function initPalomarSlider() {
     if (document.querySelector('.palomar__swiper')) {
         const slider = document.querySelector('.palomar__swiper');
-        const fractions = document.querySelector('.palomar__panel-fractions')
+        const fractions = document.querySelector('.palomar__panel-fractions');
         const next = document.querySelector('.palomar-button-next');
         const prev = document.querySelector('.palomar-button-prev');
 
@@ -173,7 +174,7 @@ function initBeforeAfterSlider() {
             breakpoints: {
                 0: {
                     slidesPerView: '2',
-                    spaceBetween: remToPx(1.3),
+                    spaceBetween: remToPx(1.3)
                 },
                 768: {
                     slidesPerView: '4',
@@ -223,10 +224,10 @@ function initDevicesSlider() {
             },
             breakpoints: {
                 0: {
-                    slidesPerView: 1,
+                    slidesPerView: 1
                 },
                 768: {
-                    slidesPerView: 'auto',
+                    slidesPerView: 'auto'
                 }
             }
         });
@@ -248,6 +249,7 @@ function initLicensesSlider() {
             fadeEffect: {
                 crossFade: true
             },
+            allowTouchMove: false,
             loop: true,
             slidesPerView: 1,
             speed: 1200,
@@ -255,9 +257,13 @@ function initLicensesSlider() {
                 el: fractions,
                 type: 'fraction'
             },
+            navigation: {
+                nextEl: btnNext,
+                prevEl: btnPrev
+            },
             breakpoints: {
                 0: {
-                    noSwiping: false,
+                    noSwiping: false
                 },
                 768: {
                     noSwiping: true,
@@ -273,13 +279,15 @@ function initLicensesSlider() {
             spaceBetween: remToPx(4),
             speed: 1200,
             loop: true,
-            thumbs: {
-                swiper: license
-            },
-            pagination: {
-                el: fractions,
-                type: 'fraction'
-            },
+            allowTouchMove: false,
+            initialSlide: 1,
+            // thumbs: {
+            //     swiper: license
+            // },
+            // pagination: {
+            //     el: fractions,
+            //     type: 'fraction'
+            // },
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
@@ -378,9 +386,7 @@ function initPagesInfoSlider() {
 function initServiceDescriptionEqSlider() {
     if (document.querySelector('.service-description__swiper')) {
         const slider = document.querySelector('.service-description__swiper');
-        const fractions = document.querySelector(
-            '.service-description-panel__fractions'
-        );
+        const fractions = document.querySelector('.service-description-panel__fractions');
         const btnPrev = document.querySelector('.service-description-panel__btn-prev');
         const btnNext = document.querySelector('.service-description-panel__btn-next');
 
@@ -400,7 +406,7 @@ function initServiceDescriptionEqSlider() {
             pagination: {
                 el: fractions,
                 type: 'fraction'
-            },
+            }
         });
     }
 }
@@ -489,11 +495,11 @@ function initActionOtherSliders() {
             breakpoints: {
                 0: {
                     slidesPerView: 1,
-                    spaceBetween: remToPx(2),
+                    spaceBetween: remToPx(2)
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: remToPx(4),
+                    spaceBetween: remToPx(4)
                 }
             }
         });
@@ -507,9 +513,11 @@ function initDotsSlide() {
             const fractions = {
                 desktop: swiper.querySelector('.dots__panel.--desc .dots__panel-fractions'),
                 mobile: swiper.querySelector('.dots__panel.--mob .dots__panel-fractions')
-            }
-            const btnPrev = swiper.querySelector('.dots__panel-prev');
-            const btnNext = swiper.querySelector('.dots__panel-next');
+            };
+            const btnPrev = swiper.querySelector('.dots__panel.--desc .dots__panel-prev');
+            const btnNext = swiper.querySelector('.dots__panel.--desc .dots__panel-next');
+            const btnPrevMob = swiper.querySelector('.dots__panel.--mob .dots__panel-prev');
+            const btnNextMob = swiper.querySelector('.dots__panel.--mob .dots__panel-next');
 
             new Swiper(slider, {
                 modules: [Pagination, Navigation, EffectFade],
@@ -520,20 +528,24 @@ function initDotsSlide() {
                 spaceBetween: remToPx(4),
                 speed: 1200,
                 navigation: {
-                    nextEl: btnNext,
-                    prevEl: btnPrev
+                    nextEl: btnPrevMob,
+                    prevEl: btnNextMob
                 },
                 breakpoints: {
                     0: {
                         pagination: {
                             el: fractions.mobile,
                             type: 'fraction'
-                        },
+                        }
                     },
                     768: {
                         pagination: {
                             el: fractions.desktop,
                             type: 'fraction'
+                        },
+                        navigation: {
+                            nextEl: btnPrev,
+                            prevEl: btnNext
                         },
                     }
                 }
@@ -589,8 +601,6 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
     checker();
 };
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     initSliders();
 
@@ -635,6 +645,6 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
             el: document.querySelector('.service-benefits__fractions'),
             type: 'fraction'
-        },
+        }
     });
 });
