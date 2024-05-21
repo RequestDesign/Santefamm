@@ -559,6 +559,8 @@
             position: relative;
             max-width: 69.4rem;
             max-height: 81.9rem;
+            width: 63rem;
+            height: 74.4rem;
 
             > img {
                 -webkit-mask-image: url('./assets/images/pages-info/photo.png');
@@ -578,6 +580,7 @@
 
             @include small-tablet {
                 max-width: 100%;
+                width: 100%;
             }
         }
     }

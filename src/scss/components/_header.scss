@@ -700,9 +700,7 @@
 
 body {
     background-color: #e9e5fd;
-    background-image: url('./assets/images/body/body--netral.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('./assets/images/body/body--netral.webp')  no-repeat top/cover;
 
     &.body-male {
         background-image: url('./assets/images/body/body--man.webp');
