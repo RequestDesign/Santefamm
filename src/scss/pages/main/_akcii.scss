@@ -189,14 +189,21 @@
         & .akcii__women {
             @include small-tablet {
                 height: 22.4rem;
+                border-radius: 2.4rem;
+                overflow: hidden;
             }
         }
 
         .akcii__item {
             height: 29.8rem;
-
             @include small-tablet {
                 height: 22.4rem;
+            }
+        }
+        .akcii__items {
+            @include small-tablet {
+                border-radius: 2.4rem;
+                overflow: hidden;
             }
         }
 
@@ -248,7 +255,7 @@
     &--five {
         & .akcii__item {
             @include small-tablet {
-                &:nth-child(4), 
+                &:nth-child(4),
                 &:nth-child(5) {
                     display: none;
                 }
