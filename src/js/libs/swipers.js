@@ -528,8 +528,8 @@ function initDotsSlide() {
                 spaceBetween: remToPx(4),
                 speed: 1200,
                 navigation: {
-                    nextEl: btnPrevMob,
-                    prevEl: btnNextMob
+                    nextEl: btnNextMob ,
+                    prevEl: btnPrevMob
                 },
                 breakpoints: {
                     0: {
@@ -544,8 +544,8 @@ function initDotsSlide() {
                             type: 'fraction'
                         },
                         navigation: {
-                            nextEl: btnPrev,
-                            prevEl: btnNext
+                            nextEl: btnNext ,
+                            prevEl: btnPrev
                         },
                     }
                 }
