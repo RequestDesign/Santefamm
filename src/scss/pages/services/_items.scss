@@ -128,12 +128,19 @@
                 grid-row: 1 / 38;
                 margin-right: 4rem;
                 margin-bottom: 4rem;
-
                 .services__item-img {
                     @media (min-width: 48em) {
                         @include sizes(49.2rem, 32.8rem);
                         top: 3rem;
                         right: 0;
+                    }
+                    @include small-tablet {
+                        right: 0;
+                        bottom: -2rem;
+                        position: absolute;
+                        max-width: 29.4rem;
+                        width: 100%;
+                        height: 20rem;
                     }
                 }
             }
@@ -147,16 +154,8 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
-
-                    @include small-tablet {
-                        right: 0;
-                        bottom: -2rem;
-                        position: absolute;
-                        max-width: 29.4rem;
-                        width: 100%;
-                        height: 20rem;
-                    }
                 }
+              
             }
 
             &:nth-child(3) {
@@ -168,10 +167,7 @@
                     right: 4rem;
                     bottom: 4rem;
 
-                    @include small-tablet {
-                        width: 18.2rem;
-                        height: 9.9rem;
-                    }
+                 
                 }
 
                 .services__item-tit {
@@ -191,16 +187,7 @@
                     right: 4rem;
                     bottom: 4rem;
 
-                    @include small-tablet {
-                        position: absolute;
-                        right: 2.8rem;
-                        top: 0;
-                        bottom: 0;
-                        max-width: 21rem;
-                        width: 100%;
-                        transform: scale(-1, 1);
-                        height: 100%;
-                    }
+                 
                 }
             }
 
@@ -212,11 +199,17 @@
                     @include sizes(28.6rem, 37.5rem);
                     right: 3rem;
                     bottom: 0;
-
                     @include small-tablet {
-                        width: 18.2rem;
-                        height: 9.9rem;
+                        position: absolute;
+                        right: 2.8rem;
+                        top: 0;
+                        bottom: 0;
+                        max-width: 21rem;
+                        width: 100%;
+                        transform: scale(-1, 1);
+                        height: 100%;
                     }
+                  
                 }
             }
         }
@@ -240,6 +233,14 @@
                     @include sizes(49.2rem, 32.8rem);
                     top: 3rem;
                     right: 0;
+                    @include small-tablet {
+                        right: 0;
+                        bottom: -2rem;
+                        position: absolute;
+                        max-width: 29.4rem;
+                        width: 100%;
+                        height: 20rem;
+                    }
                 }
             }
 
@@ -277,6 +278,7 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
+              
                 }
             }
 
@@ -300,6 +302,16 @@
                     @include sizes(28.6rem, 37.5rem);
                     right: 3rem;
                     bottom: 0;
+                    @include small-tablet {
+                        position: absolute;
+                        right: 2.8rem;
+                        top: 0;
+                        bottom: 0;
+                        max-width: 21rem;
+                        width: 100%;
+                        transform: scale(-1, 1);
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -323,6 +335,14 @@
                     @include sizes(49.2rem, 32.8rem);
                     top: 3rem;
                     right: -5rem;
+                    @include small-tablet {
+                        right: 0;
+                        bottom: -2rem;
+                        position: absolute;
+                        max-width: 29.4rem;
+                        width: 100%;
+                        height: 20rem;
+                    }
                 }
             }
 
@@ -395,6 +415,16 @@
                     @include sizes(18.8rem, 24.6rem);
                     right: 6rem;
                     bottom: 0;
+                    @include small-tablet {
+                        position: absolute;
+                        right: 2.8rem;
+                        top: 0;
+                        bottom: 0;
+                        max-width: 21rem;
+                        width: 100%;
+                        transform: scale(-1, 1);
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -418,6 +448,16 @@
                     @include sizes(49.2rem, 32.8rem);
                     top: 12.7rem;
                     left: 10.8rem;
+                    @include small-tablet {
+                        right: 0;
+                        bottom: -2rem;
+                        top: auto;
+                        left: auto;
+                        position: absolute;
+                        max-width: 29.4rem;
+                        width: 100%;
+                        height: 20rem;
+                    }
                 }
             }
 
@@ -481,6 +521,16 @@
                     @include sizes(18.8rem, 24.6rem);
                     right: 6rem;
                     bottom: 0;
+                        @include small-tablet {
+                        position: absolute;
+                        right: 2.8rem;
+                        top: 0;
+                        bottom: 0;
+                        max-width: 21rem;
+                        width: 100%;
+                        transform: scale(-1, 1);
+                        height: 100%;
+                    }
                 }
             }
 
@@ -531,6 +581,15 @@
                         @include sizes(49.2rem, 32.8rem);
                         bottom: -3rem;
                         left: 10.8rem;
+                        
+                    }
+                    @include small-tablet {
+                        right: 0;
+                        bottom: -2rem;
+                        position: absolute;
+                        max-width: 29.4rem;
+                        width: 100%;
+                        height: 20rem;
                     }
                 }
             }
@@ -546,14 +605,7 @@
                     right: 4rem;
                     bottom: 4rem;
 
-                    @include small-tablet {
-                        right: 0;
-                        bottom: -2rem;
-                        position: absolute;
-                        max-width: 29.4rem;
-                        width: 100%;
-                        height: 20rem;
-                    }
+                 
                 }
             }
 
@@ -567,10 +619,7 @@
                     right: 4rem;
                     bottom: 4rem;
 
-                    @include small-tablet {
-                        width: 18.2rem;
-                        height: 9.9rem;
-                    }
+                 
                 }
 
                 .services__item-tit {
@@ -589,17 +638,8 @@
                     @include sizes(16.2rem, 8.9rem);
                     right: 4rem;
                     bottom: 4rem;
-
-                    @include small-tablet {
-                        position: absolute;
-                        right: 2.8rem;
-                        top: 0;
-                        bottom: 0;
-                        max-width: 21rem;
-                        width: 100%;
-                        transform: scale(-1, 1);
-                        height: 100%;
-                    }
+                 
+                    
                 }
             }
 
@@ -614,10 +654,7 @@
                     right: 4rem;
                     bottom: 4rem;
 
-                    @include small-tablet {
-                        width: 18.2rem;
-                        height: 9.9rem;
-                    }
+                 
                 }
             }
 
@@ -631,15 +668,11 @@
                     @include sizes(15.8rem, 8.6rem);
                     right: 5rem;
                     bottom: 4rem;
-
-                    @include small-tablet {
-                        position: absolute;
-                        right: 4rem;
-                        top: 1rem;
-                        max-width: 20.6rem;
-                        width: 100%;
-                        height: 19rem;
-                    }
+                    // @include small-tablet {
+                    //     width: 27.2rem;
+                    //     height: 9.9rem;
+                    // }
+                    
                 }
             }
 
@@ -653,8 +686,12 @@
                     bottom: 0rem;
 
                     @include small-tablet {
-                        width: 27.2rem;
-                        height: 9.9rem;
+                        position: absolute;
+                        right: 4rem;
+                        top: 1rem;
+                        max-width: 20.6rem;
+                        width: 100%;
+                        height: 19rem;
                     }
                 }
             }
@@ -670,9 +707,16 @@
                     top: auto;
                     bottom: 0;
 
+                 
                     @include small-tablet {
-                        width: 18.2rem;
-                        height: 9.9rem;
+                        position: absolute;
+                        right: 2.8rem;
+                        top: 0;
+                        bottom: 0;
+                        max-width: 21rem;
+                        width: 100%;
+                        transform: scale(-1, 1);
+                        height: 100%;
                     }
                 }
             }
@@ -686,12 +730,20 @@
                     right: 4rem;
                     bottom: 4rem;
 
-                    @include small-tablet {
-                        width: 27.2rem;
-                        height: 9.9rem;
-                    }
+                    // @include small-tablet {
+                    //     width: 27.2rem;
+                    //     height: 9.9rem;
+                    // }
                 }
             }
+        }
+    }
+    .services__item-img {
+        flex-shrink: 0;
+    }
+    .services__item-tit {
+        @include small-tablet {
+           font-size: 3.9rem;
         }
     }
 }
