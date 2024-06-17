@@ -443,7 +443,14 @@ function initServiceDetailedSwiper() {
             slidesPerView: '1.05',
             spaceBetween: remToPx(0.8),
             speed: 1200,
-            slideToClickedSlide: true
+            slideToClickedSlide: true,
+            breakpoints: {
+
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: remToPx(4),
+                }
+            }
         });
     }
 }

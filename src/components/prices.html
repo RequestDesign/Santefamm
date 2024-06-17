@@ -1,7 +1,7 @@
 <section class="prices">
     <div class="container">
         <div class="prices__heading">
-            <h1 class="prices__heading-title">цены</h1>
+            <h1 class="prices__heading-title"><span class="--desc">цены</span> <span class="--mob">Косметология</span></h1>
 
             <span class="prices__heading-services"> 56 услуг </span>
         </div>
@@ -12,10 +12,7 @@
                     <li>
                         <a href="#" class="prices__categories-item --active">
                             <div class="prices__categories-item-image">
-                                <img
-                                    src="./assets/images/prices/categories-item-bg.webp"
-                                    alt=""
-                                />
+                                <img src="./assets/images/prices/categories-item-bg.webp" alt="" />
                             </div>
 
                             <div class="prices__categories-item-icon">
@@ -33,10 +30,7 @@
                     <li>
                         <a href="#" class="prices__categories-item">
                             <div class="prices__categories-item-image">
-                                <img
-                                    src="./assets/images/prices/categories-item-bg.webp"
-                                    alt=""
-                                />
+                                <img src="./assets/images/prices/categories-item-bg.webp" alt="" />
                             </div>
 
                             <div class="prices__categories-item-icon">
@@ -54,7 +48,7 @@
             </aside>
 
             <div class="prices__categories-info">
-                <ul class="prices__categories-info-subcategories">
+                <!-- <ul class="prices__categories-info-subcategories">
                     <li
                         data-content-open="category-1"
                         class="prices__categories-info-subcategory --active"
@@ -88,12 +82,48 @@
                         />
                         <button><span>Аппаратная косметология</span></button>
                     </li>
-                </ul>
+                </ul> -->
+                <div class="swiper prices__categories-swiper">
+                    <ul class="swiper-wrapper prices__categories-info-subcategories">
+                        <li class="swiper-slide prices__categories-slide">
+                            <div
+                                data-content-open="category-1"
+                                class="prices__categories-info-subcategory --active"
+                            >
+                                <button>
+                                    <div class="accommodation__slide-image">
+                                        <img src="./assets/images/services/aesthetic-medicine.png" alt="" />
+                                    </div>
+                                    <p><span>Эстетическая медицина</span></p>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide prices__categories-slide">
+                            <div data-content-open="category-2" class="prices__categories-info-subcategory">
+                                <button>
+                                    <div class="accommodation__slide-image">
+                                        <img src="./assets/images/services/aesthetic-medicine.png" alt="" />
+                                    </div>
+                                    <p><span>уходовая косметика</span></p>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="swiper-slide prices__categories-slide">
+                            <div data-content-open="category-3" class="prices__categories-info-subcategory">
+                                <button>
+                                    <div class="accommodation__slide-image">
+                                        <img src="./assets/images/services/aesthetic-medicine.png" alt="" />
+                                    </div>
+                                    <p><span>уходовая косметика</span></p>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-                <div
-                    data-content-block="category-1"
-                    class="prices__categories-info-articles --active"
-                >
+
+
+                <div data-content-block="category-1" class="prices__categories-info-articles --active">
                     <article class="prices__categories-info-article accordion__item --active">
                         <div class="accordion__heading">
                             <p class="accordion__heading-title">
@@ -114,19 +144,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -134,19 +159,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -154,29 +174,21 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li>
                                     <button class="prices__categories-info-button btn-secondary">
                                         <span>скрыть</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                             </ul>
@@ -202,19 +214,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -222,19 +229,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -242,29 +244,21 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li>
                                     <button class="prices__categories-info-button btn-secondary">
                                         <span>скрыть</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                             </ul>
@@ -293,19 +287,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -313,19 +302,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -333,29 +317,21 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li>
                                     <button class="prices__categories-info-button btn-secondary">
                                         <span>скрыть</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                             </ul>
@@ -381,19 +357,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -401,19 +372,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -421,29 +387,21 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li>
                                     <button class="prices__categories-info-button btn-secondary">
                                         <span>скрыть</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                             </ul>
@@ -472,19 +430,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -492,19 +445,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -512,29 +460,21 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li>
                                     <button class="prices__categories-info-button btn-secondary">
                                         <span>скрыть</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                             </ul>
@@ -560,19 +500,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -580,19 +515,14 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li class="prices__categories-info-item">
@@ -600,29 +530,21 @@
                                         Прием врача акушер- гинеколога, к.м.н., первичный
                                     </p>
 
-                                    <span class="prices__categories-info-item-price">
-                                                    3 500 ₽
-                                                </span>
+                                    <span class="prices__categories-info-item-price"> 3 500 ₽ </span>
 
                                     <button
                                         class="prices__categories-info-item-button btn-secondary appointment-button"
                                     >
                                         <span>записаться</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                                 <li>
                                     <button class="prices__categories-info-button btn-secondary">
                                         <span>скрыть</span>
 
-                                        <img
-                                            src="./assets/images/icons/gradient-arrow-v2.svg"
-                                            alt=""
-                                        />
+                                        <img src="./assets/images/icons/gradient-arrow-v2.svg" alt="" />
                                     </button>
                                 </li>
                             </ul>
