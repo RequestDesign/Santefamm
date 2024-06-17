@@ -212,7 +212,7 @@
                     }
                     & .accommodation__slide-image {
                         @include small-tablet {
-                            display: none;
+                            // display: none;
                         }
                     }
                     p {
@@ -223,6 +223,7 @@
                         backdrop-filter: blur(1.5rem);
                         transition: 0.3s background ease-out;
                         min-width: 27rem;
+                        white-space: nowrap;
                         @include small-tablet {
                             padding: 2.4rem 4rem;
                         }
