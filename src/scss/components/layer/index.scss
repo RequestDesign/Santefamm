@@ -46,29 +46,38 @@ body.body-male {
 
     &.--woman {
         .layer__content-problems-view {
-            transform: translate(8rem, -2rem);
-            max-width: 73rem;
-            width: 100%;
-            height: 73rem;
-
-            @include small-tablet {
-                transform: translate(11rem, 2rem);
-                max-width: 73rem;
+            // transform: translate(8rem, -2rem);
+            // max-width: 73rem;
+            // width: 100%;
+            // height: 73rem;
+            width: 56rem;
+            height: 61rem;
+            & img {
                 width: 100%;
-                height: 79rem;
+                height: 100%;
+                object-fit: contain;
+            }
+            @include small-tablet {
+                // transform: translate(11rem, 2rem);
+                // max-width: 73rem;
+                width: 100%;
+                // height: 79rem;
+                height: 66rem;
             }
         }
 
         .layer__content-bottom {
             position: relative;
-            bottom: 15rem;
+            // bottom: 15rem;
+            bottom: 3rem;
             left: 4rem;
             z-index: 3;
 
             @include small-tablet {
                 left: 0;
-                bottom: -8rem;
-                z-index: 1;
+                // bottom: -8rem;
+                bottom: 5rem;
+                z-index: 10;
             }
         }
 
@@ -150,6 +159,8 @@ body.body-male {
         z-index: -1;
         display: none;
         visibility: hidden;
+        align-items: center;
+        justify-content: center;
 
         @include small-tablet {
             z-index: 1;
@@ -157,7 +168,7 @@ body.body-male {
 
         &.--active {
             position: relative;
-            display: block;
+            display: flex;
             animation: fade-in 0.8s both;
             user-select: auto;
             pointer-events: auto;
@@ -189,14 +200,20 @@ body.body-male {
         }
 
         &-view {
-            transform: translate(-4rem, 1rem);
-            max-width: 56rem;
-            width: 100%;
+            // transform: translate(-4rem, 1rem);
+            // max-width: 56rem;
+            // width: 100%;
+            width: 56rem;
             height: 61rem;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
 
             @include small-tablet {
                 max-width: 100%;
-                transform: translate(-4rem, 0rem);
+                // transform: translate(-4rem, 0rem);
                 height: 66rem;
             }
         }
@@ -413,7 +430,8 @@ body.body-male {
             display: none;
             position: absolute;
             // left: -41rem;
-            left: 0;
+            // left: 0;
+            left: -3.3rem;
             transform: translateX(-113%);
             top: 25rem;
             flex-direction: column;
@@ -947,10 +965,12 @@ body.body-male {
         left: 4rem;
         z-index: 3;
 
+
         @include small-tablet {
-            bottom: -5rem;
+            // bottom: -5rem;
+            bottom: 5rem;
             left: 0;
-            z-index: 1;
+            z-index: 10;
         }
 
         &-reverse {
