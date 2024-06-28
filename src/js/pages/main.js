@@ -1,26 +1,29 @@
 import $ from 'jquery';
 //reverse button click
+import { Swiper } from 'swiper/bundle';
+import remToPx from '../utils/rem';
+
 document.addEventListener('DOMContentLoaded', () => {
-    $('[data-gender]').on('click', function(event) {
-        localStorage.setItem('gender', $(this).data("gender"));
-        setBody ()
+    $('[data-gender]').on('click', function (event) {
+        localStorage.setItem('gender', $(this).data('gender'));
+        setBody();
     });
-    $('.header__gender-neutral').on('click', function(event) {
+    $('.header__gender-neutral').on('click', function (event) {
         localStorage.removeItem('gender');
-        $('body').removeClass('body-male')
-        $('body').removeClass('body-fem')
-        setBody ()
+        $('body').removeClass('body-male');
+        $('body').removeClass('body-fem');
+        setBody();
     });
-    setBody ()
-    function setBody () {
+    setBody();
+    function setBody() {
         switch (localStorage.getItem('gender')) {
             case 'male':
-                $('body').addClass('body-male')
-                $('body').removeClass('body-fem')
+                $('body').addClass('body-male');
+                $('body').removeClass('body-fem');
                 break;
             case 'fem':
-                $('body').addClass('body-fem')
-                $('body').removeClass('body-male')
+                $('body').addClass('body-fem');
+                $('body').removeClass('body-male');
                 break;
         }
     }
@@ -218,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             $(p).css('opacity', 1);
             $(icon).css('opacity', 1);
-            $(this).removeClass('--selected')
+            $(this).removeClass('--selected');
         });
     }
 
@@ -229,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             $(p).css('opacity', 0);
             $(icon).css('opacity', 0);
-            $(this).addClass('--selected')
+            $(this).addClass('--selected');
         });
     }
 
@@ -246,9 +249,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.querySelector('.header__menu-navbar-item').classList.add('--active');
             });
             function resetActiveItemClasses() {
-                Array.from(document.querySelectorAll('.header__menu-navbar-item:has(.header__menu-navbar-item)'), (item) => {
-                    item.classList.remove('--active');
-                });
+                Array.from(
+                    document.querySelectorAll('.header__menu-navbar-item:has(.header__menu-navbar-item)'),
+                    (item) => {
+                        item.classList.remove('--active');
+                    }
+                );
             }
         }
     );
@@ -262,22 +268,57 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.classList.add('--active');
             });
             function resetActiveItemClasses() {
-                Array.from(document.querySelectorAll('.header__menu-navbar-item:not(:has(.header__menu-navbar-item))'), (item) => {
-                    item.classList.remove('--active');
-                });
+                Array.from(
+                    document.querySelectorAll(
+                        '.header__menu-navbar-item:not(:has(.header__menu-navbar-item))'
+                    ),
+                    (item) => {
+                        item.classList.remove('--active');
+                    }
+                );
             }
         }
     );
 
     const navbarMenu = document.querySelector('.header__menu-navbar');
+    const navbarAboutMenu = document.querySelector('.header__menu-about-navbar');
 
-    Array.from(document.querySelectorAll('.--menu'), (item) => {
-        item.addEventListener('mouseenter', () => {
-            navbarMenu.classList.add('--active');
-        })
-    })
+    const menyService = document.querySelector('.--menu');
+    const menyAbout = document.querySelector('.--about-menu');
+
+
+    menyService.addEventListener('mouseenter', () => {
+        navbarMenu.classList.add('--active');
+        navbarAboutMenu.classList.remove('--active');
+    });
+
+
 
     navbarMenu.addEventListener('mouseleave', () => {
-        navbarMenu.classList.remove('--active')
-    })
+        navbarMenu.classList.remove('--active');
+    });
+
+ 
+    menyAbout.addEventListener('mouseenter', () => {
+        navbarAboutMenu.classList.add('--active');
+        navbarMenu.classList.remove('--active');
+    });
+
+
+    navbarAboutMenu.addEventListener('mouseleave', () => {
+        navbarAboutMenu.classList.remove('--active');
+    });
+
+
+    const swiperRibbon = new Swiper(".header__menu-about-navbar-item-content-swiper", {
+        speed: 3000, 
+        slidesPerView: "auto",
+        loop: true, 
+        allowTouchMove: false, 
+        spaceBetween: remToPx(2.4),
+        autoplay: {
+            delay: 0,
+          disableOnInteraction: false,
+        }
+      });
 });
