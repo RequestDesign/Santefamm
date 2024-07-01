@@ -239,18 +239,19 @@ document.addEventListener('DOMContentLoaded', () => {
     //header navbar;
 
     Array.from(
-        document.querySelectorAll('.header__menu-navbar-item:has(.header__menu-navbar-item)'),
+        document.querySelectorAll('.header__menu-navbar-item--external'),
         (item) => {
             item.addEventListener('mouseenter', () => {
                 resetActiveItemClasses();
 
                 item.classList.add('--active');
-
+            if(item.querySelector('.header__menu-navbar-item')) {
                 item.querySelector('.header__menu-navbar-item').classList.add('--active');
+            }
             });
             function resetActiveItemClasses() {
                 Array.from(
-                    document.querySelectorAll('.header__menu-navbar-item:has(.header__menu-navbar-item)'),
+                    document.querySelectorAll('.header__menu-navbar-item--external'),
                     (item) => {
                         item.classList.remove('--active');
                     }
@@ -260,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     Array.from(
-        document.querySelectorAll('.header__menu-navbar-item:not(:has(.header__menu-navbar-item))'),
+        document.querySelectorAll('.header__menu-navbar-item--interior'),
         (item) => {
             item.addEventListener('mouseenter', () => {
                 resetActiveItemClasses();
@@ -270,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
             function resetActiveItemClasses() {
                 Array.from(
                     document.querySelectorAll(
-                        '.header__menu-navbar-item:not(:has(.header__menu-navbar-item))'
+                        '.header__menu-navbar-item--interior'
                     ),
                     (item) => {
                         item.classList.remove('--active');
