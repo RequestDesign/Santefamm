@@ -245,9 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 resetActiveItemClasses();
 
                 item.classList.add('--active');
-            if(item.querySelector('.header__menu-navbar-item')) {
-                item.querySelector('.header__menu-navbar-item').classList.add('--active');
-            }
+                if(item.querySelector('.header__menu-navbar-item')) {
+                    Array.from(
+                        document.querySelectorAll(
+                            '.header__menu-navbar-item--interior'
+                        ),
+                        (item) => {
+                            item.classList.remove('--active');
+                        }
+                    );
+
+                    item.querySelector('.header__menu-navbar-item').classList.add('--active');
+                }
             });
             function resetActiveItemClasses() {
                 Array.from(
