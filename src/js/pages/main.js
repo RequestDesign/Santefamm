@@ -78,8 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const neutralService = $('.neutral__service');
 
             neutralWrapper.attr('class', 'neutral__wrapper');
-
+       
+            // $('.layer__content-bottom').css('z-index', '0')
             $('.navigation').addClass('--active');
+
+            if (window.innerWidth < 768 && $('.navigation').hasClass('--active')) {
+                $('.layer__content-bottom').css('z-index', '0')
+            } 
 
             if ($(window).innerWidth() <= 768) {
                 $('body').addClass('blocked');
@@ -101,6 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
             dots.toggleClass('--active');
         });
     });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 768 && $('.navigation').hasClass('--active')) {
+            $('.layer__content-bottom').css('z-index', '0')
+        } else {
+            $('.layer__content-bottom').css('z-index', '3')  
+        }
+    })
 
     //reset dots classes
     function resetActiveClasses() {
@@ -174,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showProblemDotsRowButtons();
         $('.navigation').removeClass('--active');
+        $('.layer__content-bottom').css('z-index', '3')
     });
 
     //close 4-th stage mobile menu on back click

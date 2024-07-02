@@ -132,12 +132,20 @@
             display: none;
             pointer-events: none;
             user-select: none;
+            position: relative;
 
             &.--active {
                 user-select: auto;
                 pointer-events: auto;
                 display: flex;
                 animation: fade-in 0.5s both;
+            }
+            .benefits__item-back-btn {
+                position: absolute;
+                top: 6rem;
+                left: 6rem;
+                width: 4.8rem;
+                height: 4.8rem;
             }
 
             .benefits__item-icon {
