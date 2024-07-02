@@ -1,7 +1,7 @@
 <section class="doctors">
     <div class="container">
         <div class="doctors__container">
-            <div class="doctors__heading">
+            <!-- <div class="doctors__heading">
                 <h2 class="doctors__title title doctors__heading-title">другие Специалисты</h2>
             </div>
 
@@ -24,6 +24,47 @@
                 <button type="button" class="swiper-panel__btn doctors-detailed-panel__btn-next">
                     <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
                 </button>
+            </div> -->
+
+
+            
+            <div class="doctors__heading">
+                <div class="doctors__title doctors__heading-title title">другие Специалисты</div>
+                <div data-da=".doctors .panel-wrapper,768,first" class="doctors__panel swiper-panel">
+                    <button type="button" class="swiper-panel__btn doctors-panel__btn-prev">
+                        <img src="./assets/images/icons/swiper-prev.svg" alt="btn-prev" />
+                    </button>
+                    <div class="doctors-panel__fractions"></div>
+                    <button type="button" class="swiper-panel__btn doctors-panel__btn-next">
+                        <img src="./assets/images/icons/swiper-next.svg" alt="btn-next" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper doctors__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide doctors__slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </div>
+                    <div class="swiper-slide doctors__slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </div>
+                    <div class="swiper-slide doctors__slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </div>
+                    <div class="swiper-slide doctors__slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </div>
+                    <div class="swiper-slide doctors__slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </div>
+                    <div class="swiper-slide doctors__slide">
+                        <include src="./components/doctor-card.html"></include>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-wrapper">
             </div>
         </div>
     </div>

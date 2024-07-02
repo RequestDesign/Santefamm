@@ -75,11 +75,12 @@ reviewButtons.forEach((button, index) => {
         const form = $(modal).find('form');
 
         $(form)
-            .find('input')
+            .find('input[type="checkbox"]')
             .on('change', function () {
                 const isChecked = $(this).is(':checked');
 
                 $(form).find('button[type="submit"]').prop('disabled', !isChecked);
+                console.log($(form).find('button[type="submit"]'))
             });
     });
 });

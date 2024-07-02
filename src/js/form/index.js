@@ -98,7 +98,8 @@ export let formValidate = {
         }
 
         if (formRequiredItem.dataset.validate === 'name') {
-            const pattern = /^[А-ЯЁ][а-яё]+(\s[А-ЯЁ][а-яё]+)?$/;
+            // const pattern = /^[А-ЯЁ][а-яё]+(\s[А-ЯЁ][а-яё]+)?$/;
+            const pattern = /^[a-zA-Zа-яА-Я\s\-]+$/;
             console.log(formRequiredItem.value)
 
             if (!pattern.test(formRequiredItem.value)) {

@@ -1,4 +1,4 @@
-import { Swiper } from 'swiper';
+import { Swiper } from 'swiper/bundle';
 import { EffectFade, Navigation, Pagination, Thumbs } from 'swiper/modules';
 import remToPx from '../utils/rem';
 
@@ -9,7 +9,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 function initReviewsSliders() {
-    console.log('1234')
     if (document.querySelector('.reviews__swiper')) {
         const slider = document.querySelector('.reviews__swiper');
         const fractions = document.querySelector('.reviews-panel__fractions');
@@ -17,7 +16,8 @@ function initReviewsSliders() {
         const btnNext = document.querySelector('.reviews-panel__btn-next');
 
         new Swiper(slider, {
-            modules: [Pagination, Navigation],
+            // modules: [Pagination, Navigation],
+             speed: 1200,
             allowTouchMove: true,
             navigation: {
                 nextEl: btnNext,
@@ -50,12 +50,13 @@ function initDoctorsSliders() {
         const btnNext = document.querySelector('.doctors-panel__btn-next');
 
         new Swiper(slider, {
-            modules: [Pagination, Navigation],
+            // modules: [Pagination, Navigation],
             allowTouchMove: true,
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
             },
+             speed: 1200,
             pagination: {
                 el: fraction,
                 type: 'fraction'
@@ -82,8 +83,9 @@ function initNewsSliders() {
         const btnNext = document.querySelector('.news-panel__btn-next');
 
         new Swiper(slider, {
-            modules: [Pagination, Navigation],
+            // modules: [Pagination, Navigation],
             allowTouchMove: true,
+             speed: 1200,
             navigation: {
                 nextEl: btnNext,
                 prevEl: btnPrev
@@ -122,12 +124,12 @@ function initCategorySlider() {
 function initPalomarSlider() {
     if (document.querySelector('.palomar__swiper')) {
         const slider = document.querySelector('.palomar__swiper');
-        const fractions = document.querySelector('.palomar__panel-fractions');
+        // const fractions = document.querySelector('.palomar__panel-fractions');
         const next = document.querySelector('.palomar-button-next');
         const prev = document.querySelector('.palomar-button-prev');
 
         new Swiper(slider, {
-            modules: [Navigation],
+            // modules: [Navigation],
             speed: 1200,
             slideToClickedSlide: true,
             loop: true,
@@ -135,10 +137,10 @@ function initPalomarSlider() {
                 nextEl: next,
                 prevEl: prev
             },
-            pagination: {
-                el: fractions,
-                type: 'fraction'
-            },
+            // pagination: {
+            //     el: fractions,
+            //     type: 'fraction'
+            // },
             breakpoints: {
                 0: {
                     slidesPerView: '2.2',
@@ -160,9 +162,9 @@ function initBeforeAfterSlider() {
         const nextButton = document.querySelector('.palomar__result-next');
 
         new Swiper(slider, {
-            modules: [Pagination, Navigation],
+            // modules: [Pagination, Navigation],
             allowTouchMove: true,
-            speed: 1200,
+             speed: 1200,
             navigation: {
                 nextEl: nextButton,
                 prevEl: prevButton
@@ -189,7 +191,7 @@ function initSpecialistsSlider() {
         const slider = document.querySelector('.specialists__swiper');
 
         new Swiper(slider, {
-            modules: [Navigation],
+            // modules: [Navigation],
             slidesPerView: 'auto',
             spaceBetween: remToPx(1.2),
             speed: 1200,
@@ -210,7 +212,7 @@ function initDevicesSlider() {
         const btnNext = document.querySelector('.devices__panel-next');
 
         new Swiper(slider, {
-            modules: [Pagination, Navigation],
+            // modules: [Pagination, Navigation],
 
             spaceBetween: remToPx(4),
             speed: 1200,
@@ -244,7 +246,7 @@ function initLicensesSlider() {
         const sliderLicense = document.querySelector('.licenses__swiper-license');
 
         const license = new Swiper(sliderLicense, {
-            modules: [Pagination, Navigation, EffectFade],
+            // modules: [Pagination, Navigation, EffectFade],
             effect: 'fade',
             fadeEffect: {
                 crossFade: true
@@ -527,7 +529,8 @@ function initDotsSlide() {
             const btnNextMob = swiper.querySelector('.dots__panel.--mob .dots__panel-next');
 
             new Swiper(slider, {
-                modules: [Pagination, Navigation, EffectFade],
+                // modules: [Pagination, Navigation, EffectFade],
+                autoHeight: true,
                 slidesPerView: 1,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
