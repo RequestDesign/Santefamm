@@ -112,6 +112,9 @@
                     inset: 0;
                     display: block;
                     z-index: -1;
+                    & img {
+                        object-fit: cover;
+                    }
                 }
             }
 
@@ -128,6 +131,7 @@
 
                 img {
                     border-radius: inherit;
+                    object-fit: cover;
                 }
             }
 

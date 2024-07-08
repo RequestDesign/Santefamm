@@ -124,6 +124,7 @@
         align-items: center;
         gap: 1.8rem;
         position: relative;
+        overflow: hidden;
 
         &:hover {
             & .prices-categories__categories-item-title {
@@ -200,6 +201,7 @@
 
         img {
             border-radius: inherit;
+            object-fit: cover;
         }
 
         @include small-tablet {
