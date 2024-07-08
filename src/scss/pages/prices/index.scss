@@ -86,6 +86,7 @@
             align-items: center;
             gap: 1.8rem;
             position: relative;
+            overflow: hidden;
 
             &:hover {
                 .prices__categories-arrow {
